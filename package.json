@@ -1,0 +1,35 @@
+{
+  "name": "express-prototype-4",
+  "description": "GOVUK prototyping app in Express 4",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "consolidate": "0.x",
+    "express": "~4.0.0",
+    "govuk_frontend_toolkit": "^4.3.0",
+    "govuk_template_mustache": "0.15.1",
+    "minimist": "0.0.8",
+    "readdir": "0.0.6",
+    "morgan": "~1.0.0",
+    "body-parser": "~1.0.0",
+    "method-override":"~1.0.0",
+    "cookie-parser":"~1.0.0",
+    "express-session":"~1.0.0"
+      
+  },
+  "devDependencies": {
+    "node-sass": "0.x",
+    "grunt": "0.4.2",
+    "grunt-contrib-clean": "0.5.0",
+    "grunt-contrib-copy": "0.5.0",
+    "grunt-contrib-watch": "0.5.3",
+    "grunt-sass": "~0.10.0",
+    "grunt-contrib-sass": "0.7.3",
+    "grunt-text-replace": "~0.3.10",
+    "grunt-concurrent": "~0.4.3",
+    "grunt-execute": "~0.2.1"
+  }
+}
