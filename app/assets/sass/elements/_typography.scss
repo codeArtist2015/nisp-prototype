@@ -1,10 +1,10 @@
 // Typography
 // ==========================================================================
 
-// Increase the base font size to 19px for the main content area
+// Increase the base font size to 19px
 // Using the core-19 mixin from the govuk_toolkit _typography.scss file
 
-main {
+#content {
   @include core-19;
   -webkit-font-smoothing: antialiased;
 }
@@ -66,7 +66,7 @@ main {
   }
 
   .heading-secondary {
-    @include heading-27();
+    @include core-27();
 
     display: block;
     color: $secondary-text-colour;
@@ -83,13 +83,6 @@ main {
   @include media(tablet) {
     margin-top: em(45, 36 );
     margin-bottom: em(20, 36);
-  }
-
-  .heading-secondary {
-    @include heading-24();
-
-    display: block;
-    color: $secondary-text-colour;
   }
 
 }
@@ -142,24 +135,6 @@ p {
   max-width: 30em;
 }
 
-.text-secondary {
-  color: $secondary-text-colour;
-}
-
-// Link styles
-.link {
-  color: $link-colour;
-  text-decoration: underline;
-}
-.link:visited {
-  color: $link-visited-colour;
-}
-.link:hover {
-  color: $link-hover-colour;
-}
-.link:active {
-  color: $link-colour;
-}
 
 // Code styles
 pre,

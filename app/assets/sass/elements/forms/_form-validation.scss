@@ -1,5 +1,6 @@
-// Validation summary box
+@import "../colours";
 
+// Validation summary box
 .validation-summary {
   border: 3px solid $error-colour;
   padding: $gutter-half $gutter;
@@ -39,7 +40,7 @@
 // Validation error message box
 // .validation-error {
 //   clear: both;
-//   @extend %contain-floats;
+//   @include contain-floats;
 //   border-left: 3px solid $error-colour;
 //   padding: $gutter- $gutter;
 //   margin-bottom: $gutter-half;
