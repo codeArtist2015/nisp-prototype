@@ -23,19 +23,20 @@ if (env === 'production') {
 }
 
 // Application settings
-app.engine('html', require(path.join(__dirname,'/lib/template-engine.js')).__express);
+app.engine('html', require(__dirname + '/lib/template-engine.js').__express);
 app.set('view engine', 'html');
-app.set('vendorViews', path.join(__dirname, '/govuk_modules/govuk_template/views/layouts'));
-app.set('views', path.join(__dirname, '/app/views'));
+app.set('vendorViews', __dirname + '/govuk_modules/govuk_template/views/layouts');
+app.set('views', __dirname+'/app/views');
 
 // Middleware to serve static assets
-app.use('/public', express.static(path.join(__dirname, '/public')));
-app.use('/public', express.static(path.join(__dirname, '/govuk_modules/govuk_template/assets')));
-app.use('/public', express.static(path.join(__dirname, '/govuk_modules/govuk_frontend_toolkit')));
+app.use('/public', express.static(__dirname + '/public'));
+app.use('/public', express.static(__dirname + '/govuk_modules/govuk_template/assets'));
+app.use('/public', express.static(__dirname + '/govuk_modules/govuk_frontend_toolkit'));
 app.use(logger('dev'));
 
 app.use(favicon(path.join(__dirname, 'govuk_modules', 'govuk_template', 'assets', 'images','favicon.ico'))); 
 
+console.log("Dirname path is "+ __dirname)
 
 // send assetPath to all views
 app.use(function (req, res, next) {
