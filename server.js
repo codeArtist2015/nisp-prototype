@@ -3,6 +3,8 @@ var path = require('path'),
     routes = require(__dirname + '/app/routes.js'),
     favicon = require('serve-favicon'),
     app = express(),
+    logger = require('morgan'),
+    bodyParser = require('body-parser'),
     port = (process.env.PORT || 8080),
 
 // Grab environment variables specified in Procfile or as Heroku config vars
@@ -21,15 +23,16 @@ if (env === 'production') {
 }
 
 // Application settings
-app.engine('html', require(__dirname + '/lib/template-engine.js').__express);
+app.engine('html', require(path.join(__dirname,'/lib/template-engine.js')).__express);
 app.set('view engine', 'html');
-app.set('vendorViews', __dirname + '/govuk_modules/govuk_template/views/layouts');
-app.set('views', __dirname + '/app/views');
+app.set('vendorViews', path.join(__dirname, '/govuk_modules/govuk_template/views/layouts'));
+app.set('views', path.join(__dirname, '/app/views'));
 
 // Middleware to serve static assets
-app.use('/public', express.static(__dirname + '/public'));
-app.use('/public', express.static(__dirname + '/govuk_modules/govuk_template/assets'));
-app.use('/public', express.static(__dirname + '/govuk_modules/govuk_frontend_toolkit'));
+app.use('/public', express.static(path.join(__dirname, '/public')));
+app.use('/public', express.static(path.join(__dirname, '/govuk_modules/govuk_template/assets')));
+app.use('/public', express.static(path.join(__dirname, '/govuk_modules/govuk_frontend_toolkit')));
+app.use(logger('dev'));
 
 app.use(favicon(path.join(__dirname, 'govuk_modules', 'govuk_template', 'assets', 'images','favicon.ico'))); 
 
