@@ -3,7 +3,7 @@ var path = require('path'),
     routes = require(__dirname + '/app/routes.js'),
     favicon = require('serve-favicon'),
     app = express(),
-    port = (process.env.PORT || 3000),
+    port = (process.env.PORT || 8080),
 
 // Grab environment variables specified in Procfile or as Heroku config vars
     username = process.env.USERNAME,
