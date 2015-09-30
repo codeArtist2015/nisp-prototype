@@ -1,68 +1,60 @@
 module.exports = function(grunt){
   grunt.initConfig({
-
-    execute: {
-        target: {
-            src: ['app.js']
-        }
-    },
+    // Clean
+    clean: ['public', 'govuk_modules'],
 
     // Builds Sass
     sass: {
       dev: {
-        files: {
-          'public/stylesheets/application.css': 'public/sass/application.scss',
-          'public/stylesheets/examples.css': 'public/sass/examples.scss'
-        },
         options: {
-          includePaths: ['govuk/public/sass'],
+          style: "expanded",
+          sourcemap: true,
+          includePaths: [
+            'govuk_modules/govuk_template/assets/stylesheets',
+            'govuk_modules/govuk_frontend_toolkit/stylesheets'
+          ],
           outputStyle: 'expanded'
-        }
+        },
+        files: [{
+          expand: true,
+          cwd: "app/assets/sass",
+          src: ["*.scss"],
+          dest: "public/stylesheets/",
+          ext: ".css"
+        }]
       }
     },
 
     // Copies templates and assets from external modules and dirs
     copy: {
-
-      govuk_template: {
-        src: 'node_modules/govuk_template_mustache/views/layouts/govuk_template.html',
-        dest: 'govuk/views/',
-        expand: true,
-        flatten: true,
-        filter: 'isFile'
+      assets: {
+        files: [{
+          expand: true,
+          cwd: 'app/assets/',
+          src: ['**/*', '!sass/**'],
+          dest: 'public/'
+        }]
       },
-
-      govuk_assets: {
-        files: [
-          {
-            expand: true,
-            src: '**',
-            cwd: 'node_modules/govuk_template_mustache/assets',
-            dest: 'govuk/public/'
-          }
-        ]
+      govuk: {
+        files: [{
+          expand: true,
+          cwd: 'node_modules/govuk_frontend_toolkit',
+          src: '**',
+          dest: 'govuk_modules/govuk_frontend_toolkit/'
+        },
+        {
+          expand: true,
+          cwd: 'node_modules/govuk_template_mustache/',
+          src: '**',
+          dest: 'govuk_modules/govuk_template/'
+        }]
       },
-
-      govuk_frontend_toolkit: {
-        expand: true,
-        src: '**',
-        cwd: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets/',
-        dest: 'govuk/public/sass/'
-      },
-
-      govuk_frontend_toolkit_assets: {
-        expand: true,
-        src: '**',
-        cwd: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/images/',
-        dest: 'govuk/public/images/icons/'
-      },
-
     },
 
     // workaround for libsass
     replace: {
       fixSass: {
-        src: ['govuk/public/sass/**/*.scss'],
+        src: ['govuk_modules/govuk_template/**/*.scss', 'govuk_modules/govuk_frontend_toolkit/**/*.scss'],
         overwrite: true,
         replacements: [{
           from: /filter:chroma(.*);/g,
@@ -71,42 +63,52 @@ module.exports = function(grunt){
       }
     },
 
-    // Watches styles and specs for changes
+    // Watches assets and sass for changes
     watch: {
       css: {
-        files: ['public/sass/**/*.scss'],
+        files: ['app/assets/sass/**/*.scss'],
         tasks: ['sass'],
-        options: { nospawn: true }
-      }
-    },
-
-/*
-    // nodemon watches for changes and restarts app
-    nodemon: {
-      dev: {
-        script: 'app.js',
         options: {
-          ext: 'html, js'
+          spawn: false,
+        }
+      },
+      assets:{
+        files: ['app/assets/**/*', '!app/assets/sass/**'],
+        tasks: ['copy:assets'],
+        options: {
+          spawn: false,
         }
       }
     },
 
-*/
+    // nodemon watches for changes and restarts app
+    nodemon: {
+      dev: {
+        script: 'server.js',
+        options: {
+          ext: 'js',
+          ignore: ['node_modules/**', 'app/assets/**', 'public/**'],
+          args: grunt.option.flags()
+        }
+      }
+    },
+
     concurrent: {
         target: {
-            tasks: ['watch', 'execute'],
+            tasks: ['watch', 'nodemon'],
             options: {
                 logConcurrentOutput: true
             }
         }
     }
   });
+
   [
     'grunt-contrib-copy',
     'grunt-contrib-watch',
+    'grunt-contrib-clean',
     'grunt-sass',
-    'grunt-execute',
-    // 'grunt-nodemon',
+    'grunt-nodemon',
     'grunt-text-replace',
     'grunt-concurrent'
   ].forEach(function (task) {
@@ -124,14 +126,27 @@ module.exports = function(grunt){
     }
   );
 
-  grunt.registerTask('default', [
-    'copy:govuk_template',
-    'copy:govuk_assets',
+  grunt.registerTask('generate-assets', [
+    'clean',
+    'copy',
     'convert_template',
-    'copy:govuk_frontend_toolkit',
-    'copy:govuk_frontend_toolkit_assets',
     'replace',
-    'sass',
+    'sass'
+  ]);
+
+  grunt.registerTask('default', [
+    'generate-assets',
     'concurrent:target'
   ]);
+
+  grunt.event.on('watch', function(action, filepath, target) {
+
+    // just copy the asset that was changed, not all of them
+
+    if (target == "assets"){
+      grunt.config('copy.assets.files.0.src', filepath.replace("app/assets/",""));
+    }
+
+  });
+
 };
