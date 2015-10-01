@@ -5,6 +5,10 @@ module.exports = {
       res.render('index');
     });  
 
+    app.get('/start_persephone', function (req, res) {
+      res.render('start/start_persephone1');
+    });       
+      
     app.get('/kitchen-sink', function (req, res) {
       res.render('kitchen-sink',{"forms": req.session['ks']});
     });
