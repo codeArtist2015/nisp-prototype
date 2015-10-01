@@ -4,12 +4,42 @@ module.exports = {
     app.get('/', function (req, res) {
       res.render('index');
     });  
-
+      
+//********************************
+// Start routes
+//********************************
+      
     app.get('/start_persephone', function (req, res) {
       res.render('start/start_persephone1');
     });       
       
-    app.get('/kitchen-sink', function (req, res) {
+    
+// End Start routes
+      
+      
+//******************************** 
+// Dashboard routes
+//********************************
+      
+    app.get('/dashboard-persephone-gaps1', function (req, res) {
+      res.render('dashboard/dashboard-persephone-gaps1');
+    })   
+      
+      
+// End Dashboard routes    
+    
+//********************************
+// NI routes
+//********************************
+    
+      app.get('/ni/ni-persephone-full5', function (req, res) {
+      res.render('ni/ni-persephone-full5');
+    })     
+    
+// End NI routes    
+    
+    
+      app.get('/kitchen-sink', function (req, res) {
       res.render('kitchen-sink',{"forms": req.session['ks']});
     });
       

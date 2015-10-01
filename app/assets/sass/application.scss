@@ -12,10 +12,10 @@
 // If you need a phase banner, put this inside the main content area
 // See elements _layout.scss line 22.
 .alpha-banner  {
-  @include phase-banner(alpha); // Change this to (beta) for a beta banner
+  @include phase-banner(beta); // Change this to (beta) for a beta banner
 }
 .alpha-tag {
-  @include phase-tag(alpha); // Change this to (beta) for a beta tag
+  @include phase-tag(beta); // Change this to (beta) for a beta tag
 }
 
 // If you need to create a page as part of your journey, but without GOV.UK branding

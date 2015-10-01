@@ -6,7 +6,6 @@
 
 {% macro scripts() %}
     <script src="{{assetPath}}javascripts/details.polyfill.js"></script>
-    <script src="{{assetPath}}javascripts/jquery-1.11.3.js"></script>
     <script src="{{assetPath}}javascripts/vendor/polyfills/bind.js"></script>
     <script src="{{assetPath}}javascripts/govuk/selection-buttons.js"></script>
     <script src="{{assetPath}}javascripts/application.js"></script>
@@ -15,7 +14,7 @@
 {% macro banner() %}
     <div class="phase-banner">
       <p>
-        <strong class="phase-tag">ALPHA</strong>
+        <strong class="phase-tag">BETA</strong>
         <span>This is a new service – your <a href="/feedback">feedback</a> will help us to improve it.</span>
       </p>
     </div>
@@ -68,6 +67,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{assetPath}}images/apple-touch-icon-76x76.png?0.13.0">
     <!-- Default non-defined size, also used for Android 2.1+ devices -->
     <link rel="apple-touch-icon-precomposed" href="{{assetPath}}images/apple-touch-icon-60x60.png?0.13.0">
+      
+    <script src="{{assetPath}}javascripts/jquery-1.11.3.js"></script>
 
     {{stylesheets()}}
       
