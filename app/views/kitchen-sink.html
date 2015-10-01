@@ -1,0 +1,37 @@
+{% extends 'layouts/template.html' %}
+{% import 'helpers/form.html' as form %}
+
+{% block title %}GOV.UK prototyping kit{% endblock %}
+
+{% block serviceName %}GOV.UK prototyping kit{% endblock %}
+
+
+{% block main %}
+
+ <div class="grid-row">
+            <div class="column-two-thirds">
+
+                    <h1 class="heading-xlarge">Form helpers</h1>
+
+                    <form method="post" action="kitchen-sink">
+
+                    {{form.inputText("fname", "fname","","First Name", forms.fname,errors.fname) }}
+
+                    {{form.inputText("lname", "lname","This is your last name","Last Name", forms.lname,errors.lname) }}
+                
+                    {{form.inputTextArea("info", "info","Information","Other Information", forms.info,errors.info) }}
+                
+                    {{form.radioButtons("yesno", "yesno", "","Yes or no?",[{ value: "Yes", id: "yes" }, { value: "No", id: "no"}], forms.yesno,errors.yesno,{inline: true}) }}
+   
+                    <div class="form-group">
+                        <input type="submit" class="button" value="I agree - send my application">
+                    </div>
+                        
+                    </form>
+                    
+            </div>
+</div>
+
+
+{% endblock %}
+

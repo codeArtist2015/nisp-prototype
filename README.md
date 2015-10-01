@@ -50,7 +50,7 @@ This will install extra code that the prototype kit needs.
 node start.js
 ```
 
-Go to [localhost:8080](http://localhost:8080) in your browser.
+Go to [localhost:3000](http://localhost:3000) in your browser.
 
 #### Hot reload
 

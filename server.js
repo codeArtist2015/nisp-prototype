@@ -1,15 +1,16 @@
 var path = require('path'),
     express = require('express'),
+    bodyParser = require('body-parser'),
     routes = require(__dirname + '/app/routes.js'),
     favicon = require('serve-favicon'),
+    session = require('express-session'),
     app = express(),
-    logger = require('morgan'),
-    bodyParser = require('body-parser'),
+    nunjucks = require('nunjucks'),
     port = (process.env.PORT || 8080),
-
 // Grab environment variables specified in Procfile or as Heroku config vars
     username = process.env.USERNAME,
     password = process.env.PASSWORD,
+    sessionKey = process.env.sessionKey || "ERieueijeeieiIUUXuxueue9UUU",
     env = process.env.NODE_ENV || 'development';
 
 // Authenticate against the environment-provided credentials, if running
@@ -22,27 +23,31 @@ if (env === 'production') {
   app.use(express.basicAuth(username, password));
 }
 
-// Application settings
-app.engine('html', require(__dirname + '/lib/template-engine.js').__express);
+//nunjucks
+nunjucks.configure('app/views', {autoescape: true, express   : app, noCache :true });
+
 app.set('view engine', 'html');
-app.set('vendorViews', __dirname + '/govuk_modules/govuk_template/views/layouts');
-app.set('views', __dirname+'/app/views');
+app.set('views', __dirname + '/app/views');
 
 // Middleware to serve static assets
 app.use('/public', express.static(__dirname + '/public'));
 app.use('/public', express.static(__dirname + '/govuk_modules/govuk_template/assets'));
 app.use('/public', express.static(__dirname + '/govuk_modules/govuk_frontend_toolkit'));
-app.use(logger('dev'));
 
 app.use(favicon(path.join(__dirname, 'govuk_modules', 'govuk_template', 'assets', 'images','favicon.ico'))); 
 
-console.log("Dirname path is "+ __dirname)
+app.use(session({ secret: sessionKey, cookie: { maxAge: 60000000 }}))
 
 // send assetPath to all views
 app.use(function (req, res, next) {
   res.locals.assetPath="/public/";
   next();
 });
+
+
+//add post body
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 
 // routes (found in app/routes.js)

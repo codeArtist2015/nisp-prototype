@@ -1,0 +1,40 @@
+{% extends 'layouts/template.html' %}
+{% import 'helpers/form.html' as form %}
+
+{% block title %}GOV.UK prototyping kit{% endblock %}
+
+{% block serviceName %}GOV.UK prototyping kit{% endblock %}
+
+
+{% block main %}
+
+ <div class="grid-row">
+            <div class="column-two-thirds">
+
+                
+            <div class="highlighted-event">
+					<p class="font-xxlarge">End Page</p>
+            </div>                
+                
+                
+            <h1 class="form-title heading-large">
+              Declaration
+            </h1>
+
+				<p>By sending this application you agree:</p>
+				<ul class="list-bullet">
+					<li>the information in this application is complete and correct</li>
+					<li>to report any changes to your circumstances</li>
+				</ul>
+
+
+				<div class="form-group">
+					<input type="submit" class="button" value="I agree - send my application">
+				</div>
+                    
+            </div>
+</div>
+
+
+{% endblock %}
+

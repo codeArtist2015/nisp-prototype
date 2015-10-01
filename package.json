@@ -4,18 +4,17 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-  "node": "0.10.x"
+    "node": "0.10.x"
   },
   "dependencies": {
     "express": "4.13.3",
     "serve-favicon": "2.3.0",
+    "body-parser": "^1.4.0",
+    "multer": "1.0.5",
+    "express-session": "1.11.3",
     "connect": "2.30.2",
-    "body-parser": "1.14.1", 
     "consolidate": "0.x",
-    "readdir": "0.0.6",
     "minimist": "0.0.8",
-    "hogan.js": "3.0.2",
-    "morgan": "1.6.1",
     "govuk_frontend_toolkit": "^4.3.0",
     "govuk_template_mustache": "~0.13.0",
     "node-sass": "2.1.1",
@@ -27,6 +26,6 @@
     "grunt-nodemon": "0.3.0",
     "grunt-sass": "0.18.0",
     "grunt-text-replace": "0.3.12",
-    "grunt-concurrent": "0.4.3"
-  }
+    "grunt-concurrent": "0.4.3",
+    "nunjucks":"2.1.0" }
 }
