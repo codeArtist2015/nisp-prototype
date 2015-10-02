@@ -32,14 +32,18 @@ module.exports = {
 // NI routes
 //********************************
     
-      app.get('/ni/ni-persephone-full5', function (req, res) {
+    app.get('/ni/ni-persephone-full5', function (req, res) {
       res.render('ni/ni-persephone-full5');
     })     
+
+    app.get('/ni/basket', function (req, res) {
+      res.render('ni/basket');
+    }) 
     
 // End NI routes    
     
     
-      app.get('/kitchen-sink', function (req, res) {
+    app.get('/kitchen-sink', function (req, res) {
       res.render('kitchen-sink',{"forms": req.session['ks']});
     });
       
