@@ -8,14 +8,22 @@
 
 {% include '../persephone_login.html' %}
 
+
+<div id="global-breadcrumb" class="header-context">
+    <ol role="breadcrumbs" class="group">
+      <li><a href="/dashboard-persephone-gaps1#lie-improve-sp-value">Check my State Pension home</a></li>
+    </ol>
+</div>
+
  <div class="grid-row">
     <div class="column-two-thirds">
+  
         <h1 class="heading-xlarge" style="margin: 1em 0 0">Your National Insurance record</h1> 
         <p class="lede">You have 3 years where you can pay voluntary contributions to make them count towards your pension. You also have 2&nbsp;years that are too late to pay.</p>
 
         <p><a href="/20/ni-persephone-fuller5">View your full National Insurance record</a></p>
 
-        ****** NI Record Text ***************
+        {% include './ni_record_text.html' %}
 
                  
         <div class="ni-wrapper" style="padding-top: 40px;">
@@ -25,114 +33,44 @@
           <div class="ni-action"></div>
         </div>
         
-             <dl class="ni-table">
-                <!-- 2014 -->
-              <dt>
-                <div class="ni-wrapper">
-                     <div class="ni-years">2014-15</div>
-                     <div class="ni-full">Your record for this year isn't available yet </div>
-                  </div>
-             </dt>
-             <dd>
-             </dd>
-             <!-- 2013 -->
-           <!--  <dt>
-             <div class="ni-wrapper">
-                 <div class="ni-years">2013-14</div>
-                 <span class="inactive">Full year</span>
-               </div>
-             </dt>
-             <dd>
-             </dd>-->
-              <!-- gap 1 -->
-              <dt>
-
-                <div class="ni-wrapper">
-                 <div class="ni-years">2012-13</div>
-                 <div class="ni-cost"><strong> £50</strong></div>
-                 <div class="ni-payby">6 April 2019</div>
-                 <div class="ni-action"><a href="/20/basket55">View details</a></div>
-               </div>
-
-
-             </dt>
-                  
-            <!-- gap end -->
-               <!-- gap 2 -->
-                <!-- 2013 -->
-            
-               <dt>
-                 <div class="ni-wrapper">
-                   <div class="ni-years">2011-12</div>
-                   <div class="ni-cost"><strong> £722</strong></div>
-                   <div class="ni-payby">6 April 2018</div>
-                   <div class="ni-action"><a href="/20/basket2011">View details</a></div>
-                 </div>
-
-               </dt>
-
-                
-          <!-- gap 3 -->
-                  <dt>
-                       <div class="ni-wrapper">
-                         <div class="ni-years">2009-10</div>
-                         <div class="ni-cost"><strong> £648</strong></div>
-                         <div class="ni-payby">6 April 2017</div>
-                         <div class="ni-action"><a href="/20/basket2009">View details</a></div>
-                       </div>
-                     
-                  </dt>
-     
- <!-- year end -->
-  </dl>
-   <dl class="accordion">
-              <!-- 2007 -->
-           <!-- gap 4 --> 
-                 <dt class="late">
-                     <div class="ni-wrapper">
-                         <div class="ni-years">2007-08</div>
-                         <div class="ni-late">It's too late to pay for this year</div>
-                         <div class="ni-action"><a href="#">View details</a></div>
-                     </div>
-
-                    <dd class="lastdate">
-                         <div class="contributions-wrapper">
-                            <p>You didn't make any contributions this year.</p>
-                            <p>The last date you could pay by was 6 April 2015.</p> <p>If you think your record is wrong or you are entitled to credits because you were unemployed or unable to work, find out how to <a href="ni-record-help5">check and correct your National Insurance record</a>.</p> 
-                        </div>
-                     </dd> 
-                  </dt>
-
-                   <dt class="late">
-                         <div class="ni-wrapper">
-                             <div class="ni-years">2006-07</div>
-                             <div class="ni-late">It's too late to pay for this year</div>
-                             <div class="ni-action"><a href="#">View details</a></div>
-                         </div>
-                     
-                        <dd class="lastdate">
-                             <div class="contributions-wrapper">
-                            <p>You didn't make any contributions this year.</p>
-                               <p>The last date you could pay by was 6 April 2014.</p> <p>If you think your record is wrong or you are entitled to credits because you were unemployed or unable to work, find out how to <a href="ni-record-help5">check and correct your National Insurance record
-                                 </a>.</p> </div>
-                        </dd>
-                  </dt>
-    </dl>
-
+         {% include './ni_table5.html' %}
+        
 <a href="dashboard-persephone-gaps5#lie-improve-sp-value" class="example-back-link">Back</a>
 					
 
-				</div><!-- /.inner -->
-			</div><!-- /.column-two-thirds -->
+				</div><!-- /.column-two-thirds -->
+			
 
-			<div class="column-one-third">
-				<div class="related-container">
+			 <div class="column-third">
 					<div class="related" id="related">
 						<div class="inner group related-subsection">      
 						{% include './ni_side_bar.html' %}
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> <!-- /.column-third -->
+                
+           </div><!-- /.grid-row -->
+<script>
+
+
+jQuery(document).ready(function($){
+	var allPanels = $('.accordion > dd').hide();
+
+	$('.accordion > dt').click(function(){
+		if(!$(this).parent().parent().hasClass("active")){          
+			allPanels.prev().removeClass("active");
+			$(this).parent().parent().addClass("active");
+            console.log($(this));
+			$(this).parent().parent().next().slideDown();
+			return false;
+		}else{
+			$(this).parent().parent().removeClass("active");             
+			return false;
+		}
+	});
+});
+
+
+</script>
 
 {% endblock %}
