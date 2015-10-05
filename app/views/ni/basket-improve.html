@@ -31,10 +31,10 @@
            
  
            
-            	<p><a href="payment2012" class="button">Continue to payment</a></p>
+            	<p><a href="#" class="button">Continue to payment</a></p>
            
         
-<a href="javascript:window.history.back();" class="example-back-link">Back</a>
+                <a href="javascript:window.history.back();" class="example-back-link">Back</a>
 					
 
 				</div><!-- /.column-two-thirds -->
@@ -49,27 +49,6 @@
                 </div> <!-- /.column-third -->
                 
            </div><!-- /.grid-row -->
-<script>
 
-
-jQuery(document).ready(function($){
-	var allPanels = $('.accordion > dd').hide();
-
-	$('.accordion > dt').click(function(){
-		if(!$(this).parent().parent().hasClass("active")){          
-			allPanels.prev().removeClass("active");
-			$(this).parent().parent().addClass("active");
-            console.log($(this));
-			$(this).parent().parent().next().slideDown();
-			return false;
-		}else{
-			$(this).parent().parent().removeClass("active");             
-			return false;
-		}
-	});
-});
-
-
-</script>
 
 {% endblock %}
