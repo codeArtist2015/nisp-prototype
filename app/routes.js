@@ -36,7 +36,9 @@ module.exports = {
       res.render('ni/ni-persephone-full5');
     });
 
-
+    app.get('/ni/ni-check', function (req, res) {
+      res.render('ni/ni-check');
+    });
       
     app.get('/ni/basket-toolate/:year', function (req, res) {        
           res.render('ni/basket-toolate',{"year": req.params.year});
