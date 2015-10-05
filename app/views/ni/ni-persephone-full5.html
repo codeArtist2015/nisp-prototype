@@ -21,7 +21,7 @@
         <h1 class="heading-xlarge" style="margin: 1em 0 0">Your National Insurance record</h1> 
         <p class="lede">You have 3 years where you can pay voluntary contributions to make them count towards your pension. You also have 2&nbsp;years that are too late to pay.</p>
 
-        <p><a href="/20/ni-persephone-fuller5">View your full National Insurance record</a></p>
+        <p><a href="/ni-persephone-fuller5">View your full National Insurance record</a></p>
 
         {% include './ni_record_text.html' %}
 
@@ -50,27 +50,5 @@
                 </div> <!-- /.column-third -->
                 
            </div><!-- /.grid-row -->
-<script>
-
-
-jQuery(document).ready(function($){
-	var allPanels = $('.accordion > dd').hide();
-
-	$('.accordion > dt').click(function(){
-		if(!$(this).parent().parent().hasClass("active")){          
-			allPanels.prev().removeClass("active");
-			$(this).parent().parent().addClass("active");
-            console.log($(this));
-			$(this).parent().parent().next().slideDown();
-			return false;
-		}else{
-			$(this).parent().parent().removeClass("active");             
-			return false;
-		}
-	});
-});
-
-
-</script>
 
 {% endblock %}

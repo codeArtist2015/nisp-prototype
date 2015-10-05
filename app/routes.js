@@ -23,7 +23,7 @@ module.exports = {
       
     app.get('/dashboard-persephone-gaps1', function (req, res) {
       res.render('dashboard/dashboard-persephone-gaps1');
-    })   
+    });
       
       
 // End Dashboard routes    
@@ -34,11 +34,17 @@ module.exports = {
     
     app.get('/ni/ni-persephone-full5', function (req, res) {
       res.render('ni/ni-persephone-full5');
-    })     
+    });
 
-    app.get('/ni/basket', function (req, res) {
-      res.render('ni/basket');
-    }) 
+
+      
+    app.get('/ni/basket-toolate/:year', function (req, res) {        
+          res.render('ni/basket-toolate',{"year": req.params.year});
+    });
+      
+    app.get('/ni/basket-improve/:year/pay/:amount', function (req, res) {        
+          res.render('ni/basket-improve',{"year": req.params.year,"amount":req.params.amount});
+    });
     
 // End NI routes    
     
