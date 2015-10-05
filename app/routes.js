@@ -47,7 +47,16 @@ module.exports = {
     app.get('/ni/basket-improve/:year/pay/:amount', function (req, res) {        
           res.render('ni/basket-improve',{"year": req.params.year,"amount":req.params.amount});
     });
+    app.get('/ni/basket-improve-emp-benefits/:year/pay/:amount/emp/:empAmount/ben/:benefitNum', function (req, res) {        
+          res.render('ni/basket-improve-emp-benefits',{"year": req.params.year,"amount":req.params.amount,
+                    "empAmount": req.params.empAmount, "benefitNum": req.params.benefitNum});
+    });      
     
+    app.get('/ni/basket-improve-all/:year/pay/:amount/emp/:empAmount/ben/:benefitNum', function (req, res) {        
+          res.render('ni/basket-improve-all',{"year": req.params.year,"amount":req.params.amount,
+                    "empAmount": req.params.empAmount, "benefitNum": req.params.benefitNum});
+    });         
+      
 // End NI routes    
     
     

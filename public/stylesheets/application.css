@@ -1817,9 +1817,6 @@ aside .page-navigation li span.part-number {
   padding-top: 10px;
   padding-bottom: 5px; }
 
-.accordion dt, .ni-table dt {
-  border-top: 1px solid #dee0e2; }
-
 .ni-wrapper {
   display: inline-block;
   clear: both;
