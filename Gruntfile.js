@@ -117,7 +117,6 @@ module.exports = function(grunt){
 
 
   grunt.registerTask('generate-assets', [
-    'clean',
     'copy',
     'replace',
     'sass'
