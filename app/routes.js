@@ -78,18 +78,14 @@ module.exports = {
 
 var protoVersionPath= "22";
  app.get("/"+protoVersionPath, function (req, res) {
-      res.render(protoVersionPath+'/index');
+      res.render(protoVersionPath+'/start/start_persephone1');
     });  
       
       
 //********************************
 // Start routes
 //********************************
-      
-    app.get('/'+protoVersionPath+'/start_persephone', function (req, res) {
-      res.render(protoVersionPath+'/start/start_persephone1');
-    });       
-      
+           
      app.get('/'+protoVersionPath+'/tsandcs', function (req, res) {
       res.render(protoVersionPath+'/start/tsandcs');
     });       
