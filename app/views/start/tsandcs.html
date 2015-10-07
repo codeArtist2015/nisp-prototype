@@ -1,0 +1,39 @@
+{% extends '../layouts/template.html' %}
+
+{% block title %}Check my State Pension{% endblock %}
+
+{% block serviceName %}Check my State Pension{% endblock %}
+
+{% block main %}
+
+{% include '../persephone_login.html' %}
+
+
+<div id="global-breadcrumb" class="header-context">
+    <ol role="breadcrumbs" class="group">
+      <li><a href="/dashboard-persephone-gaps1#lie-improve-sp-value">Check my State Pension home</a></li>
+    </ol>
+</div>
+
+ <div class="grid-row">
+    <div class="column-two-thirds">
+  
+     <h1>Your State Pension</h1>
+  <h2 class="heading-large">Guidance notes for the service</h2>
+         <p>The information provided is based on the rules of the new State Pension, which starts on 6 April 2016. In working out your estimate we have used a figure of £151.25 a week as the full rate of the new State Pension. The full rate has yet to be finalised.</p>
+
+		<p>This estimate is provided for your information only, you shouldn’t rely on it and it doesn’t amount to financial advice. When planning for your retirement, you should seek professional advice.</p>
+
+		<p>We can’t guarantee the amount in your estimate as it is based on information currently available and the rules when it was produced. We aren’t responsible for any losses or damages you incur by any reliance on this estimate and you shouldn’t enter into any financial commitment based on it.</p>
+
+		<p>You will pay Income Tax if your State Pension, along with other sources of income, exceeds your tax-free personal allowance.</p>
+    
+                <a href="javascript:window.history.back();" class="example-back-link">Back</a>
+					
+
+				</div><!-- /.column-two-thirds -->
+			
+           </div><!-- /.grid-row -->
+
+
+{% endblock %}

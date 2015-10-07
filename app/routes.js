@@ -13,7 +13,9 @@ module.exports = {
       res.render('start/start_persephone1');
     });       
       
-    
+     app.get('/tsandcs', function (req, res) {
+      res.render('start/tsandcs');
+    });       
 // End Start routes
       
       
@@ -35,6 +37,10 @@ module.exports = {
     app.get('/ni/ni-persephone-full5', function (req, res) {
       res.render('ni/ni-persephone-full5');
     });
+      
+    app.get('/ni/ni-persephone-fuller', function (req, res) {
+      res.render('ni/ni-persephone-fuller');
+    });      
 
     app.get('/ni/ni-check', function (req, res) {
       res.render('ni/ni-check');
