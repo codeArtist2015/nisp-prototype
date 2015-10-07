@@ -1,9 +1,13 @@
+
+
 module.exports = {
   bind : function (app) {
 
+      
     app.get('/', function (req, res) {
       res.render('index');
     });  
+      
       
 //********************************
 // Start routes
@@ -65,29 +69,79 @@ module.exports = {
       
 // End NI routes    
     
-    
-    app.get('/kitchen-sink', function (req, res) {
-      res.render('kitchen-sink',{"forms": req.session['ks']});
-    });
       
-    app.get('/end-page', function (req, res) {
-      res.render('end');
-    });
-      
-    app.post('/kitchen-sink', function (req, res) {
-        req.session.ks = req.body;
-        
-        var errors = new Object()
-        
-        if(req.session['ks']['fname'] == ""){ errors.fname = 'Please complete'; }
-        if(req.session['ks']['lname'] == ""){ errors.lname = 'Please complete'; }
-        if(req.session['ks']['info'] == ""){ errors.info = 'Please complete'; }
-        if(req.session['ks']['yesno'] == undefined){ errors.yesno = 'Please complete'; }
-           
-        if(Object.keys(errors).length == 0){
-            res.redirect("end-page");
-                }else{   res.render('kitchen-sink',{"forms": req.session['ks'],"errors":errors});    }
-    });
+//****--------------------------------------------------------------------------------------------------------*****//
+//****                                                                                                        *****//
+//****    Prototype Version: 22                                                                               *****//
+//****                                                                                                        *****//  
+//****--------------------------------------------------------------------------------------------------------*****//
 
+var protoVersionPath= "22";
+ app.get("/"+protoVersionPath, function (req, res) {
+      res.render(protoVersionPath+'/index');
+    });  
+      
+      
+//********************************
+// Start routes
+//********************************
+      
+    app.get('/'+protoVersionPath+'/start_persephone', function (req, res) {
+      res.render(protoVersionPath+'/start/start_persephone1');
+    });       
+      
+     app.get('/'+protoVersionPath+'/tsandcs', function (req, res) {
+      res.render(protoVersionPath+'/start/tsandcs');
+    });       
+// End Start routes
+      
+      
+//******************************** 
+// Dashboard routes
+//********************************
+      
+    app.get('/'+protoVersionPath+'/dashboard-persephone-gaps1', function (req, res) {
+      res.render(protoVersionPath+'/dashboard/dashboard-persephone-gaps1');
+    });
+      
+      
+// End Dashboard routes    
+    
+//********************************
+// NI routes
+//********************************
+    
+    app.get('/'+protoVersionPath+'/ni/ni-persephone-full5', function (req, res) {
+      res.render(protoVersionPath+'/ni/ni-persephone-full5');
+    });
+      
+    app.get('/'+protoVersionPath+'/ni/ni-persephone-fuller', function (req, res) {
+      res.render(protoVersionPath+'/ni/ni-persephone-fuller');
+    });      
+
+    app.get('/'+protoVersionPath+'/ni/ni-check', function (req, res) {
+      res.render(protoVersionPath+'/ni/ni-check');
+    });
+      
+    app.get('/'+protoVersionPath+'/ni/basket-toolate/:year', function (req, res) {        
+          res.render(protoVersionPath+'/ni/basket-toolate',{"year": req.params.year});
+    });
+      
+    app.get('/'+protoVersionPath+'/ni/basket-improve/:year/pay/:amount', function (req, res) {        
+          res.render(protoVersionPath+'/ni/basket-improve',{"year": req.params.year,"amount":req.params.amount});
+    });
+    app.get('/'+protoVersionPath+'/ni/basket-improve-emp-benefits/:year/pay/:amount/emp/:empAmount/ben/:benefitNum', function (req, res) {        
+          res.render(protoVersionPath+'/ni/basket-improve-emp-benefits',{"year": req.params.year,"amount":req.params.amount,
+                    "empAmount": req.params.empAmount, "benefitNum": req.params.benefitNum});
+    });      
+    
+    app.get('/'+protoVersionPath+'/ni/basket-improve-all/:year/pay/:amount/emp/:empAmount/ben/:benefitNum', function (req, res) {        
+          res.render(protoVersionPath+'/ni/basket-improve-all',{"year": req.params.year,"amount":req.params.amount,
+                    "empAmount": req.params.empAmount, "benefitNum": req.params.benefitNum});
+    });         
+      
+// End NI routes        
+    
+    
   }
 };
