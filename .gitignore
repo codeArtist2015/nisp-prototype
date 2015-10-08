@@ -3,4 +3,4 @@
 .start.pid
 govuk_modules
 node_modules/*
-!node_modules/nunjucks/src/filters.js
+!node_modules/nunjucks/*
