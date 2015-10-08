@@ -1,0 +1,54 @@
+{% extends '../layouts/template.html' %}
+
+{% block title %}Check my State Pension{% endblock %}
+
+{% block serviceName %}Check my State Pension{% endblock %}
+
+{% block main %}
+
+{% include '../persephone_login.html' %}
+
+
+<div id="global-breadcrumb" class="header-context">
+    <ol role="breadcrumbs" class="group">
+      <li><a href="/dashboard-persephone-gaps1#lie-improve-sp-value">Check my State Pension home</a></li>
+    </ol>
+</div>
+
+ <div class="grid-row">
+    <div class="column-two-thirds">
+  
+        <h1 class="heading-xlarge" style="margin: 1em 0 0">Your National Insurance record</h1> 
+        <p class="lede">You have 3 years where you can pay voluntary contributions to make them count towards your pension. You also have 2&nbsp;years that are too late to pay.</p>
+
+        <p><a href="/ni/ni-persephone-fuller">View your full National Insurance record</a></p>
+
+        {% include './ni_record_text.html' %}
+
+                 
+        <div class="ni-wrapper" style="padding-top: 40px;">
+          <div class="ni-years"><strong>Year</strong></div>
+          <div class="ni-cost"><strong>One-off cost</strong></div>
+          <div><strong>Last date you can pay</strong></div>
+          <div class="ni-action"></div>
+        </div>
+        
+         {% include './ni_table5.html' %}
+        
+<a href="javascript:window.history.back();" class="example-back-link">Back</a>
+					
+
+				</div><!-- /.column-two-thirds -->
+			
+
+			 <div class="column-third">
+					<div class="related" id="related">
+						<div class="inner group related-subsection">      
+						{% include './ni_side_bar.html' %}
+                        </div>
+                    </div>
+                </div> <!-- /.column-third -->
+                
+           </div><!-- /.grid-row -->
+
+{% endblock %}

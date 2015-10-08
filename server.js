@@ -44,12 +44,6 @@ app.use(function (req, res, next) {
   next();
 });
 
-
-//add post body
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
-
 // routes (found in app/routes.js)
 
 routes.bind(app);

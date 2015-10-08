@@ -1,9 +1,13 @@
+
+
 module.exports = {
   bind : function (app) {
 
+      
     app.get('/', function (req, res) {
       res.render('index');
     });  
+      
       
 //********************************
 // Start routes
@@ -65,29 +69,77 @@ module.exports = {
       
 // End NI routes    
     
-    
-    app.get('/kitchen-sink', function (req, res) {
-      res.render('kitchen-sink',{"forms": req.session['ks']});
-    });
-      
-    app.get('/end-page', function (req, res) {
-      res.render('end');
-    });
-      
-    app.post('/kitchen-sink', function (req, res) {
-        req.session.ks = req.body;
-        
-        var errors = new Object()
-        
-        if(req.session['ks']['fname'] == ""){ errors.fname = 'Please complete'; }
-        if(req.session['ks']['lname'] == ""){ errors.lname = 'Please complete'; }
-        if(req.session['ks']['info'] == ""){ errors.info = 'Please complete'; }
-        if(req.session['ks']['yesno'] == undefined){ errors.yesno = 'Please complete'; }
-           
-        if(Object.keys(errors).length == 0){
-            res.redirect("end-page");
-                }else{   res.render('kitchen-sink',{"forms": req.session['ks'],"errors":errors});    }
-    });
 
+           
+//****--------------------------------------------------------------------------------------------------------*****//
+//****                                                                                                        *****//
+//****    Prototype Version: XX                                                                               *****//
+//****                                                                                                        *****//  
+//****--------------------------------------------------------------------------------------------------------*****//
+
+ app.get("/:mvpversion", function (req, res) {
+      res.render(req.params.mvpversion+'/start/start_persephone1');
+ });  
+      
+      
+//********************************
+// Start routes
+//********************************
+           
+    app.get('/:mvpversion/tsandcs', function (req, res) {
+      res.render(req.params.mvpversion+'/start/tsandcs');
+    });       
+// End Start routes
+      
+      
+//******************************** 
+// Dashboard routes
+//********************************
+      
+    app.get('/:mvpversion/dashboard-persephone-gaps1', function (req, res) {
+      res.render(req.params.mvpversion+'/dashboard/dashboard-persephone-gaps1');
+    });
+      
+      
+// End Dashboard routes    
+    
+//********************************
+// NI routes
+//********************************
+    
+    app.get('/:mvpversion/ni/ni-persephone-full5', function (req, res) {
+      res.render(req.params.mvpversion+'/ni/ni-persephone-full5');
+    });
+      
+    app.get('/:mvpversion/ni/ni-persephone-fuller', function (req, res) {
+      res.render(req.params.mvpversion+'/ni/ni-persephone-fuller');
+    });      
+
+    app.get('/:mvpversion/ni/ni-check', function (req, res) {
+      res.render(req.params.mvpversion+'/ni/ni-check');
+    });
+      
+    app.get('/:mvpversion/ni/basket-toolate/:year', function (req, res) {        
+          res.render(req.params.mvpversion+'/ni/basket-toolate',{"year": req.params.year});
+    });
+      
+    app.get('/:mvpversion/ni/basket-improve/:year/pay/:amount', function (req, res) {        
+          res.render(req.params.mvpversion+'/ni/basket-improve',{"year": req.params.year,"amount":req.params.amount});
+    });
+    app.get('/:mvpversion/ni/basket-improve-emp-benefits/:year/pay/:amount/emp/:empAmount/ben/:benefitNum', function (req, res)     {        
+          res.render(req.params.mvpversion+'/ni/basket-improve-emp-benefits',{"year":           
+                    req.params.year,"amount":req.params.amount,
+                    "empAmount": req.params.empAmount, "benefitNum": req.params.benefitNum});
+    });      
+    
+    app.get('/:mvpversion/ni/basket-improve-all/:year/pay/:amount/emp/:empAmount/ben/:benefitNum', function (req, res) {        
+          res.render(req.params.mvpversion+'/ni/basket-improve-all',{"year": req.params.year,"amount":req.params.amount,
+            "empAmount": req.params.empAmount, "benefitNum": req.params.benefitNum});
+    });         
+      
+// End NI routes        
+      
+      
+    
   }
 };

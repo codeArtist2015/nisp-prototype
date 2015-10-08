@@ -1,0 +1,58 @@
+{% extends '../layouts/template.html' %}
+
+{% block title %}Check my State Pension{% endblock %}
+
+{% block serviceName %}Check my State Pension{% endblock %}
+
+{% block main %}
+
+{% include '../persephone_login.html' %}
+
+
+<div id="global-breadcrumb" class="header-context">
+    <ol role="breadcrumbs" class="group">
+      <li><a href="/dashboard-persephone-gaps1#lie-improve-sp-value">Check my State Pension home</a></li>
+    </ol>
+</div>
+
+ <div class="grid-row">
+    <div class="column-two-thirds">
+  
+      <h1> {{year|int}} - {{(year|int+1)|shorten(2,4)}}</h1>
+	     <h2 class="heading-medium"><strong>You have contributions from</strong></h2>
+                <p>Paid employment: <strong>£{{empAmount}}</strong></p>
+                <p>Self-employment: <strong>3 weeks</strong></p>
+
+                <p>Because you were claiming benefits or unable to work you received National Insurance credits for <strong>{{benefitNum}} weeks</strong></p>
+ 
+                   <p>If you think these details are wrong or you are entitled to credits because you were unemployed or unable to work, you may be able to <a href="/ni/ni-check">check and correct your National Insurance record</a> which can make years count towards your pension.</p>
+               <h2 class="heading-medium"><strong>Pay £{{amount}} to make up the shortfall </strong></h2> 
+             <p>This will improve your forecast from
+					 <br>
+            <img class="forcast-image" src="/public/images/forecast_plus_gaps.png"></p>
+            <p style="padding-top: 10px">To<br>
+            <img class="forcast-image" src="/public/images/page2_gap_added.png"></p>
+           
+ 
+           
+            	<p><a href="#" class="button">Continue to payment</a></p>
+           
+        
+                <a href="javascript:window.history.back();" class="example-back-link">Back</a>
+					
+
+				</div><!-- /.column-two-thirds -->
+			
+
+			 <div class="column-third">
+					<div class="related" id="related">
+						<div class="inner group related-subsection">      
+						{% include './ni_side_bar.html' %}
+                        </div>
+                    </div>
+                </div> <!-- /.column-third -->
+                
+           </div><!-- /.grid-row -->
+
+
+{% endblock %}
