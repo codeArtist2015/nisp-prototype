@@ -17,7 +17,7 @@ module.exports = {
       res.render('start/start_persephone1');
     });       
       
-     app.get('/tsandcs', function (req, res) {
+     app.get('/tsandcs132', function (req, res) {
       res.render('start/tsandcs');
     });       
 // End Start routes
@@ -51,20 +51,20 @@ module.exports = {
     });
       
     app.get('/ni/basket-toolate/:year', function (req, res) {        
-          res.render('ni/basket-toolate',{"year": req.params.year});
+          res.render('ni/basket-toolate', {"year": req.params.year});
     });
       
     app.get('/ni/basket-improve/:year/pay/:amount', function (req, res) {        
-          res.render('ni/basket-improve',{"year": req.params.year,"amount":req.params.amount});
+          res.render('ni/basket-improve', {"year": req.params.year, "amount":req.params.amount});
     });
     app.get('/ni/basket-improve-emp-benefits/:year/pay/:amount/emp/:empAmount/ben/:benefitNum', function (req, res) {        
-          res.render('ni/basket-improve-emp-benefits',{"year": req.params.year,"amount":req.params.amount,
-                    "empAmount": req.params.empAmount, "benefitNum": req.params.benefitNum});
+          res.render('ni/basket-improve-emp-benefits', {"year": req.params.year, "amount":req.params.amount,
+                     "empAmount": req.params.empAmount, "benefitNum": req.params.benefitNum});
     });      
     
     app.get('/ni/basket-improve-all/:year/pay/:amount/emp/:empAmount/ben/:benefitNum', function (req, res) {        
-          res.render('ni/basket-improve-all',{"year": req.params.year,"amount":req.params.amount,
-                    "empAmount": req.params.empAmount, "benefitNum": req.params.benefitNum});
+          res.render('ni/basket-improve-all', {"year": req.params.year, "amount":req.params.amount,
+                     "empAmount": req.params.empAmount, "benefitNum": req.params.benefitNum});
     });         
       
 // End NI routes    
@@ -78,7 +78,7 @@ module.exports = {
 //****--------------------------------------------------------------------------------------------------------*****//
 
  app.get("/:mvpversion", function (req, res) {
-      res.render(req.params.mvpversion+'/start/start_persephone1');
+      res.render(req.params.mvpversion+'/start/start_persephone1', {"mvpversion": req.params.mvpversion});
  });  
       
       
@@ -86,9 +86,9 @@ module.exports = {
 // Start routes
 //********************************
            
-    app.get('/:mvpversion/tsandcs', function (req, res) {
-      res.render(req.params.mvpversion+'/start/tsandcs');
-    });       
+app.get('/:mvpversion/tsandcs', function (req, res) {
+  res.render(req.params.mvpversion+'/start/tsandcs', {"mvpversion": req.params.mvpversion});
+});       
 // End Start routes
       
       
@@ -97,7 +97,7 @@ module.exports = {
 //********************************
       
     app.get('/:mvpversion/dashboard-persephone-gaps1', function (req, res) {
-      res.render(req.params.mvpversion+'/dashboard/dashboard-persephone-gaps1');
+      res.render(req.params.mvpversion+'/dashboard/dashboard-persephone-gaps1', {"mvpversion": req.params.mvpversion});
     });
       
       
@@ -108,33 +108,35 @@ module.exports = {
 //********************************
     
     app.get('/:mvpversion/ni/ni-persephone-full5', function (req, res) {
-      res.render(req.params.mvpversion+'/ni/ni-persephone-full5');
+      res.render(req.params.mvpversion+'/ni/ni-persephone-full5', {"mvpversion": req.params.mvpversion});
     });
       
     app.get('/:mvpversion/ni/ni-persephone-fuller', function (req, res) {
-      res.render(req.params.mvpversion+'/ni/ni-persephone-fuller');
+      res.render(req.params.mvpversion+'/ni/ni-persephone-fuller', {"mvpversion": req.params.mvpversion});
     });      
 
     app.get('/:mvpversion/ni/ni-check', function (req, res) {
-      res.render(req.params.mvpversion+'/ni/ni-check');
+      res.render(req.params.mvpversion+'/ni/ni-check', {"mvpversion": req.params.mvpversion});
     });
       
     app.get('/:mvpversion/ni/basket-toolate/:year', function (req, res) {        
-          res.render(req.params.mvpversion+'/ni/basket-toolate',{"year": req.params.year});
+          res.render(req.params.mvpversion+'/ni/basket-toolate', {"year": req.params.year,"mvpversion": req.params.mvpversion});
     });
       
     app.get('/:mvpversion/ni/basket-improve/:year/pay/:amount', function (req, res) {        
-          res.render(req.params.mvpversion+'/ni/basket-improve',{"year": req.params.year,"amount":req.params.amount});
+          res.render(req.params.mvpversion+'/ni/basket-improve', {"year":        
+            req.params.year,"amount":req.params.amount,"mvpversion": req.params.mvpversion});
     });
     app.get('/:mvpversion/ni/basket-improve-emp-benefits/:year/pay/:amount/emp/:empAmount/ben/:benefitNum', function (req, res)     {        
-          res.render(req.params.mvpversion+'/ni/basket-improve-emp-benefits',{"year":           
+          res.render(req.params.mvpversion+'/ni/basket-improve-emp-benefits', {"year":           
                     req.params.year,"amount":req.params.amount,
-                    "empAmount": req.params.empAmount, "benefitNum": req.params.benefitNum});
+                    "empAmount": req.params.empAmount, "benefitNum": req.params.benefitNum,"mvpversion": 
+                    req.params.mvpversion});
     });      
     
     app.get('/:mvpversion/ni/basket-improve-all/:year/pay/:amount/emp/:empAmount/ben/:benefitNum', function (req, res) {        
-          res.render(req.params.mvpversion+'/ni/basket-improve-all',{"year": req.params.year,"amount":req.params.amount,
-            "empAmount": req.params.empAmount, "benefitNum": req.params.benefitNum});
+          res.render(req.params.mvpversion+'/ni/basket-improve-all', {"year": req.params.year,"amount":req.params.amount,
+            "empAmount": req.params.empAmount, "benefitNum": req.params.benefitNum,"mvpversion": req.params.mvpversion});
     });         
       
 // End NI routes        
