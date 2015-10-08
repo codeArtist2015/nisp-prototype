@@ -1,6 +1,6 @@
 {% extends '../layouts/template.html' %}
 
-{% block title %}Check my State Pension{% endblock %}
+{% block title %}22 Check my State Pension - {{mvpversion}}{% endblock %}
 
 {% block serviceName %}Check my State Pension{% endblock %}
 
@@ -37,17 +37,14 @@
 								<p><strong>Amount if you continue to contribute until 2020</strong><br>
 								<img src="/public/images/page1_amount_retire.png"><br>
 							<span class="">which is £567 a month, £6,812 a year </span></p>
-							
-
-								
+															
 						</div><!-- /.tab-pane -->
-
 
 						<div class="tab-pane" id="improve-sp-value" style="display: none;">       
 
-						<div class="panel-1">
-							{% include './improve_message_gapsv5.html' %}
-						</div>
+                            <div class="panel-1">
+                                {% include './improve_message_gapsv5.html' %}
+                            </div>
 
 						</div><!-- /.tab-pane -->
 					</div><!-- /.tab-content --> 
