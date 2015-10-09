@@ -2,5 +2,13 @@
 .DS_Store
 .start.pid
 govuk_modules
-node_modules/*
-!node_modules/nunjucks/**
+node_modules/g*
+node_modules/b*
+node_modules/c*
+node_modules/e*
+node_modules/g*
+node_modules/h*
+node_modules/m*
+node_modules/r*
+node_modules/s*
+node_modules/node-sass/**
