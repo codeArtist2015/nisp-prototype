@@ -1918,3 +1918,49 @@ aside .page-navigation li span.part-number {
 
 .gird-2-3 {
   width: 66%; }
+
+/*----------------------------------*\
+    # Chart lines
+\*----------------------------------*/
+.chart-block {
+  clear: both;
+  margin-top: 25px; }
+
+.chart-block span.graph-title {
+  font-weight: 800;
+  font-size: 19px; }
+
+.chart-block .footnote {
+  margin-top: -15px;
+  margin-bottom: 25px;
+  display: inline-block; }
+
+.graph {
+  float: left;
+  width: 100%;
+  margin-top: -2px; }
+
+.graph li {
+  position: relative;
+  display: block;
+  border-bottom: 1px solid #EEE;
+  background: #C1DFE4;
+  height: 37px; }
+  @media only screen and (max-width: 640px) {
+    .graph li {
+      height: 27px;
+      margin-left: 0; } }
+
+.graph li .amount {
+  display: block;
+  height: 100%;
+  background: #28A197;
+  line-height: 1.6em;
+  color: #fff;
+  text-align: right;
+  padding-right: 10px;
+  font-size: 25px;
+  font-weight: 800; }
+  @media only screen and (max-width: 640px) {
+    .graph li .amount {
+      font-size: 20px; } }
