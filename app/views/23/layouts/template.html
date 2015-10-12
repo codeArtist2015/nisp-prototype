@@ -103,8 +103,16 @@
           <div class="header-proposition">
               <div class="content">
                 <nav id="proposition-menu">
-                  <a href="/" id="proposition-name">{% block serviceName %}Service Name{% endblock %}</a>
+                  <a href="/{{mvpversion}}" id="proposition-name">{% block serviceName %}Service Name{% endblock %}</a>
+                    {% if signout %}
+                        <nav id="proposition-links" style="float: right">  
+                              <li>
+                                <a href="/{{mvpversion}}/feedback" class="font-xsmall">Sign out</a>
+                              </li>
+                        </nav> 
+                    {% endif %}
                 </nav>
+                        
               </div>
           </div>          
       </div>
