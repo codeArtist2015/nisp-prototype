@@ -1,0 +1,35 @@
+{% extends '../layouts/template.html' %}
+
+{% block title %}Check my State Pension{% endblock %}
+
+{% block serviceName %}Check my State Pension{% endblock %}
+
+
+{% block main %}
+
+ <div class="grid-row">
+            <div class="column-two-thirds">    	
+		    	
+
+				<form action="/users/login" method="POST">
+					<div class="loginformfield">
+						<label for="username">
+							Username 
+						</label>
+						<input type="text" id="username" name="username" />
+					</div>
+					<div class="loginformfield">
+						<label for="password">
+							Password
+						</label>
+						<input type="password" id="password" name="password"  />
+					</div>
+					<button class="button" type="submit">
+						Sign in
+					</button>
+				</form>
+			</div>
+		</div>
+
+
+{% endblock %}

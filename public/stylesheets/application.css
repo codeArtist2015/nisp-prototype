@@ -1923,8 +1923,7 @@ aside .page-navigation li span.part-number {
     # Chart lines
 \*----------------------------------*/
 .chart-block {
-  clear: both;
-  margin-top: 25px; }
+  clear: both; }
 
 .chart-block span.graph-title {
   font-weight: 800;
