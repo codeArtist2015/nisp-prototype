@@ -6,7 +6,16 @@
 
 {% block main %}
 
-{% include '../persephone_login.html' %}
+{% if user.displayName %}
+
+<div id="login-msg-header">
+    <div style="padding: 12px 0 0; color: #666; line-height: 1;"><!-- class="inner-block" -->         
+       <div> 
+         <span class="font-xsmall"> Hello {{user.displayName}}: You last signed in 10:42am, 12 October 2014</span>
+        </div>
+    </div>
+</div>
+{% endif %}
 
  <div class="grid-row">
             <div class="column-two-thirds">
@@ -27,7 +36,7 @@
 
 							<div class="highlighted-event">
 								<p>If you continue to contribute to your National Insurance record your estimate in 2020 will be</p>
-								<p><em>£131 a week</em></p>
+								<p><em>£122 a week</em></p>
 							</div><!-- /.highlighted-event -->
 							<p>The amount shown is not a guarantee and is based on your National Insurance record using the latest complete tax year available, 5 April 2014. It assumes that you'll continue to contribute until you reach State Pension age in 2020. It doesn't include any increase due to inflation.</p>
 							                              
