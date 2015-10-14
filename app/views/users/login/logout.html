@@ -1,0 +1,29 @@
+{{<layout}}
+
+{{$pageTitle}}GOV.UK{{/pageTitle}}
+
+{{$content}}
+{{>beta_banner}}
+
+<main id="wrapper" role="main">
+  <article id="content">
+	  <div class="outer-block">
+      <div class="inner-block" style="margin-top:25px;">
+        <p>Thank you for using our service. You are now signed off.</p>
+        <p>This is a new service; <a href="/{{mvpVersion}}feedback">please answer these questions to help improve the service</a>.
+        
+        <h2 class="heading-medium">What you can do next</h2>
+        <ul class="list-bullet">
+          <li><a href="http://www.pensionwise.gov.uk">Pension Wise - understanding your pension options</a></li>
+          <li><a href="https://www.gov.uk/check-national-insurance-record">check your National Insurance record</a></li>         
+          <li><a href="https://www.gov.uk/contact-pension-service">contact the Pension Service</a></li>
+        </ul>
+        
+        <a id="Finished" href="/{{mvpVersion}}login" class="button">Done</a>
+      </div>
+	  </div>
+  </article>
+</main>
+
+{{/content}}
+{{/layout}}
