@@ -1,0 +1,9 @@
+{% if user.displayName %}
+<div id="login-msg-header">
+    <div style="padding: 12px 0 0; color: #666; line-height: 1;"><!-- class="inner-block" -->         
+       <div> 
+         <span class="font-xsmall"> Hello {{user.displayName}}: You last signed in 10:42am, 12 October 2014</span>
+        </div>
+    </div>
+</div>
+{% endif %}

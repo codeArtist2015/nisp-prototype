@@ -1,0 +1,118 @@
+{% extends '../layouts/template.html' %}
+
+{% block title %}Check my State Pension - {{user.id}}{% endblock %}
+
+{% block serviceName %}Check my State Pension{% endblock %}
+
+{% block main %}
+
+{% if user.displayName %}
+
+<div id="login-msg-header">
+    <div style="padding: 12px 0 0; color: #666; line-height: 1;"><!-- class="inner-block" -->         
+       <div> 
+         <span class="font-xsmall"> Hello {{user.displayName}}: You last signed in 10:42am, 12 October 2014</span>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+ <div class="grid-row">
+            <div class="column-two-thirds">
+
+					<h2 class="heading-large">Based on the current law, the earliest you can claim your State Pension is <br>1 December 2020, when you'll be 66.</h2>			  		       
+
+					<div class="tab-content">     		          
+
+						<div class="js-tabs nav-tabs">
+							<ul class="tabs-nav" role="tablist">
+								<li class="active"><a href="#current-sp-value" id="tab-current-sp-value">Forecast</a></li>
+								
+								<li><a href="#improve-sp-value" id="tab-improve-sp-value">How to increase your amount</a></li>
+							</ul>	  
+						</div>
+
+						<div class="tab-pane" id="current-sp-value" style="display: block;"> 
+
+							<div class="highlighted-event">
+								<p>If you continue to contribute to your National Insurance record your estimate in 2020 will be</p>
+								<p><em>£151 a week</em></p>
+							</div><!-- /.highlighted-event -->
+							<p>The amount shown is not a guarantee and is based on your National Insurance record using the latest complete tax year available, 5 April 2014. It assumes that you'll continue to contribute until you reach State Pension age in 2020. It doesn't include any increase due to inflation.</p>
+							                              
+                                
+                                <div class="chart-block">
+                                    <span class="graph-title">Amount based on your latest record. 26 years of full contributions</span>
+                                        <ul class="graph">
+                                            <li>                       
+                                                <span class="amount" style="width:{{110/131*100}}%">110 a week</span>
+                                            </li>
+                                        </ul>
+                                    <span class="footnote">which is £476 a month, £5,720 a year </span>
+                                </div>
+                            
+							  <div class="chart-block">
+                                    <span class="graph-title">Amount if you continue to contribute until 2020</span>
+                                        <ul class="graph">
+                                            <li>                       
+                                                <span class="amount" style="width:({{131/131*100}})%">131 a week</span>
+                                            </li>
+                                        </ul>
+                                    <span class="footnote">which is £567 a month, £6,812 a year </span>
+                                </div><br>
+															
+						</div><!-- /.tab-pane -->
+
+						<div class="tab-pane" id="improve-sp-value" style="display: none;">       
+
+                            <div class="panel-1">
+                                {% include './improve_message_gapsv5.html' %}
+                            </div>
+
+						</div><!-- /.tab-pane -->
+					</div><!-- /.tab-content --> 
+				</div><!-- /.inner -->
+			</div><!-- /.column-two-thirds -->
+
+
+
+<script type="text/javascript">
+
+
+
+jQuery(document).ready(function($){
+
+
+    $("a#tab-current-sp-value").click(function() { 
+        $(".tabs-nav li").removeClass("active");
+	
+        $(this).parent().addClass("active");
+        $("#current-sp-value").show();
+        $("#improve-sp-value").hide();
+        window.location.hash = "#lie-current-sp-value";
+        return false;
+    });
+    $("a#tab-improve-sp-value").click(function() { 
+        $(".tabs-nav li").removeClass("active");
+		
+        $(this).parent().addClass("active");
+        $("#improve-sp-value").show();
+        $("#current-sp-value").hide();
+        window.location.hash = "#lie-improve-sp-value";
+        return false;
+    });
+
+    if(window.location.hash === "#lie-current-sp-value") {
+        $("a#tab-current-sp-value").trigger('click');
+    }
+    else if (window.location.hash === "#lie-improve-sp-value") {
+        $("a#tab-improve-sp-value").trigger('click');
+    }
+});
+
+
+
+</script>
+
+
+{% endblock %}

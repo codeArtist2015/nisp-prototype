@@ -1,6 +1,14 @@
 var records = [
     { id: 1, username: 'jack', password: 'secret', displayName: 'Jack', emails: [ { value: 'jack@example.com' } ] }
-  , { id: 2, username: 'jill', password: 'one', displayName: 'Jill', emails: [ { value: 'jill@example.com' } ] }
+    , { id: 2, username: 'jill', password: 'one', displayName: 'Jill', emails: [ { value: 'jill@example.com' } ] }
+    , { id: 3, username: 'jill3', password: 'one', displayName: 'Jill3', emails: [ { value: 'jill@example.com' } ] }
+    , { id: 4, username: 'jill4', password: 'one', displayName: 'Jill4', emails: [ { value: 'jill@example.com' } ] }
+    , { id: 5, username: 'jill5', password: 'one', displayName: 'Jill5', emails: [ { value: 'jill@example.com' } ] }
+    , { id: 6, username: 'jill6', password: 'one', displayName: 'Jill6', emails: [ { value: 'jill@example.com' } ] }
+    , { id: 7, username: 'jill7', password: 'one', displayName: 'Jill7', emails: [ { value: 'jill@example.com' } ] }
+    , { id: 8, username: 'jill8', password: 'one', displayName: 'Jill8', emails: [ { value: 'jill@example.com' } ] }
+    , { id: 9, username: 'jill9', password: 'one', displayName: 'Jill9', emails: [ { value: 'jill@example.com' } ] }
+    , { id: 10, username: 'jill10', password: 'one', displayName: 'Jill10', emails: [ { value: 'jill@example.com' } ] }
 ];
 
 exports.findById = function(id, cb) {
