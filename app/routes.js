@@ -73,7 +73,7 @@ app.get('/users/dashboard',
       
 app.get('/users/dashboard-persephone-gaps1', function (req, res) {
       res.render(req.params.mvpversion+'/dashboard/dashboard-persephone-gaps1', {"mvpversion": req.params.mvpversion, "signout":true});
-    });
+});
       
       
 app.get('/users/ni/ni-persephone-full', 
@@ -96,7 +96,7 @@ app.get('/users/ni/ni-persephone-fuller',
           res.render('users/'+req.user.id+'/ni/basket-improve-emp-benefits', { user:req.user, "year":           
                     req.params.year,"amount":req.params.amount,
                     "empAmount": req.params.empAmount, "benefitNum": req.params.benefitNum, "signout":true});
-  });   
+ });   
 
 app.get('/users/ni/ni-check', 
         require('connect-ensure-login').ensureLoggedIn('/users/login'),
@@ -122,7 +122,7 @@ app.get('/users/ni/basket-toolate/:year',
         require('connect-ensure-login').ensureLoggedIn('/users/login'),
         function (req, res) {        
             res.render('users/'+req.user.id+'/ni/basket-toolate', { user: req.user, "year": req.params.year, "signout":true});
-    });      
+});      
       
 app.get('/users/start/tsandcs', function (req, res) {
   res.render('users/start/tsandcs', {"signout":false});
