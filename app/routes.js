@@ -71,11 +71,7 @@ app.get('/users/dashboard',
         res.render('users/'+req.user.id+'/dashboard/dashboard-persephone-gaps1', { user: req.user, "signout": true   });
 });
       
-app.get('/users/dashboard-persephone-gaps1', function (req, res) {
-      res.render(req.params.mvpversion+'/dashboard/dashboard-persephone-gaps1', {"mvpversion": req.params.mvpversion, "signout":true});
-});
-      
-      
+       
 app.get('/users/ni/ni-persephone-full', 
     require('connect-ensure-login').ensureLoggedIn('/users/login'),
     function (req, res) {
@@ -93,8 +89,8 @@ app.get('/users/ni/ni-persephone-fuller',
  app.get('/users/ni/basket-improve-emp-benefits/:year/pay/:amount/emp/:empAmount/ben/:benefitNum', 
          require('connect-ensure-login').ensureLoggedIn('/users/login'), 
          function (req, res)  {        
-          res.render('users/'+req.user.id+'/ni/basket-improve-emp-benefits', { user:req.user, "year":           
-                    req.params.year,"amount":req.params.amount,
+          res.render('users/'+req.user.id+'/ni/basket-improve-emp-benefits', { user:req.user, 
+                    "year":  req.params.year,"amount":req.params.amount,
                     "empAmount": req.params.empAmount, "benefitNum": req.params.benefitNum, "signout":true});
  });   
 
@@ -107,21 +103,22 @@ app.get('/users/ni/ni-check',
 app.get('/users/ni/basket-improve/:year/pay/:amount', 
          require('connect-ensure-login').ensureLoggedIn('/users/login'),
          function (req, res) {        
-            res.render('users/'+req.user.id+'/ni/basket-improve', { user: req.user, "year":        
-            req.params.year,"amount":req.params.amount, "signout":true});
+            res.render('users/'+req.user.id+'/ni/basket-improve', { user: req.user, 
+                    "year": req.params.year,"amount":req.params.amount, "signout":true});
 });      
       
 app.get('/users/ni/basket-improve-all/:year/pay/:amount/emp/:empAmount/ben/:benefitNum', 
          require('connect-ensure-login').ensureLoggedIn('/users/login'),
          function (req, res) {        
-            res.render('users/'+req.user.id+'/ni/basket-improve-all', { user: req.user, "year": req.params.year,"amount":req.params.amount,
-            "empAmount": req.params.empAmount, "benefitNum": req.params.benefitNum, "signout":true});
+            res.render('users/'+req.user.id+'/ni/basket-improve-all', { user: req.user, 
+                "year": req.params.year,"amount":req.params.amount, "empAmount": req.params.empAmount, 
+                "benefitNum": req.params.benefitNum, "signout":true});
 });       
 
 app.get('/users/ni/basket-toolate/:year', 
-        require('connect-ensure-login').ensureLoggedIn('/users/login'),
-        function (req, res) {        
-            res.render('users/'+req.user.id+'/ni/basket-toolate', { user: req.user, "year": req.params.year, "signout":true});
+    require('connect-ensure-login').ensureLoggedIn('/users/login'),
+    function (req, res) {        
+        res.render('users/'+req.user.id+'/ni/basket-toolate', { user: req.user, "year": req.params.year, "signout":true});
 });      
       
 app.get('/users/start/tsandcs', function (req, res) {
