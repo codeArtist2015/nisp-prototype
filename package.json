@@ -16,6 +16,7 @@
     "serve-favicon": "2.3.0",
     "body-parser": "^1.4.0",
     "multer": "1.0.5",
+    "basic-auth":"^1.0.3 ",
     "express-session": "1.11.3",
     "connect": "2.30.2",
     "consolidate": "0.x",
