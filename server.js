@@ -16,15 +16,6 @@ var path = require('path'),
     sessionKey = process.env.sessionKey || "ERieueijeeieiIUUXuxueue9UUU",
     env = process.env.NODE_ENV || 'development';
 
-// Authenticate against the environment-provided credentials, if running
-// the app in production (Heroku, effectively)
-if (env === 'production') {
-  if (!username || !password) {
-    console.log('Username or password is not set, exiting.');
-    process.exit(1);
-  }
-  app.use(express.basicAuth(username, password));
-}
 
 //nunjucks
 nunjucks.configure('app/views', {autoescape: true, express   : app, noCache :true });
