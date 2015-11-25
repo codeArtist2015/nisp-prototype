@@ -1,0 +1,36 @@
+{% extends '../layouts/template.html' %}
+
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+
+{% block serviceName %}Check my State Pension{% endblock %}
+
+
+{% block main %}
+
+ <div class="grid-row">
+            <div class="column-two-thirds">
+
+                 
+			{% include '../start/breadcrumb.html' %}
+
+
+			{% include '../start/start_text.html' %}
+					
+
+							<a id="Start" href="/{{mvpversion}}/dashboard-persephone-gaps1" role="button" class="button button-get-started" style="margin-top: 0">Start now</a>
+					<div class="panel-indent verify-block" style="margin-bottom: 10px">
+        <h2 class="verify-heading">
+          <img src="/public/images/verify-logo-inline.png" class="verify-logo" alt="">
+          <span style="font-weight:bold;">GOV.UK</span>
+          <br/> Verify
+        </h2><br/>
+        <p class="text">This service uses GOV.UK Verify to check your identity.</p>
+      </div>
+
+
+				</div><!-- /.column-two-thirds -->
+			</div>
+		
+
+{% endblock %}
+

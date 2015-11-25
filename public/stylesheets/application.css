@@ -1832,6 +1832,10 @@ aside .page-navigation li span.part-number {
   width: 25%;
   float: left; }
 
+.ni-shortfall {
+  width: 50%;
+  float: left; }
+
 .ni-payby {
   width: 25%;
   float: left; }
