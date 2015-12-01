@@ -8,61 +8,52 @@
 
 {% include '../persephone_login.html' %}
 
- <div class="grid-row">
-            <div class="column-two-thirds">
+<div class="grid-row">
+    <div class="column-two-thirds">
 
-					<h2 class="heading-large">Your State Pension</h2>			  		       
-<h3 class="heading-medium" style="margin: 10px 0 -10px 0">Summary</h3>   
-					<div class="tab-content">     		          
+        <h2 class="heading-large">Your State Pension</h2>
+        <h3 class="heading-medium" style="margin: 10px 0 -10px 0">Summary</h3>
+        <div class="tab-content">
 
-				
-						
+            <div class="highlighted-event">
+                <p>You can get your State Pension on 1&nbsp;December&nbsp;2020 when you'll be 66, your estimate is</p>
+                <p><em>£130 a week</em></p>
 
-							<div class="highlighted-event">
-								<p>You can get your State Pension on 1 December 2020 when you'll be 66, your estimate is</p>
-								<p><em>£130 a week</em></p>
-							</div><!-- /.highlighted-event -->
-							<p>The amount shown is not a guarantee and does not include any increase due to inflation.</p>
-							                              
-                                <h3 class="heading-medium">Breakdown</h3>   
-                                <div class="chart-block">
-                                    <div class="graph-title">Amount based on your latest National Insurance record (5 April 2015)</div>
-                                        <ul class="graph">
-                                            <li>                       
-                                                <span class="amount" style="width:{{75/100*100}}%">£110 a week</span>
-                                            </li>
-                                        </ul>
-                                    <span class="footnote">which is £476 a month, £5,720 a year </span>
-                                </div>
-                         
-                                <div class="chart-block">
-                                    <div class="graph-title">Amount if you continue to contribute NI until 2020</div>
-                                        <ul class="graph">
-                                            <li>                       
-                                                <span class="amount" style="width:{{90/100*100}}%">£130 a week</span>
-                                            </li>
-                                        </ul>
-                                    <span class="footnote">which is £567 a month, £6,812 a year </span>
-                                </div>
-							 
-										<h3 class="heading-medium">How to increase it</h3>  
-                                     <p>You have gaps on your record for years when you did not contribute enough National Insurance. You can make up the shortfall to make these years count toward your pension and improve your forecast.</p> <div class="chart-block">
-                                    <span class="graph-title">The maximum you can get by filling gaps in your NI record</span>
-                                        <ul class="graph">
-                                            <li>                       
-                                                <div class="amount" style="width:({{131/145*100}})%">£145 a week</div>
-                                            </li>
-                                        </ul>
-                                    <span class="footnote">which is £628 a month, £7,540 a year </span>
+            </div><!-- /.highlighted-event -->
 
-                                </div>  
-                                  <p><a href="ni/ni-persephone-full5">View your National Insurance record</a> to find out about filling gaps and making payments.</p>
-						</div><!-- /.tab-pane -->
+            <p>The amount shown is not a guarantee and does not include any increase due to inflation.</p>
 
-						
+            <h3 class="heading-medium">Breakdown</h3>
+            <div class="chart-block">
+                <div class="graph-title">Amount based on your latest National Insurance record (5 April 2015)</div>
+                <ul class="graph">
+                    <li><span class="amount" style="width:{{75/100*100}}%">£110 a week</span></li>
+                </ul>
+                <span class="footnote">which is £476 a month, £5,720 a year</span>
+            </div>
 
-					
-			</div><!-- /.column-two-thirds --> 
+            <div class="chart-block">
+                <div class="graph-title">Amount if you continue to contribute National Insurance until 2020</div>
+                <ul class="graph">
+                    <li><span class="amount" style="width:{{90/100*100}}%">£130 a week</span></li>
+                </ul>
+                <span class="footnote">which is £567 a month, £6,812 a year </span>
+            </div>
+
+            <h3 class="heading-medium">How to increase it</h3>
+            <p>You have gaps on your record for years when you did not contribute enough National Insurance. You can make up the shortfall to make these years count toward your pension and improve your forecast.</p>
+            <div class="chart-block">
+                <span class="graph-title">The maximum you can get by filling gaps in your NI record</span>
+                <ul class="graph">
+                    <li><div class="amount" style="width:({{131/145*100}})%">£145 a week</div></li>
+                </ul>
+                <span class="footnote">which is £628 a month, £7,540 a year </span>
+            </div>
+
+            <p><a href="ni/ni-persephone-full5">View your National Insurance record</a> to find out about filling gaps and making payments.</p>
+        </div><!-- /.tab-pane -->
+
+</div><!-- /.column-two-thirds --> 
             <div class="column-third">
                    <!-- <div class="related" id="related"  style="margin-top: 50px">
                         <div class="inner group related-subsection">      
@@ -74,13 +65,9 @@
            </div><!-- /.grid-row -->
 </div>
 
-
 <script type="text/javascript">
 
-
-
 jQuery(document).ready(function($){
-
 
     $("a#tab-current-sp-value").click(function() { 
         $(".tabs-nav li").removeClass("active");
@@ -109,9 +96,6 @@ jQuery(document).ready(function($){
     }
 });
 
-
-
 </script>
-
 
 {% endblock %}
