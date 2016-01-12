@@ -1594,28 +1594,6 @@ details .panel-indent {
   background: url("/public/images/icons/icon-important.png") no-repeat scroll 0 0.5em;
   padding-left: 55px; }
 
-#global-breadcrumb ol li a {
-  color: #0b0c0c; }
-
-#global-breadcrumb ol li strong {
-  font-weight: normal; }
-
-#global-breadcrumb ol li {
-  font-family: "nta",Arial,sans-serif;
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 400;
-  text-transform: none;
-  background-image: url(https://assets.digital.cabinet-office.gov.uk/static/separator-73822610794bc3a64871f144d93d6526.png);
-  background-position: 100% 50%;
-  background-repeat: no-repeat;
-  float: left;
-  list-style: none;
-  margin-left: 0;
-  margin-right: 0.5em;
-  margin-bottom: 0.4em;
-  padding-right: 1em; }
-
 .related-container {
   padding: 0 15px;
   -webkit-box-sizing: border-box;
@@ -1631,12 +1609,10 @@ details .panel-indent {
   margin-top: 40px; }
 
 .form-label {
-  margin-top: 30px;
   font-weight: bold; }
 
-.form-control {
-  height: 100px;
-  width: 640px; }
+.form-hint {
+  font-weight: 400; }
 
 aside .page-navigation li {
   list-style: decimal;
@@ -1890,36 +1866,6 @@ aside .page-navigation li span.part-number {
     padding-bottom: 5px; }
   .contributions-wrapper {
     margin-bottom: 0; } }
-
-#global-breadcrumb {
-  background-color: #fff;
-  max-width: 1020px;
-  margin: 0 auto;
-  z-index: 50; }
-
-#global-breadcrumb ol {
-  max-width: 960px;
-  margin: 0px;
-  padding: 2em 0 0.55em 0; }
-
-#global-breadcrumb ol li {
-  font-family: "nta", Arial, sans-serif;
-  line-height: 1.25;
-  font-weight: 400;
-  text-transform: none;
-  background-image: url(https://assets.digital.cabinet-office.gov.uk/static/separator-73822610794bc3a64871f144d93d6526.png);
-  background-position: 100% 50%;
-  background-repeat: no-repeat;
-  float: left;
-  list-style: none;
-  margin-left: 0;
-  margin-right: 0.5em;
-  margin-bottom: 0.4em;
-  padding-right: 1em; }
-
-#global-breadcrumb ol li a {
-  color: #005ea5;
-  font-size: 19px; }
 
 .gird-2-3 {
   width: 66%; }
