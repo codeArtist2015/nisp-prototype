@@ -213,7 +213,51 @@ app.get('/:mvpversion/tsandcs', authUtil.basicAuth(userId, pwd),
             });         
       
 // End NI routes        
-      
+
+
+
+
+// Ineligible users are routed to '/ineligible.html'
+
+app.get('/25/start/p60_question', function (req, res) {
+
+  var choose = req.query.choose;
+  
+
+  if (choose == "P60"){
+    res.render('25/start/p60_question');
+  } 
+ 
+ else if (choose == "Payslip") {
+    res.redirect('/25/start/payslip_question');
+  }
+
+  else if (choose == "No") {
+    res.redirect('/25/start/ineligible');
+  }
+
+ 
+  
+});
+
+// Write the user input to the check your answers page
+
+app.get('/check-your-answers-page', function (req, res) {
+
+  var feat = req.query.feat;
+
+  res.render('check-your-answers-page', { 'feat' : feat });
+  
+});
+
+
+
+ 
     
   }
 };
+
+
+
+
+
