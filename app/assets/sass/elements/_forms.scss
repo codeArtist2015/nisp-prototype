@@ -97,13 +97,7 @@ fieldset {
   @include media(tablet) {
     width: 50%;
   }
-
-  :focus {
-        outline: 3px solid $focus-colour;
-        border: none;
-  }
 }
-
 
 
 
