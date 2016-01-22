@@ -996,14 +996,43 @@ li .amount
 
 .form-label
 {
-font-size: 24px
+font-size: 24px;
+@media only screen and (max-width: 640px) {
+     font-size: 18px;
+
+  }
 }
 
 .form-hint
 {
-font-size: 19px
+font-size: 19px;
+@media only screen and (max-width: 640px) {
+     font-size: 16px;
+
+  }
 }
 
+.form-date .form-group {
+    float: left;
+    width: 50px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    clear: none;
+}
+
+.form-date .form-group input {
+    width: 100%;
+}
+
+.form-date .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.form-date .form-group-year {
+    width: 70px;
+}
 
 
 
