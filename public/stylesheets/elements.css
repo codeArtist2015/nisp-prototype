@@ -10,7 +10,7 @@
 @-o-viewport {
   width: device-width; }
 
-.grid-row:after, #content:after, fieldset:after, .form-group:after, .form-block:after, .panel-indent:after {
+.grid-row:after, #content:after, .panel-indent:after {
   content: "";
   display: block;
   clear: both; }
@@ -41,7 +41,7 @@
 @-o-viewport {
   width: device-width; }
 
-.grid-row:after, #content:after, fieldset:after, .form-group:after, .form-block:after, .panel-indent:after {
+.grid-row:after, #content:after, .panel-indent:after {
   content: "";
   display: block;
   clear: both; }
@@ -58,7 +58,7 @@
 @-o-viewport {
   width: device-width; }
 
-.grid-row:after, #content:after, fieldset:after, .form-group:after, .form-block:after, .panel-indent:after {
+.grid-row:after, #content:after, .panel-indent:after {
   content: "";
   display: block;
   clear: both; }
@@ -82,7 +82,7 @@
 @-o-viewport {
   width: device-width; }
 
-.grid-row:after, #content:after, fieldset:after, .form-group:after, .form-block:after, .panel-indent:after {
+.grid-row:after, #content:after, .panel-indent:after {
   content: "";
   display: block;
   clear: both; }
@@ -93,9 +93,11 @@
 @-o-viewport {
   width: device-width; }
 
-.example-highlight-grid .grid-row {
+.example-highlight-grid .grid-wrapper {
   background: #bfc1c3; }
-.example-highlight-grid .column-highlight {
+.example-highlight-grid .grid {
+  background: #f8f8f8; }
+.example-highlight-grid .is-inner-block-highlight {
   background: #dee0e2;
   width: 100%; }
 
@@ -113,9 +115,6 @@
   margin: -1px;
   padding: 0;
   border: 0; }
-
-.js-enabled .js-hidden {
-  display: none; }
 
 /* Borrowed from http://meyerweb.com/eric/tools/css/reset/ */
 div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark {
@@ -515,13 +514,14 @@ pre, code {
       float: left;
       width: 66.6666666667%; } }
 
-fieldset {
-  width: 100%; }
-
 .form-group {
-  float: left;
   width: 100%;
+  clear: both;
   margin-bottom: 15px; }
+  .form-group:after {
+    content: "";
+    display: block;
+    clear: both; }
   @media (min-width: 641px) {
     .form-group {
       margin-bottom: 30px; } }
@@ -535,15 +535,14 @@ fieldset {
 .form-group-compound {
   margin-bottom: 10px; }
 
+fieldset {
+  width: 100%; }
+
 .form-title {
   margin-bottom: 30px; }
   @media (min-width: 641px) {
     .form-title {
       margin-bottom: 45px; } }
-
-.form-label, .form-label-bold {
-  display: block;
-  color: #0b0c0c; }
 
 .form-label {
   font-family: "nta", Arial, sans-serif;
@@ -551,6 +550,7 @@ fieldset {
   line-height: 1.25;
   font-weight: 400;
   text-transform: none;
+  display: block;
   margin-bottom: 5px; }
   @media (min-width: 641px) {
     .form-label {
@@ -563,6 +563,7 @@ fieldset {
   line-height: 1.2;
   font-weight: 700;
   text-transform: none;
+  display: block;
   margin-bottom: 0; }
   @media (min-width: 641px) {
     .form-label-bold {
@@ -582,6 +583,10 @@ fieldset {
 .form-block {
   float: left;
   width: 100%; }
+  .form-block:after {
+    content: "";
+    display: block;
+    clear: both; }
 
 .form-hint {
   display: block;
@@ -603,7 +608,7 @@ fieldset {
   box-sizing: border-box;
   padding: 4px;
   background-color: #fff;
-  border: 1px solid #bfc1c3;
+  border: 2px solid #6f777b;
   -webkit-appearance: none;
   border-radius: 0; }
   @media (min-width: 641px) {
@@ -648,6 +653,13 @@ fieldset {
   vertical-align: middle;
   margin: -2px 5px 0 0; }
 
+@media (max-width: 640px) {
+  .form .button {
+    width: 100%; } }
+
+.js-enabled .toggle-content {
+  display: none; }
+
 .validation-summary {
   border: 3px solid #b10e1e;
   padding: 15px 30px;
@@ -690,32 +702,33 @@ fieldset {
       font-size: 16px;
       line-height: 1.25; } }
 
-input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0; }
+.date-of-birth label {
+  display: block;
+  margin-bottom: 5px; }
 
-input[type=number] {
-  -moz-appearance: textfield; }
-
-.form-date .form-group {
-  float: left;
+.date-of-birth .form-group {
   width: 50px;
+  float: left;
   margin-right: 20px;
-  margin-bottom: 0;
   clear: none; }
-  .form-date .form-group label {
-    display: block;
-    margin-bottom: 5px; }
-  .form-date .form-group input {
-    width: 100%; }
-.form-date .form-group-year {
+
+.date-of-birth .form-group-year {
   width: 70px; }
 
-@-ms-viewport {
-  width: device-width; }
+.date-of-birth .form-group input {
+  width: 100%; }
 
-@-o-viewport {
-  width: device-width; }
+.touchevents .date-of-birth {
+  display: none; }
+
+.no-touchevents .native-date-of-birth {
+  display: none; }
+
+.touchevents .native-date-of-birth {
+  display: block; }
+
+.touchevents input[type="date"] {
+  min-height: 36px; }
 
 .block-label {
   display: block;
@@ -733,27 +746,29 @@ input[type=number] {
       float: left;
       margin-top: 5px;
       margin-bottom: 5px; } }
-  .block-label input {
-    position: absolute;
-    top: 18px;
-    left: 15px;
-    cursor: pointer; }
-  .block-label:hover {
-    border-color: #0b0c0c; }
+
+.block-label:hover {
+  border-color: #0b0c0c; }
+
+.block-label input {
+  position: absolute;
+  top: 18px;
+  left: 15px;
+  cursor: pointer; }
 
 .inline .block-label {
   clear: none;
   margin-right: 15px; }
 
-.js-enabled label.selected {
-  background: #fff;
-  border-color: #0b0c0c; }
-
-.js-enabled label.focused {
+.js-enabled .add-focus {
   outline: 3px solid #ffbf47; }
 
-.js-enabled .focused input:focus {
+.js-enabled .block-label input:focus {
   outline: none; }
+
+.js-enabled .selected {
+  background: #fff;
+  border-color: #0b0c0c; }
 
 table {
   border-collapse: collapse;
