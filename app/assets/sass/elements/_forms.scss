@@ -1,17 +1,11 @@
 // Forms
 // ==========================================================================
 
-// Fieldset is used to group more than one .form-group
-fieldset {
-  width: 100%;
-  @extend %contain-floats;
-}
-
 // Form group is used to wrap label and input pairs
 .form-group {
-  float: left;
   width: 100%;
-  @extend %contain-floats;
+  clear: both;
+  @include contain-floats;
   margin-bottom: $gutter-half;
   @include media(tablet) {
     margin-bottom: $gutter;
@@ -29,6 +23,12 @@ fieldset {
   margin-bottom: 10px;
 }
 
+// Fieldset is used to group more than one .form-group
+fieldset {
+  width: 100%;
+}
+
+
 // Form title
 .form-title {
   margin-bottom: $gutter;
@@ -41,19 +41,15 @@ fieldset {
 // Labels
 
 // Form labels, or for legends styled to look like labels
-.form-label,
-.form-label-bold {
-  display: block;
-  color: $text-colour;
-}
-
 .form-label {
   @include core-19;
+  display: block;
   margin-bottom: 5px;
 }
 
 .form-label-bold {
   @include bold-24;
+  display: block;
   margin-bottom: 0;
   .form-hint {
     @include core-19;
@@ -64,7 +60,7 @@ fieldset {
 .form-block {
   float: left;
   width: 100%;
-  @extend %contain-floats;
+  @include contain-floats;
 }
 
 
@@ -92,7 +88,7 @@ fieldset {
   @include box-sizing(border-box);
   padding: 4px;
   background-color: $white;
-  border: 1px solid $border-colour;
+  border: 2px solid $secondary-text-colour;
 
   // Disable webkit appearance and remove rounded corners
   -webkit-appearance: none;
@@ -102,6 +98,7 @@ fieldset {
     width: 50%;
   }
 }
+
 
 
 // Form control widths
@@ -149,11 +146,24 @@ fieldset {
   margin: -2px 5px 0 0;
 }
 
+// Buttons
+.form .button {
+  @include media(mobile) {
+    width: 100%;
+  }
+}
+
+// Hide toggled content
+.js-enabled .toggle-content {
+    display: none;
+}
+
 
 // Form validation
 @import "forms/form-validation";
 
 
 // Form patterns
-@import "forms/form-date";
-@import "forms/form-block-labels";
+@import "forms/form-date-of-birth";
+
+@import "forms/form-chunky-labels";
