@@ -1,72 +1,64 @@
 {% extends '../layouts/template.html' %}
-
 {% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
-
 {% block serviceName %}{% endblock %}
-
-
 {% block main %}
+
 <div class="grid-row">
-            <div class="column-two-thirds">
+  <div class="column-two-thirds">
 
-          <h2 class="heading-large">Your State Pension</h2>                  
-<h3 class="heading-medium" style="margin: 10px 0 -10px 0">Summary</h3>   
-          <div class="tab-content">                   
+    <h1 class="heading-large">Your State Pension</h1>
+    <h3 class="heading-medium" style="margin: 10px 0 -10px 0">Summary</h3>
 
+    <div class="tab-content">
+      <div class="highlighted-event">
+
+        <p>You can get your State Pension on 1&nbsp;December&nbsp;2025 when you'll be 67, your estimate is</p>
+        <p><em>£151.25 a week</em></p>
+        <p>£655 a month, £7,865 a year</p>
+
+      </div><!-- /.highlighted-event -->
+
+      <p>Your estimate</p>
+      <ul class="list-bullet">
+        <li>is not guaranteed</li>
+        <li> assumes you'll have at least 5 more years National Insurance contributions by 1&nbsp;December&nbsp;2025</li>
+        <li>does not include any increase due to inflation</li>
+      </ul>
+
+      <h3 class="heading-medium">Breakdown</h3>
+
+      <div class="chart-block"  style="margin-bottom: 80px">
+        <div class="graph-title">Amount based on your latest National Insurance record (5 April 2015)</div>
         
-            
+        <ul class="graph">
+          <li><span class="amount" style="width:{{75/100*100}}%">£110 a week</span></li>
+        </ul>
+      
+      </div>
+      <div class="chart-block" style="margin-bottom: 80px">
+        <div class="graph-title">Amount if you continue to contribute National Insurance</div>
+        
+        <ul class="graph">
+          <li><span class="amount" style="width:{{100/100*100}}%">£151.25 a week</span></li>
+        </ul>
 
-              <div class="highlighted-event">
-                <p>You can get your State Pension on 1 December 2025 when you'll be 67, your estimate is</p>
-                <p><em>£151.25 a week</em></p>
-                                <p>£655 a month, £7,865 a year</p>
-              </div><!-- /.highlighted-event -->
-              <p>Your estimate
-                <ul class="list-bullet"><li>is not guaranteed</li>
-                  <li> assumes you'll have at least 5 years more National Insurance contributions by 1 December 2025</li><li>does not include any increase due to inflation</li></ul>
-                                            
-                                <h3 class="heading-medium">Breakdown</h3>   
-                                <div class="chart-block"  style="margin-bottom: 80px">
-                                    <div class="graph-title">Amount based on your latest National Insurance record (5 April 2015)</div>
-                                        <ul class="graph">
-                                            <li>                       
-                                                <span class="amount" style="width:{{75/100*100}}%">£110 a week</span>
-                                            </li>
-                                        </ul>
-                                    
-                                </div>
-                         
-                                <div class="chart-block" style="margin-bottom: 80px">
-                                    <div class="graph-title">Amount if you continue to contribute NI </div>
-                                        <ul class="graph">
-                                            <li>                       
-                                                <span class="amount" style="width:{{100/100*100}}%">£151.25 a week</span>
-                                            </li>
-                                        </ul>
-                                  
-                                </div>
-               
-                    
-                                     <p>If you reach your forecast you cannot improve your pension any further because this is the <a href="https://www.gov.uk/new-state-pension/overview">full State Pension</a>.</p> 
-                                  
-                                  <p><a href="/25/start/extra_security">View your National Insurance record</a> 
-            </div><!-- /.tab-pane -->
+      </div>
 
-            
+      <p>If you reach your forecast you cannot improve your pension any further because this is the <a href="https://www.gov.uk/new-state-pension/overview">full State Pension</a>.</p>
+      <a href="/25/start/extra_security">View your National Insurance record</a>
 
-          
-      </div><!-- /.column-two-thirds --> 
-            <div class="column-third">
-                  <div class="related" id="related"  style="margin-top: 50px">
-                        <div class="inner group related-subsection">      
-                        {% include '../dashboard/help.html' %}
-                        </div>
-                    </div>
-                </div> <!-- /.column-third -->
-                
-           </div><!-- /.grid-row -->
+      </div><!-- /.tab-pane -->
+    </div><!-- /.column-two-thirds -->
+    <div class="column-third">
+      <div class="related" id="related"  style="margin-top: 50px">
+        <div class="inner group related-subsection">
+
+          {% include '../dashboard/help.html' %}
+
+        </div>
+      </div>
+    </div> <!-- /.column-third -->
+  </div><!-- /.grid-row -->
 </div>
 		
-
 {% endblock %}
-
