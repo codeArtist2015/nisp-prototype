@@ -31,10 +31,12 @@
 
 // Position checkbox within label, to allow text to wrap
 .block-label input {
-  position: absolute;
-  top: 18px;
-  left: $gutter-half;
-  cursor: pointer;
+    position: absolute;
+    top: 14px;
+    left: $gutter-half;
+    cursor: pointer;
+    width:29px;
+    height:29px;
 }
 
 // Use inline, to sit block labels next to each other
