@@ -1,0 +1,71 @@
+{% extends '../layouts/template.html' %}
+
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+
+{% block serviceName %}Check my State Pension{% endblock %}
+
+{% block main %}
+
+{% include '../persephone_login.html' %}
+
+
+<a href="/{{mvpversion}}/ni/ni-persephone-full5" class="example-back-link">Back</a>
+
+ <div class="grid-row">
+    <div class="column-two-thirds">
+  
+      <h1> {{year|int}} - {{(year|int+1)|shorten(2,4)}}</h1>
+	     <h2 class="heading-medium"><strong>1. Check contributions you made from</strong></h2>
+                   <p>Paid employment: <strong>£{{empAmount}}</strong></p>
+                   
+
+                    
+                        <p>When you were claiming benefits or unable to work you received National Insurance credits for <strong>{{benefitNum}} weeks</strong></p>
+                    
+                      
+                   <p>You should check your contributions before making payments. If they're wrong or missing you may be able to correct them which can make years count towards your pension.<p><a href="/{{mvpversion}}/ni/ni-check">More on gaps and how to check them</a>. </p>
+               <h2 class="heading-medium"><strong>2. Pay £{{amount}} to make up the shortfall </strong></h2> 
+            
+					  <div class="chart-block">
+                                    <div class="graph-title">Filling 1 gap will improve your pension forecast from</div>
+                                        <ul class="graph">
+                                            <li>                       
+                                                <span class="amount" style="width:{{90/100*100}}%">£130 a week</span>
+                                            </li>
+                                        </ul>
+                                    <span class="footnote">which is £476 a month, £5,720 a year </span>
+                                </div>
+                         
+                                <div class="chart-block">
+                                    <div class="graph-title">To</div>
+                                        <ul class="graph">
+                                            <li>                       
+                                                <span class="amount" style="width:{{93/100*100}}%">£135 a week</span>
+                                            </li>
+                                        </ul>
+                                    <span class="footnote">which is £567 a month, £6,812 a year </span>
+                                </div>
+ 
+           
+            	<p><a href="#" class="button">Continue to payment</a></p>
+           
+        
+                <a href="/{{mvpversion}}/ni/ni-persephone-full5" class="example-back-link">Back</a>
+					
+
+				</div><!-- /.column-two-thirds -->
+			
+
+			 <div class="column-third">
+					   <div class="related" id="related">
+                        <div class="inner group related-subsection">      
+         
+            {% include '../dashboard/help.html' %}
+                        </div>
+                    </div>
+                </div> <!-- /.column-third -->
+                
+           </div><!-- /.grid-row -->
+
+
+{% endblock %}
