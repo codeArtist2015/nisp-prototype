@@ -752,9 +752,11 @@ fieldset {
 
 .block-label input {
   position: absolute;
-  top: 18px;
+  top: 14px;
   left: 15px;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 29px;
+  height: 29px; }
 
 .inline .block-label {
   clear: none;
@@ -1979,3 +1981,6 @@ li .amount {
 
 .form-date .form-group-year {
   width: 70px; }
+
+.block-label input {
+  left: 5px; }
