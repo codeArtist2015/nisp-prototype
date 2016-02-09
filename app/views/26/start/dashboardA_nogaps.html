@@ -1,74 +1,59 @@
 {% extends '../layouts/template.html' %}
-
 {% block title %}Check your State Pension - {{mvpversion}}{% endblock %}
-
-
 {% block serviceName %}Check your State Pension{% endblock %}
-
-
-
 {% block main %}
- <div class="grid-row">
-            <div class="column-two-thirds">
 
-          <h2 class="heading-large">Your State Pension</h2>                  
-<h3 class="heading-medium" style="margin: 10px 0 -10px 0">Summary</h3>   
-          <div class="tab-content">                   
+<div class="grid-row">
+  <div class="column-two-thirds">
 
-        
-            
+    <h2 class="heading-large">Your State Pension</h2>
+    <h3 class="heading-medium" style="margin: 10px 0 -10px 0">Summary</h3>
 
-              <div class="highlighted-event">
-                <p>You can get your State Pension on 1 December 2020 when you'll be 66, your estimate is</p>
-                <p><em>£130 a week</em></p>
-                                <p>£567 a month, £6,812 a year</p>
-              </div><!-- /.highlighted-event -->
-           <p>Your estimate
-                <ul class="list-bullet"><li>is not guaranteed</li>
-                 <li>does not include any increase due to inflation</li></ul>
-                                            
-                                            
-                                <h3 class="heading-medium">Breakdown</h3>   
-                                <div class="chart-block"  style="margin-bottom: 80px">
-                                    <div class="graph-title">Amount based on your latest National Insurance record (5 April 2015)</div>
-                                        <ul class="graph">
-                                            <li>                       
-                                                <span class="amount" style="width:{{75/100*100}}%">£110 a week</span>
-                                            </li>
-                                        </ul>
-                                  
-                                </div>
-                         
-                                <div class="chart-block" style="margin-bottom: 80px">
-                                    <div class="graph-title">Amount if you contribute to contribute until 2020</div>
-                                        <ul class="graph">
-                                            <li>                       
-                                                <span class="amount" style="width:{{100/100*100}}%">£130 a week</span>
-                                            </li>
-                                        </ul>
-                                  
-                                </div>
-              
-                                <h3 class="heading-medium">This is the most you can get</h3>
-                                  <p><a href="#">View your National Insurance record</a> 
-                                 
-            </div><!-- /.tab-pane -->
+    <div class="tab-content">
+      <div class="highlighted-event">
 
-            
+        <p>You can get your State Pension on 1&nbsp;December&nbsp;2020 when you'll be 66, your estimate is</p>
+        <p><em>£130 a week</em></p>
+        <p>£567 a month, £6,812 a year</p>
 
-          
-      </div><!-- /.column-two-thirds --> 
-            <div class="column-third">
-                  <div class="related" id="related"  style="margin-top: 50px">
-                        <div class="inner group related-subsection">      
-                        {% include '../dashboard/help.html' %}
-                        </div>
-                    </div>
-                </div> <!-- /.column-third -->
-                
-           </div><!-- /.grid-row -->
+      </div><!-- /.highlighted-event -->
+
+      <p>Your estimate</p>
+      <ul class="list-bullet">
+        <li>is not guaranteed</li>
+        <li>does not include any increase due to inflation</li>
+      </ul>
+
+      <h3 class="heading-medium">Breakdown</h3>
+      <div class="chart-block"  style="margin-bottom: 80px">
+        <div class="graph-title">Amount based on your latest National Insurance record (5 April 2015)</div>
+        <ul class="graph">
+          <li><span class="amount" style="width:{{75/100*100}}%">£110 a week</span></li>
+        </ul>
+      </div>
+
+      <div class="chart-block" style="margin-bottom: 80px">
+        <div class="graph-title">Amount if you contribute to contribute until 2020</div>
+        <ul class="graph">
+          <li><span class="amount" style="width:{{100/100*100}}%">£130 a week</span></li>
+        </ul>
+      </div>
+
+      <h3 class="heading-medium">This is the most you can get</h3>
+      <p><a href="/25/start/extra_security">View your National Insurance record</a></p>
+
+    </div><!-- /.tab-pane -->
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third">
+    <div class="related" id="related"  style="margin-top: 50px">
+      <div class="inner group related-subsection">
+
+        {% include '../dashboard/help.html' %}
+
+      </div>
+    </div>
+  </div><!-- /.column-third -->
+</div><!-- /.grid-row -->
 </div>
-		
 
 {% endblock %}
-

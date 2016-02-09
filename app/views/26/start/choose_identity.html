@@ -1,60 +1,43 @@
 {% extends '../layouts/template.html' %}
-
 {% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
-
 {% block serviceName %}{% endblock %}
-
-
 {% block main %}
+
 <div class="grid-row">
-            <div class="column-two-thirds">
+  <div class="column-two-thirds">
 
-					<h1>Choose a way for us to identify you</h1>
-					<p class="lede">We’ll ask you a security question that relates to your</p>
-<form class="form" action="p60_question">
-					  <div class="form-group">
-    
+    <h1>Choose a way for us to identify you</h1>
+    <p class="lede">We’ll ask you a security question that relates to your</p>
+    <form class="form" action="p60_question">
 
- 
-    <fieldset>
+      <div class="form-group">
 
-      <legend class="visuallyhidden">Choose which evidence your have</legend>
+        <fieldset>
+          <legend class="visuallyhidden">Choose which evidence your have</legend>
+          
+          <label class="block-label" for="radio-1">
+            <input id="radio-1" type="radio" name="choose" value="P60">P60 (2014-15)
+          </label>
 
-      <label class="block-label" for="radio-1">
-        <input id="radio-1" type="radio" name="choose" value="P60">
-       P60 (2014-15)
-      </label>
-      <label class="block-label" for="radio-2">
-        <input id="radio-2" type="radio" name="choose" value="Payslip">
-        Payslip
-      </label>
-      <p class="form-block">or</p>
-      <label class="block-label" for="radio-3">
-        <input id="radio-3" type="radio" name="choose" value="No">
-    I don’t have any of these
-      </label>
+          <label class="block-label" for="radio-2">
+            <input id="radio-2" type="radio" name="choose" value="Payslip">Payslip
+          </label>
 
-    </fieldset>
- 
+          <p class="form-block">or</p>
+
+          <label class="block-label" for="radio-3">
+            <input id="radio-3" type="radio" name="choose" value="No">I don’t have any of these
+          </label>
+
+        </fieldset>
 
         <div class="form-group"><br>
           <input class="button" type="submit" value="Continue">
         </div>
       </div>
+    </form>
 
-
-      </form>
-					
-					
-					
-					
-
-						
-					
-
-					</div><!-- /.column-two-thirds -->
-				</div>
-		
+  </div><!-- /.column-two-thirds -->
+</div>
 
 {% endblock %}
-

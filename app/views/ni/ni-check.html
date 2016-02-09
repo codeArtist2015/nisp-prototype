@@ -1,60 +1,48 @@
 {% extends '../layouts/template.html' %}
-
 {% block title %}Check my State Pension{% endblock %}
-
 {% block serviceName %}Check my State Pension{% endblock %}
-
 {% block main %}
-
 {% include '../persephone_login.html' %}
 
-
 <div id="global-breadcrumb" class="header-context">
-    <ol role="breadcrumbs" class="group">
-        <li><a href="/dashboard-persephone-gaps1#lie-improve-sp-value">Check my State Pension home</a></li>
-        <li><a href="ni-persephone-full5">National Insurance record</a></li>
-    </ol>
+	<ol role="breadcrumbs" class="group">
+		<li><a href="/dashboard-persephone-gaps1#lie-improve-sp-value">Check my State Pension home</a></li>
+		<li><a href="ni-persephone-full5">National Insurance record</a></li>
+	</ol>
 </div>
 
- <div class="grid-row">
-    <div class="column-two-thirds">
-  
-     <h1 class="heading-xlarge" style="margin: 1em 0 0">Check and correct your National Insurance record</h1>  
-          <p class="lede">If you think your details are wrong you may be able to correct them. If you were unemployed or unable to work you may be entitled to claim National Insurance credits. Correcting your record or claiming credits may make years count towards your State Pension.</p>
+<div class="grid-row">
+	<div class="column-two-thirds">
 
-          
-<h2 class="heading-medium">How to check and correct your record</h2>
+		<h1 class="heading-xlarge" style="margin: 1em 0 0">Check and correct your National Insurance record</h1>
+		<p class="lede">If you think your details are wrong you may be able to correct them. If you were unemployed or unable to work you may be entitled to claim National Insurance credits. Correcting your record or claiming credits may make years count towards your State Pension.</p>
 
-<!--<table><tr><th>Contribution</th><th>How to check it</th><th>How to correct it</th></tr>
-<tr><td>Paid employment</td><td>Check the NI contributions in your record against P60s from your employers.</td><td>You can <a href="">download</a> or <a href="">request</a> a form  and return it with your evidence</td></tr></table>-->
-<p><strong>Paid employment</strong><br>
-Check the contributions in your record against P60s from your employers.</p>
+		<h2 class="heading-medium">How to check and correct your record</h2>
 
-<p><strong>Self-employment and voluntary contributions</strong><br>
-  Check the contributions in your record against your personal accounts, for instance if you made payments by cheque or through your bank.</p>
-  <p>If you think your details are wrong you can <a href="">download</a> a form and return it with your evidence.</p>
+		<!--<table><tr><th>Contribution</th><th>How to check it</th><th>How to correct it</th></tr>
+		<tr><td>Paid employment</td><td>Check the NI contributions in your record against P60s from your employers.</td><td>You can <a href="">download</a> or <a href="">request</a> a form  and return it with your evidence</td></tr></table>-->
 
-  <h2 class="heading-medium"><strong>National Insurance credits</strong></h2>
+		<p><strong>Paid employment</strong><br>Check the contributions in your record against P60s from your employers.</p>
+		<p><strong>Self-employment and voluntary contributions</strong><br>Check the contributions in your record against your personal accounts, for instance if you made payments by cheque or through your bank.</p>
+		<p>If you think your details are wrong you can <a href="">download</a> a form and return it with your evidence.</p>
 
-<p>If you were claiming benefits because you were unable to work, unemployed or caring for someone full time, these should have been credited automatically. If you think you were entitled to credits that are not on your record, check <a href="https://www.gov.uk/national-insurance-credits/eligibility">eligibility for credits</a> and find out how to get them.</p>
-        
-<a href="javascript:window.history.back();" class="example-back-link">Back</a>
-					
+		<h2 class="heading-medium"><strong>National Insurance credits</strong></h2>
+		<p>If you were claiming benefits because you were unable to work, unemployed or caring for someone full time, these should have been credited automatically. If you think you were entitled to credits that are not on your record, check <a href="https://www.gov.uk/national-insurance-credits/eligibility">eligibility for credits</a> and find out how to get them.</p>
+		<a href="javascript:window.history.back();" class="example-back-link">Back</a>
 
-				</div><!-- /.column-two-thirds -->
-			
+	</div><!-- /.column-two-thirds -->
+	<div class="column-third">
+		<div class="related" id="related">
+			<div class="inner group related-subsection">
 
-			 <div class="column-third">
-					<div class="related" id="related">
-						<div class="inner group related-subsection">      
-						{% include './ni_side_bar.html' %}
-                        </div>
-                    </div>
-                </div> <!-- /.column-third -->
-                
-           </div><!-- /.grid-row -->
+				{% include './ni_side_bar.html' %}
+
+			</div>
+		</div>
+	</div> <!-- /.column-third -->
+</div><!-- /.grid-row -->
+
 <script>
-
 
 jQuery(document).ready(function($){
 	var allPanels = $('.accordion > dd').hide();
@@ -72,7 +60,6 @@ jQuery(document).ready(function($){
 		}
 	});
 });
-
 
 </script>
 
