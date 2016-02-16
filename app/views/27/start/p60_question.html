@@ -1,50 +1,35 @@
 {% extends '../layouts/template.html' %}
-
 {% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
-
 {% block serviceName %}{% endblock %}
-
-
 {% block main %}
+
 <div class="grid-row">
-            <div class="column-two-thirds">
+  <div class="column-two-thirds">
 
-					<h1>Your Pay</h1>
-				
-<form class="form" action="/25/ni/ni-persephone-full5">
-	
-  <label class="form-label text" for="ni-number">
-    How much was your total pay on any P60 in the tax year 2014 to 2015?
-    <span class="form-hint">Enter the exact amount, including pence. For example 2379.67</span>
-  </label>
-  £ <input class="form-control" style="width: 160px" type="text">
+    <h1>Your pay</h1>
+    <form class="form" action="/25/ni/ni-persephone-full5">
+    
+      <label class="form-label text" for="ni-number">How much was your total pay on any P60 in the tax year 2014 to 2015?
+        <span class="form-hint">Enter the exact amount, including pence. For example 2379.67</span>
+      </label>
+      £ <input class="form-control" style="width: 160px" type="text">
+      <br><br>
 
-
-<br><br>
-     <details class="details" style="margin: 30px 0 30px 0">
-            <summary role="button" aria-controls="details-content-0" tabindex="0" aria-expanded="true">Where to find your total pay details</summary>
-            <div id="details-content-0" aria-hidden="false" style="display: block;">
-            <p>You can find the amount on any P60 relating to that period. </p>
-            <img width="600" src="http://iv-prototype.herokuapp.com/public/images/P60-form-rti-p60-payment-for-year.jpg" alt="Image of sample p60 with total pay field highlighted">
-            </div>
-        </details>
-
-        <div class="form-group">
-          <input class="button" type="submit" value="Continue">
+      <details class="details" style="margin: 30px 0 30px 0">
+        <summary role="button" aria-controls="details-content-0" tabindex="0" aria-expanded="true">Where to find your total pay details</summary>
+        <div id="details-content-0" aria-hidden="false" style="display: block;">
+          <p>You can find the amount on any P60 relating to that period.</p>
+          <img width="600" src="http://iv-prototype.herokuapp.com/public/images/P60-form-rti-p60-payment-for-year.jpg" alt="Image of sample p60 with total pay field highlighted">
         </div>
+      </details>
 
-      </form>
-					
-					
-					
-					
+      <div class="form-group">
+        <input class="button" type="submit" value="Continue">
+      </div>
+    
+    </form>
 
-						
-					
-
-					</div><!-- /.column-two-thirds -->
-				</div>
-		
+  </div><!-- /.column-two-thirds -->
+</div>
 
 {% endblock %}
-

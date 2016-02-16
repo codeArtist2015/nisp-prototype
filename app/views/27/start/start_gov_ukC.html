@@ -1,43 +1,34 @@
 {% extends '../layouts/template.html' %}
-
 {% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
-
 {% block serviceName %}{% endblock %}
-
-
 {% block main %}
+
 <div class="grid-row">
-            <div class="column-two-thirds">
-{% include '../start/start_gov_text_intro.html' %}
-<a id="Start" href="start_landingC" role="button" class="button button-get-started" style="margin-top: 0">Start now</a>
-{% include '../start/start_gov_text_outro.html' %}
+  <div class="column-two-thirds">
 
-        </div><!-- /.column-two-thirds -->
+    {% include '../start/start_gov_text_intro.html' %}
 
-					  <div class="column-third">
+    <a id="Start" href="start_landingC" role="button" class="button button-get-started" style="margin-top: 0">Start now</a>
 
-  <div class="related-container">
+    {% include '../start/start_gov_text_outro.html' %}
 
-    <aside class="related" id="related">
-      
-        
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third">
+    <div class="related-container">
+      <aside class="related" id="related">
         <div class="inner group related-other">
-         {% include '../start/start_gov_links.html' %}
+
+          {% include '../start/start_gov_links.html' %}
+
         </div>
-      <div class="inner group">
-       
-      </div>
-    </aside>
-
-  </div>
-     
-
+        <div class="inner group">
+        </div>
+      </aside>
     </div>
-				</div>
-		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript">
-
-
 
 $(document).ready(function(){
 
@@ -98,4 +89,3 @@ $(document).ready(function(){
 </script>
 
 {% endblock %}
-
