@@ -1,0 +1,146 @@
+{% extends '../layouts/template.html' %}
+
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+
+{% block serviceName %}{% endblock %}
+
+
+{% block main %}
+<div class="grid-row">
+            <div class="column-two-thirds">
+<!-- GOV.UK content -->
+
+<main id="content" role="main" class="">
+ 
+      <h1>
+        
+        Get a State Pension statement
+      </h1>
+   
+    
+
+
+  
+        
+  <h2 class="heading-medium">By phone or post</h2>
+<p>To get a statement of how much State Pension you can get based on your National Insurance record,  contact the <a href="/future-pension-centre">Future Pension Centre</a>.</p>
+
+<p>You can also fill in the <a href="gov.uk/government/publications/application-for-a-state-pension-statement">BR19 application form</a> and send it in the post - you can only do this if you’ll reach State Pension age in more than 30 days. </p>
+
+<p><a href="gov.uk/state-pension-age">Check your State Pension age.</a></p>
+
+
+
+<h2 class="heading-medium">Online</h2>
+  <p>You can get a State Pension forecast and find out how to improve it, if you're:</p>
+
+        <ul class="list-bullet">
+         <li>a man born after 5 April 1951</li>
+         <li>a woman born after 5 April 1953</li>
+       </ul>
+       <h3 class="heading-small">Before you start</h3>
+   <p> You need your National Insurance number and we'll ask you to confirm your identity.</p>
+       <p>You can also <a href="">sign in using GOV.UK Verify</a>.  </p>
+<a class="button button-get-started" href="start_landingIV">Start now</a>. <p>This new service is currently in <a href="/help/beta">‘beta’</a> - it’s being tested and improved. </p>
+
+
+<h2 class="heading-medium">If you’ve worked and paid National Insurance in the Isle of Man</h2>
+
+<p>Contact the <a href="gov.uk/future-pension-centre">Future Pension Centre</a> to get information about your State Pension.</p>
+
+
+     
+    
+
+
+
+
+
+</main>
+        </div><!-- /.column-two-thirds -->
+
+					  <div class="column-third">
+
+  <div class="related-container">
+
+    <aside class="related" id="related">
+      
+        
+        <div class="inner group related-other">
+         {% include '../start/start_gov_links.html' %}
+        </div>
+      <div class="inner group">
+       
+      </div>
+    </aside>
+
+  </div>
+     
+
+    </div>
+				</div>
+		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+
+$(document).ready(function(){
+
+    $("a#tab-current-sp-value").click(function() { 
+        $(".tabs-nav li").removeClass("active");
+        $(this).parent().addClass("active");
+        $("#current-sp-value").show();
+        $("#contracted-out").hide();
+        $("#improve-sp-value").hide();
+        window.location.hash = "#lie-current-sp-value";
+        return false;
+    });
+       $("a#tab-contracted-out").click(function() { 
+        $(".tabs-nav li").removeClass("active");
+        $(this).parent().addClass("active");
+        $("#contracted-out").show();
+        $("#improve-sp-value").hide();
+        $("#current-sp-value").hide();
+        window.location.hash = "#lie-contracted-out";
+        return false;
+    });
+    $("a#tab-improve-sp-value").click(function() { 
+        $(".tabs-nav li").removeClass("active");
+        $(this).parent().addClass("active");
+        $("#improve-sp-value").show();
+        $("#contracted-out").hide();
+        $("#current-sp-value").hide();
+        window.location.hash = "#lie-improve-sp-value";
+        return false;
+    });
+
+    if(window.location.hash === "#lie-current-sp-value") {
+        $("a#tab-current-sp-value").trigger('click');
+    }
+     else if (window.location.hash === "#lie-contracted-out") {
+        $("a#tab-contracted-out").trigger('click');
+    }
+    else if (window.location.hash === "#lie-improve-sp-value") {
+        $("a#tab-improve-sp-value").trigger('click');
+    }
+});
+$(document).ready(function(){
+  var allPanels = $('.accordion > dd').hide();
+
+  $('.accordion > dt').click(function(){
+    if(!$(this).parent().parent().hasClass("active")){          
+      allPanels.prev().removeClass("active");
+      $(this).parent().parent().addClass("active");
+      $(this).parent().parent().next().slideDown();
+      return false;
+    }else{
+      $(this).parent().parent().removeClass("active");             
+      return false;
+    }
+  });
+});
+
+</script>
+
+{% endblock %}
+
