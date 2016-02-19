@@ -920,26 +920,22 @@ font-size: 19px;
 
 .chart-block {
   clear: both;  
-}
-
-
-.chart-block .graph-title {
-  font-weight: 800;
-  font-size: 19px;
-  display: inline-block;
-  clear: both;
-  width: 100%;
-   @media only screen and (max-width: 640px) {
-      font-weight: 800;
-  font-size: 16px;
+   margin-bottom: 80px;
+    @media only screen and (max-width: 640px) {
+      margin-bottom:50px;
   }
 }
 
+
+
+
+
 .chart-block .footnote {
-  margin-top: -15px;
-  margin-bottom: 25px;
+ 
+  margin-bottom: 60px;
     display:inline-block;
 }
+
 
 .graph
 {
