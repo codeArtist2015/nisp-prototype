@@ -1,0 +1,60 @@
+{% extends '../layouts/template.html' %}
+
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+
+{% block serviceName %}{% endblock %}
+
+
+{% block main %}
+<div class="grid-row">
+            <div class="column-two-thirds">
+ <h1>Check your State Pension</h1>
+      
+      <p class="lede">Check how much pension you can get based on your National Insurance record.</p>
+<div class="panel-indent">This estimate is based on the current law. It's provided for your information only and the service does not offer financial advice. When planning for your retirement, you should seek professional advice.</p></div>
+
+			<h3 class="heading-medium">You need to sign in to use this service</h3>
+  
+       <p>You can <a href="http://twofactor-prototype.herokuapp.com/01_govuk-login?url=http://nisp2016.herokuapp.com/27/start/dashboardA&failUrl=http://nisp.herokuapp.com/20/start/fail_gov_iv" role="button">sign in using the Government Getway</a>.  You may need to answer a few additional questions – they’ll be based on things HMRC already know about you.</p>
+        <p>You can also <a href="https://www.signin.service.gov.uk/start">sign in using GOV.UK Verify</a>. If you haven’t used GOV.UK Verify before, it will take you about 10 minutes to get set up.</p>
+         <a id="Start" href="http://twofactor-prototype.herokuapp.com/01_govuk-login?url=http://nisp2016.herokuapp.com/27/start/dashboardA&failUrl=http://nisp.herokuapp.com/20/start/failedIV" class="button" style="margin-top: 0">Continue</a>
+     
+					</div><!-- /.column-two-thirds -->
+					<div class="column-third">
+					 <div class="related-container">
+
+    <aside class="related" id="related">
+      
+        
+        <div class="inner group related-other">
+          
+          <h2 id="parent-other">Elsewhere on GOV.UK</h2>
+          
+
+          <nav role="navigation" aria-labelledby="parent-other">
+            <ul>
+              
+                <li>
+                  <a href="https://www.gov.uk/plan-retirement-income/overview">Plan your retirement income</a>
+                </li>
+              
+                
+              
+              
+            </ul>
+          </nav>
+        </div>
+      
+
+      
+
+      <div class="inner group">
+       
+      </div>
+    </aside>
+				</div><!-- /.column-one-thirds -->
+			</div>
+
+
+{% endblock %}
+
