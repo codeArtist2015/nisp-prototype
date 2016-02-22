@@ -1037,3 +1037,136 @@ font-size: 19px;
  
     left: 5px;
 }
+
+
+
+.button-get-started {  
+  background-image: url("/public/images/icons/icon-pointer.png");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  padding: em(7) em(41) em(4) em(16);
+
+}
+
+
+
+//verify
+
+.hub {
+  background-color: #005ea5;
+  color: #fff;
+  padding-top: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 480px;
+  padding: 30px;
+  max-width: 960px;
+  float: none
+ 
+}
+
+.grid-1-3, .grid-2-3 {
+  float: left;
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .hub {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 769px) {
+  .hub {
+    margin-top: 15px;
+    margin-bottom: -45px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .hub {
+    padding: 45px;
+  }
+}
+
+@media (min-width: 769px) {
+  .hub {
+    padding: 75px 70px;
+  }
+}
+
+.hub .selectable {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0);
+}
+
+.hub .selectable input:focus {
+  outline: none;
+}
+
+.hub .selectable:hover {
+  background: #2e8aca;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.hub .selectable.binary {
+  display: inline-block;
+  width: auto;
+  margin: 10px 10px 0 0;
+}
+
+.hub .actions .button {
+    display: inline-block;
+    min-width: 160px;
+    padding: 8px 10px 6px 10px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    background-color: #fff;
+    color: #005ea5;
+    font-weight: bold;
+    margin: 0 0 0 20px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+}
+
+p.tight {
+  font-size: 24px;
+}
+
+p.tight {
+  margin: 0;
+}
+
+p.tight-top {
+  margin-top: 0px;
+}
+
+p.tight-bottom {
+  margin-bottom: 0;
+}
+
+label
+
+{ font-size: 22px;
+margin: 10px 0 10px 0px}
+
+
+h2.tight {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.form-control {
+    font-size: 19px;
+    line-height: 1.3157894737;
+}
+
+.form-control {
+    width: 50%;
+}
