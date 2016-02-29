@@ -1,0 +1,76 @@
+{% extends '../layouts/template.html' %}
+
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+
+{% block serviceName %}Check your State Pension{% endblock %}
+
+
+{% block main %}
+<div class="grid-row">
+            <div class="column-two-thirds">
+ <h1>Check your State Pension</h1>
+      
+     
+<div class="panel-indent">Your State Pension estimate is provided for your information only and the service does not offer financial advice. When planning for your retirement, you should seek professional advice.</p></div>
+
+			<h3 class="heading-medium">We need to confirm your identity</h3>
+
+     
+					</div><!-- /.column-two-thirds -->
+					<div class="column-third">
+				
+        
+     
+        </div><!-- /. column-third -->
+      </div><!-- /. grid-row -->
+      <div class="grid-row">
+       <div class="column-half left-iv">
+       <p>You can sign in using the Government Gateway. You may need to answer a few questions – they’ll be based on things HMRC already know about you. You can then access other HMRC services securely. </p> 
+       <a id="Start" href="http://twofactor-prototype.herokuapp.com/01_govuk-login_sa?url=http://nisp2016.herokuapp.com/27/start/dashboardA&failUrl=http://nisp2016.herokuapp.com/27/start/failedIV" class="button">Continue</a>
+       </div><!-- /. column-half left-iv -->
+
+        <div class="column-half right-verify">
+      
+        <p>You can also <a href="/27/start/start_Verify1">sign in using GOV.UK Verify</a>. If you haven’t used GOV.UK Verify before, it will take you about 10 minutes to get set up. You can access other government services securely wherever you see the GOV.UK Verify logo.</p>
+        <div class="verify-block">
+        <h2 class="verify-heading">
+          <img src="/public/images/verify-logo-inline.png" class="verify-logo" alt="">
+          <span style="font-weight:bold;">GOV.UK</span>
+          <br> Verify
+        </h2>
+        
+        </div><!-- /. verify-block -->
+
+          </div><!-- /. column-half right-verify -->
+
+        </div><!-- /. grid-row -->
+
+    
+
+      <!--<div class="grid-row">
+            <div class="column-two-thirds">
+ <h3 class="heading-medium">Before you start</h3>
+      
+     
+<p><strong>You can use this service if you're</strong></p>
+    <ul class="list-bullet">
+      <li>a man born after 5 April 1951</li>
+      <li>a woman born after 5 April 1953</li>
+    </ul>
+    
+
+    <p><strong>If you were born before these date</p>
+    <p>Contact the <a href="https://www.gov.uk/future-pension-centre">Futures Pension centre</a> to get a statement of your current pension by post.</p>
+
+     
+          </div><
+          <div class="column-third">
+        
+        
+     
+        </div>
+      </div>-->
+
+
+{% endblock %}
+
