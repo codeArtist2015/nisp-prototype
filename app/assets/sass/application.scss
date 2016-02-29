@@ -1174,3 +1174,17 @@ h2.tight {
 .phase-banner .phase-tag {
     background-color: #f47738 !important;
 }
+
+.left-iv {
+border-right: 3px solid #BFC1C3; 
+padding-right: 30px;
+}
+
+.right-verify {
+padding-left: 30px;
+@media only screen and (max-width: 640px) {
+     padding: 15px;
+
+  }
+
+}
