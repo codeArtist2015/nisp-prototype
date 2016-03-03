@@ -1,0 +1,87 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h1>Sign in</h1>
+    <p class="lede">Enter your Government Gateway credentials to sign in. You received these when you created your HMRC online account.</p>
+
+    <form class="form" action="../dashboard/dashboardA">
+      <div class="form-group">
+        <label class="form-label" for="user-id">User ID</label>
+        <input class="form-control" id="user-id" name="user-id" type="text">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="password">Password</label>
+        <input class="form-control" id="password" name="password" type="text">
+      </div>
+ 
+
+
+
+
+      <div class="form-group" style="margin-top: 30px">
+        <input class="button" type="submit" value="Sign in" role="button">
+      </div>
+       
+
+      
+    </form>
+<h2 class="heading-medium">Problems signing in</h2>
+ <details class="details">
+    <summary>Don’t have a Government Gateway account </summary>
+    <div>
+     <p class="panel-indent">
+      Do not create a new account if you already have one for filing your Self Assessment tax return. Use the login credentials you were sent when you <a href="https://www.gov.uk/register-for-self-assessment">registered for Self Assessment tax return</a>.</p> 
+   
+          <p class="top-margin bottom-margin"> <a href="/gg_registration/select_service">Create a new Government Gateway account</a></p>
+    <p></p>
+  </div>
+</details>
+<details class="details">
+  <summary>Forgotten user ID</summary>
+  <div>
+    <h3 class="heading-small">Previously filed your Self Assessment tax return online </h3> 
+    <p> <a href="https://online.hmrc.gov.uk/user/credentials/userid">Recover your user ID online or by post</a></p>
+    <h3 class="heading-small">Never filed your Self Assessment tax return online</h3> 
+    <p class="bottom-margin"> <a href="/gg_registration/select_service">Create a new Government Gateway account</a></p>
+
+  
+  </div>
+</details>
+<details class="details">
+  <summary>Forgotten password</summary>
+  <div>
+
+  
+   <h3 class="heading-small">Previously filed your Self Assessment tax return online </h3> 
+    <p> <a href="https://online.hmrc.gov.uk/user/credentials/password">Recover your user password online or by post</a></p>
+    <h3 class="heading-small">Never filed your Self Assessment tax return online</h3> 
+    <p class="bottom-margin"> <a href="/gg_registration/select_service">Create a new Government Gateway account</a></p>
+
+  </div>
+</details>
+<details class="details">
+  <summary>Forgotten  user ID and password</summary>
+  <div>
+
+   <h3 class="heading-small">Previously filed your Self Assessment tax return online </h3> 
+
+
+   <p>Sign in using <a href="https://www.tax.service.gov.uk/ida/sa/login" target="_self" data-sso="false">GOV.UK Verify</a>. This takes around 10 minutes. You’ll need your Self Assessment Unique Taxpayer Reference (SA UTR).</p>
+   <a href="https://www.tax.service.gov.uk/ida/sa/login"><img src="/public/images/govuk_verify_logo.png" alt="Gov.UK and Verify logos" style="margin-bottom: 15px"> </a>
+   
+   <p class="bottom-margin">Alternatively <a href="https://www.gov.uk/government/organisations/hm-revenue-customs/contact/online-services-helpdesk">contact the help desk</a></p>
+
+       <h3 class="heading-small">Never filed your Self Assessment tax return online</h3> 
+    <p class="bottom-margin"> <a href="/gg_registration/select_service">Create a new Government Gateway account</a></p>
+
+ </div>
+</details>
+  </div><!-- /.column-two-thirds -->
+</div>
+
+{% endblock %}
