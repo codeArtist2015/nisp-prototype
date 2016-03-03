@@ -1,0 +1,43 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check your National Insurance record {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your National Insurance record{% endblock %}
+{% block main %}
+{% include '../persephone_login.html' %}
+
+</div>
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h2 class="heading-large">Your National Insurance record</h2>
+    <ul class="list-bullet">
+      <li>
+    you have 25 years which count toward your pension</li>
+    <li>there are 5 years where you can make up the shortfall</li>
+      <li>paying to fill any 3 of these years will increase your forecast up to the maximum State Pension. The cheapest is highlighted.</li></ul>
+    <p><a href="#">View all years</a></p>
+
+    <!--<div class="ni-wrapper" style="padding-top: 40px;">
+    <div class="ni-years"><strong>Year</strong></div>
+    <div class="ni-cost"><strong>One-off cost</strong></div>
+    <div><strong>Last date you can pay</strong></div>
+    <div class="ni-action"></div></div>-->
+
+    {% include './ni_table5.html' %}
+
+    <a href="/28/dashboard/dashboardA" class="example-back-link">Back</a>
+
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third">
+    <div class="related" id="related">
+      <div class="inner group related-subsection">
+        <a href="/28/dashboard/dashboardA" class="example-back-link">Check your State Pension</a>
+        <br><br>
+
+        {% include '../dashboard/help.html' %}
+
+      </div>
+    </div>
+  </div> <!-- /.column-third -->
+</div><!-- /.grid-row -->
+
+{% endblock %}
