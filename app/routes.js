@@ -127,7 +127,44 @@ app.get('/users/ni/basket-toolate/:year',
 app.get('/users/start/tsandcs', function (req, res) {
   res.render('users/start/tsandcs', {"signout":false});
 });   
-      
+
+
+
+//**************************   Prototype 28 Routes ******************************************************************************//
+//*******************************************************************************************************************************//
+   
+app.get("/28/start/gg_login", function (req, res) {
+      res.render('28/start/gg_login', {"signout":false});
+ });
+ 
+ app.get("/28/start/start_Verify2", function (req, res) {
+      res.render('28/start/start_Verify2', {"signout":false});
+ });
+ 
+ 
+ app.post('/28/start/gg_login', passport.authenticate('local', { failureRedirect: '/28/start/gg_login' }),
+  function(req, res) {
+    res.redirect('/28/dashboard/dashboardA');
+});
+
+ app.post('/28/start/start_Verify2', passport.authenticate('local', { failureRedirect: '/28/start/start_Verify2' }),
+  function(req, res) {
+    res.redirect('/28/dashboard/dashboardV');
+});
+   
+app.get('/28/dashboard/dashboardA',
+  require('connect-ensure-login').ensureLoggedIn('/28/start/gg_login'),
+  function(req, res){
+        res.render('28/dashboard/dashboard'+req.user.id, {  "mvpversion": 28, user: req.user, "signout": true   });
+});
+
+app.get('/28/dashboard/dashboardV',
+  require('connect-ensure-login').ensureLoggedIn('/28/start/start_Verify2'),
+  function(req, res){
+        res.render('28/dashboard/dashboard-v-'+req.user.id, {  "mvpversion": 28, user: req.user, "signout": true   });
+});           
+    
+//******************************************************************************************************************************//   
    
              
 //****--------------------------------------------------------------------------------------------------------*****//
