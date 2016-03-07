@@ -9,8 +9,8 @@ var records = [
     , { id: 8, username: 'jill8', password: 'one', displayName: 'Jill8', emails: [ { value: 'jill@example.com' } ] }
     , { id: 9, username: 'jill9', password: 'one', displayName: 'Jill9', emails: [ { value: 'jill@example.com' } ] }
     , { id: 10, username: 'jill10', password: 'one', displayName: 'Jill10', emails: [ { value: 'jill@example.com' } ] }
-	, { id: 11, username: 'personaa', password: '123456', displayName: 'User A', emails: [ { value: 'jill@example.com' } ] }
-	, { id: 12, username: 'personab', password: '123456', displayName: 'User B', emails: [ { value: 'jill@example.com' } ] }
+	, { id: 11, username: 'davida', password: '123456', displayName: 'David A', emails: [ { value: 'jill@example.com' } ] }
+	, { id: 12, username: 'janeb', password: '123456', displayName: 'Jane B', emails: [ { value: 'jill@example.com' } ] }
 ];
 
 exports.findById = function(id, cb) {
