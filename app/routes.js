@@ -215,7 +215,12 @@ app.get('/:mvpversion/tsandcs', authUtil.basicAuth(userId, pwd),
                 res.render(req.params.mvpversion+'/ni/ni-persephone-full5', {"mvpversion": req.params.mvpversion, "signout":true});
             });
       
-    app.get('/:mvpversion/ni/ni-persephone-fuller', authUtil.basicAuth(userId, pwd),
+    app.get('/:mvpversion/ni/ni-persephone-full6', authUtil.basicAuth(userId, pwd),
+            function (req, res) {
+                res.render(req.params.mvpversion+'/ni/ni-persephone-full6', {"mvpversion": req.params.mvpversion, "signout":true});
+            });
+
+app.get('/:mvpversion/ni/ni-persephone-fuller', authUtil.basicAuth(userId, pwd),
             function (req, res) {
                 res.render(req.params.mvpversion+'/ni/ni-persephone-fuller', {"mvpversion": req.params.mvpversion, "signout":true});
             });      
@@ -243,7 +248,15 @@ app.get('/:mvpversion/tsandcs', authUtil.basicAuth(userId, pwd),
                 req.params.mvpversion, "signout":true});
             });      
     
-    app.get('/:mvpversion/ni/basket-improve-all/:year/pay/:amount/emp/:empAmount/ben/:benefitNum', authUtil.basicAuth(userId, pwd),
+    app.get('/:mvpversion/ni/basket-improve-emp-benefits2/:year/pay/:amount/emp/:empAmount/ben/:benefitNum', authUtil.basicAuth(userId, pwd),
+            function (req, res)     {        
+                res.render(req.params.mvpversion+'/ni/basket-improve-emp-benefits2', {"year":           
+                req.params.year,"amount":req.params.amount,
+                "empAmount": req.params.empAmount, "benefitNum": req.params.benefitNum,"mvpversion": 
+                req.params.mvpversion, "signout":true});
+            });      
+
+app.get('/:mvpversion/ni/basket-improve-all/:year/pay/:amount/emp/:empAmount/ben/:benefitNum', authUtil.basicAuth(userId, pwd),
             function (req, res) {        
               res.render(req.params.mvpversion+'/ni/basket-improve-all', {"year": req.params.year,"amount":req.params.amount,
               "empAmount": req.params.empAmount, "benefitNum": req.params.benefitNum,"mvpversion": req.params.mvpversion, "signout":true});
