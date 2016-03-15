@@ -1,0 +1,65 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check your State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your State Pension{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h2 class="heading-large">Your State Pension</h2>
+    <h3 class="heading-medium" style="margin: 10px 0 -10px 0">Summary</h3>
+
+    <div class="tab-content">
+      <div class="highlighted-event">
+
+        <p>You can get your State Pension on 1&nbsp;December&nbsp;2020 when you'll be 66, your estimate is</p>
+        <p><em>£155.65 a week</em></p>
+        <p>£655 a month, £7,865 a year</p>
+
+      </div><!-- /.highlighted-event -->
+
+      <p>Your estimate</p>
+      <ul class="list-bullet">
+        <li>is not a guarantee and is based on the current law</li>
+        <li>is based on your latest National Insurance record (5 April 2015)</li>
+        <li>does not include any increase due to inflation</li>
+      </ul>
+
+      <h3 class="heading-medium">You have reached the full amount</h3>
+     <p>You cannot improve your estimate any more, as this is the maximum State Pension.</p>
+     <p>You'll still need to pay National Insurance contributions until 2020 as they fund other state benefits and the NHS.</p>
+     <p><a href="/26/start/extra_security">View your National Insurance record</a></p>
+     
+   <!--<details class="helptext" role="group" open="">
+            <summary role="button" aria-controls="details-content-1" tabindex="0" aria-expanded="false">
+              <span class="summary"> More about contributions</span>
+            </summary>
+
+            <div class="panel-indent" id="details-content-1" aria-hidden="false" style="display: block;">
+
+              <p>National Insurance contributions come from 
+                <ul class="list-bullet">
+        <li>payments from employment</li>
+        <li>you can be credited if you’re not paying National Insurance, eg when you’re claiming benefits because you’re ill or unemployed.</li>
+        <li>voluntary contributions if you've missed payments</li>
+      </ul>
+
+            </div>
+          </details>-->
+ 
+
+    </div><!-- /.tab-pane -->
+  </div><!-- /.column-two-thirds --> 
+  <div class="column-third">
+    <div class="related" id="related"  style="margin-top: 50px">
+      <div class="inner group related-subsection">
+
+        {% include '../dashboard/help.html' %}
+
+      </div>
+    </div>
+  </div><!-- /.column-third -->
+</div><!-- /.grid-row -->
+</div>
+
+{% endblock %}

@@ -11,6 +11,9 @@ var records = [
     , { id: 10, username: 'jill10', password: 'one', displayName: 'Jill10', emails: [ { value: 'jill@example.com' } ] }
 	, { id: 11, username: 'davida', password: '123456', displayName: 'David A', emails: [ { value: 'jill@example.com' } ] }
 	, { id: 12, username: 'janeb', password: '123456', displayName: 'Jane B', emails: [ { value: 'jill@example.com' } ] }
+  , { id: 13, username: 'johnc', password: '123456', displayName: 'John C', emails: [ { value: 'jill@example.com' } ] }
+  , { id: 14, username: 'burtd', password: '123456', displayName: 'John C', emails: [ { value: 'jill@example.com' } ] }
+  , { id: 15, username: 'michellee', password: '123456', displayName: 'John C', emails: [ { value: 'jill@example.com' } ] }
 ];
 
 exports.findById = function(id, cb) {

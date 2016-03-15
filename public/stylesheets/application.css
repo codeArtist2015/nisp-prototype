@@ -2089,3 +2089,32 @@ h2.tight {
   @media only screen and (max-width: 640px) {
     .right-verify {
       padding: 15px; } }
+
+#global-breadcrumb.pta-breadcrumb {
+  background-color: #fff;
+  max-width: 1020px;
+  margin: 0 auto;
+  z-index: 50; }
+
+#global-breadcrumb.pta-breadcrumb ol li a:visited, .back-to-previous a:visited {
+  color: #005ea5; }
+
+#global-breadcrumb.pta-breadcrumb ol li a:visited, .back-to-previous a:link {
+  color: #005ea5; }
+
+#global-breadcrumb.pta-breadcrumb ol li {
+  font-family: "nta",Arial,sans-serif;
+  font-size: 19px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  background-image: url(https://assets.digital.cabinet-office.gov.uk/static/separator-73822610794bc3a64871f144d93d6526.png);
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  float: left;
+  list-style: none;
+  margin-left: 0;
+  margin-right: 0.5em;
+  margin-bottom: 0.4em;
+  padding-right: 1em;
+  margin-top: 0.4em; }

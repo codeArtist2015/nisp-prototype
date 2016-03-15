@@ -1,0 +1,46 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check your National Insurance record {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your National Insurance record{% endblock %}
+{% block main %}
+{% include '../persephone_login.html' %}
+
+</div>
+<div class="grid-row">
+  <div class="column-two-thirds">
+ <ol role="breadcrumbs" class="group">
+      <li><a href="#">Account home</a></li>
+      <li><a href="javascript:history.back()">State Pension</a></li>
+     
+   </ol>
+    <h2 class="heading-large">Your National Insurance record</h2>
+    <ul class="list-bullet">
+      <li>you have 25 years that count towards your pension</li>
+      <li>there are 3 years where you did not contribute enough</li>      
+    </ul>
+    <p><a href="#">View all years</a></p>
+
+    <!--<div class="ni-wrapper" style="padding-top: 40px;">
+    <div class="ni-years"><strong>Year</strong></div>
+    <div class="ni-cost"><strong>One-off cost</strong></div>
+    <div><strong>Last date you can pay</strong></div>
+    <div class="ni-action"></div></div>-->
+
+    {% include './ni_table6.html' %}
+
+    <a href="/28/dashboard/dashboardA" class="example-back-link">Back</a>
+
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third">
+    <div class="related" id="related">
+      <div class="inner group related-subsection">
+        <a href="/28/dashboard/dashboardA" class="example-back-link">Check your State Pension</a>
+        <br><br>
+
+        {% include '../dashboard/help.html' %}
+
+      </div>
+    </div>
+  </div> <!-- /.column-third -->
+</div><!-- /.grid-row -->
+
+{% endblock %}
