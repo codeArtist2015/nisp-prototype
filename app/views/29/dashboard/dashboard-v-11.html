@@ -1,0 +1,82 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check your State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your State Pension{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h2 class="heading-large">Your State Pension</h2>
+    <h3 class="heading-medium" style="margin: 10px 0 -10px 0">Summary</h3>
+
+    <div class="tab-content">
+      <div class="highlighted-event">
+
+        <p>You can get your State Pension on 1&nbsp;December&nbsp;2020 when you'll be 66, your estimate is</p>
+        <p><em>£130.10 a week</em></p>
+        <p>£567 a month, £6,812 a year</p>
+
+      </div><!-- /.highlighted-event -->
+
+      <p>Your estimate</p>
+      <ul class="list-bullet">
+        <li>is not guaranteed</li>
+        <li>does not include any increase due to inflation</li>
+      </ul>
+
+      <h3 class="heading-medium">Breakdown</h3>
+      <div class="chart-block">
+        <div class="graph-title">Estimate based on National Insurance record up to 5 April 2015</div>
+        <ul class="graph">
+          <li><span class="amount" style="width:{{75/100*100}}%">£110.10 a week</span></li>
+        </ul>
+      </div>
+
+      <div class="chart-block">
+        <div class="graph-title">Estimate if you continue to contribute until 2020</div>
+        <ul class="graph">
+          <li><span class="amount" style="width:{{90/100*100}}%">£130.10 a week</span></li>
+        </ul>
+      </div>
+   <!--<details class="helptext" role="group" open="">
+            <summary role="button" aria-controls="details-content-1" tabindex="0" aria-expanded="false">
+              <span class="summary"> More about contributions</span>
+            </summary>
+
+            <div class="panel-indent" id="details-content-1" aria-hidden="false" style="display: block;">
+
+              <p>National Insurance contributions come from 
+                <ul class="list-bullet">
+        <li>payments from employment</li>
+        <li>you can be credited if you’re not paying National Insurance, eg when you’re claiming benefits because you’re ill or unemployed.</li>
+        <li>voluntary contributions if you've missed payments</li>
+      </ul>
+
+            </div>
+          </details>-->
+      <h3 class="heading-medium">Most you can get</h3>
+      <p>You have gaps in your National Insurance record for years where you did not contribute enough. You only need to fill 3 gaps to get the most you can.</p>
+      <div class="chart-block">
+        <span class="graph-title">Estimate if you fill gaps in 3 years</span>
+        <ul class="graph">
+          <li><span class="amount" style="width:({{131/145*100}})%">£155.65 a week</span></li>
+        </ul>
+      </div>
+
+      <p><a href="/28/ni/ni-persephone-full5">View your National Insurance record</a> to find out about filling gaps and making payments.</p>
+
+    </div><!-- /.tab-pane -->
+  </div><!-- /.column-two-thirds --> 
+  <div class="column-third">
+    <div class="related" id="related"  style="margin-top: 50px">
+      <div class="inner group related-subsection">
+
+        {% include '../dashboard/help.html' %}
+
+      </div>
+    </div>
+  </div><!-- /.column-third -->
+</div><!-- /.grid-row -->
+</div>
+
+{% endblock %}

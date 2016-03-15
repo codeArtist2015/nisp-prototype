@@ -1,0 +1,35 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    {% include '../start/start_landing_text_intro.html' %}
+
+    <a id="Start" href="dashboardB" role="button" class="button" style="margin-top: 0">Continue</a>
+
+    {% include '../start/start_landing_text_outro.html' %}
+
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third">
+    <div class="related-container">
+      <aside class="related" id="related">
+        <div class="inner group related-other">
+
+          <h2 id="parent-other">Elsewhere on GOV.UK</h2>
+          <nav role="navigation" aria-labelledby="parent-other">
+            <ul>
+              <li><a href="https://www.gov.uk/plan-retirement-income/overview">Plan your retirement income</a></li>
+            </ul>
+          </nav>
+
+        </div>
+        <div class="inner group">
+        </div>
+      </aside>
+    </div><!-- /.column-one-thirds -->
+  </div>
+
+  {% endblock %}

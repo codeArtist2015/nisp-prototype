@@ -166,7 +166,44 @@ app.get('/28/dashboard/dashboardV',
     
 //******************************************************************************************************************************//   
    
-             
+//**************************   Prototype 29 Routes ******************************************************************************//
+//*******************************************************************************************************************************//
+   
+app.get("/29/start/gg_login", function (req, res) {
+      res.render('29/start/gg_login', {"signout":false});
+ });
+ 
+ app.get("/29/start/start_Verify2", function (req, res) {
+      res.render('29/start/start_Verify2', {"signout":false});
+ });
+ 
+ 
+ app.post('/29/start/gg_login', passport.authenticate('local', { failureRedirect: '/29/start/gg_login' }),
+  function(req, res) {
+    res.redirect('/29/dashboard/dashboardA');
+});
+
+ app.post('/29/start/start_Verify2', passport.authenticate('local', { failureRedirect: '/29/start/start_Verify2' }),
+  function(req, res) {
+    res.redirect('/29/dashboard/dashboardV');
+});
+   
+app.get('/29/dashboard/dashboardA',
+  require('connect-ensure-login').ensureLoggedIn('/29/start/gg_login'),
+  function(req, res){
+        res.render('29/dashboard/dashboard'+req.user.id, {  "mvpversion": 29, user: req.user, "signout": true   });
+});
+
+app.get('/29/dashboard/dashboardV',
+  require('connect-ensure-login').ensureLoggedIn('/29/start/start_Verify2'),
+  function(req, res){
+        res.render('29/dashboard/dashboard-v-'+req.user.id, {  "mvpversion": 29, user: req.user, "signout": true   });
+});           
+    
+//******************************************************************************************************************************//   
+      
+
+
 //****--------------------------------------------------------------------------------------------------------*****//
 //****                                                                                                        *****//
 //****    Prototype Version: XX                                                                               *****//
