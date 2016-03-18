@@ -1,0 +1,24 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h1>Version 27</h1>
+    <ul class="list-bullet">  <li><a href="/27/start/start_gov_ukVerify">IV 2FA + Verify (default) options on Landing page in service</a> </li>
+ <li><a href="/27/start/start_gov_ukIV2">IV 2FA (default) + Verify options on Landing page in service</a> </li>
+    <li><a href="http://nisp2016.herokuapp.com/27/start/start_gov_ukIV"> IV 2FA + Verify options on Start page</a></li>
+   <li><a href="/27/start/dashboardA"> Forecast with gaps page and less caveats</a></li>
+    <li><a href="/27/start/failedIV"> IV failure page</a></li>
+<li><a href="/27/start/successIV"> IV success page</a></li>
+</ul>
+
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third">
+  
+    </div><!-- /.column-one-thirds -->
+  </div>		
+
+{% endblock %}
