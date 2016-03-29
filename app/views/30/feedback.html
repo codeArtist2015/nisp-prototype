@@ -1,0 +1,111 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check my State Pension{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h1>You've signed out of your account</h1>
+    <p class="text">To use the service again you’ll need to <a href="/{{mvpversion}}">sign in</a>.</p>
+    <p class="text">Give us feedback to help us improve this service.<br>It will take no more than 2 minutes.</p>
+
+    <h2 class="heading-large">Your State Pension</h2>
+
+    <form action="#" method="POST">
+      <fieldset class="inline">
+
+        <label class="form-label">How easy was it to use Your State Pension service?</label>
+        
+        <label class="block-label" for="question1-inline-1">
+          <input id="question1-inline-1" type="radio" name="radio-inline-group1" value="Yes">
+          Very difficult
+        </label>
+
+        <label class="block-label" for="question1-inline-2">
+          <input id="question1-inline-2" type="radio" name="radio-inline-group1" value="No">
+          Difficult 
+        </label>
+        
+        <label class="block-label" for="question1-inline-3">
+          <input id="question1-inline-3" type="radio" name="radio-inline-group1" value="No">
+          Neutral 
+        </label>
+        
+        <label class="block-label" for="question1-inline-4">
+          <input id="question1-inline-4" type="radio" name="radio-inline-group1" value="No">
+          Easy
+        </label>
+
+        <label class="block-label" for="question1-inline-5">
+          <input id="question1-inline-5" type="radio" name="radio-inline-group1" value="No">
+          Very easy
+        </label>
+
+      </fieldset>
+      <fieldset class="inline">
+
+        <label class="form-label">How likely would you be to use this service next time?</label>
+
+        <label class="block-label" for="question2-inline-1">
+          <input id="question2-inline-1" type="radio" name="radio-inline-group2" value="Yes">
+          Very unlikely 
+        </label>
+
+        <label class="block-label" for="question2-inline-2">
+          <input id="question2-inline-2" type="radio" name="radio-inline-group2" value="No">
+          Unlikely
+        </label>
+
+        <label class="block-label" for="question2-inline-3">
+          <input id="question2-inline-3" type="radio" name="radio-inline-group2" value="No">
+          Likely
+        </label>
+
+        <label class="block-label" for="question2-inline-4">
+          <input id="question2-inline-4" type="radio" name="radio-inline-group2" value="No">
+          Very likely
+        </label>
+
+      </fieldset>
+
+      <fieldset class="inline">
+        <label class="form-label">Overall, how satisfied were you with the service?</label>
+
+        <label class="block-label" for="question3-inline-1">
+          <input id="question3-inline-1" type="radio" name="radio-inline-group3" value="Yes">
+          Very dissatisfied
+        </label>
+
+        <label class="block-label" for="question3-inline-2">
+          <input id="question3-inline-2" type="radio" name="radio-inline-group3" value="No">
+          Dissatisfied
+        </label>
+
+        <label class="block-label" for="question3-inline-4">
+          <input id="question3-inline-4" type="radio" name="radio-inline-group3" value="No">
+          Satisfied
+        </label>
+
+        <label class="block-label" for="question3-inline-5">
+          <input id="question3-inline-5" type="radio" name="radio-inline-group3" value="No">
+          Very satisfied
+        </label>
+
+      </fieldset>
+      <fieldset class="inline">
+
+        <label class="form-label">How could we improve the service?</label>
+        <textarea class="form-control" type="text" wrap="true"></textarea>
+        <p class="text">Please do not include any personal or financial information, such as your National Insurance or       credit card number.</p>
+
+      </fieldset>
+
+      <a href="thank-you4" class="button" role="button">Send</a>
+
+    </form>
+
+  </div><!-- /.column-two-thirds -->
+</div>
+
+{% endblock %}

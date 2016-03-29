@@ -1,0 +1,66 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check your State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your State Pension{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h2 class="heading-large">Your State Pension</h2>
+    <h3 class="heading-medium" style="margin: 10px 0 -10px 0">Summary</h3>
+
+    <div class="tab-content">
+      <div class="highlighted-event">
+
+        <p>You can get your State Pension on 1&nbsp;December&nbsp;2020 when you'll be 66, your estimate is</p>
+        <p><em>£130.10 a week</em></p>
+        <p>£567 a month, £6,812 a year</p>
+
+      </div><!-- /.highlighted-event -->
+
+      <p>Your estimate</p>
+      <ul class="list-bullet">
+        <li>is not a guarantee and is based on the current law</li>
+        <li>does not include any increase due to inflation</li>
+      </ul>
+
+      <h3 class="heading-medium">Breakdown</h3>
+      <div class="chart-block">
+        <div class="graph-title">Estimate based on your National Insurance record up to 5 April 2015</div>
+        <ul class="graph">
+          <li><span class="amount" style="width:{{75/100*100}}%">£110.10 a week</span></li>
+        </ul>
+      </div>
+
+      <div class="chart-block">
+        <div class="graph-title">Estimate if you continue to contribute until 2020</div>
+        <ul class="graph">
+          <li><span class="amount" style="width:{{90/100*100}}%">£130.10 a week</span></li>
+        </ul>
+      </div>
+
+
+          
+      <h3 class="heading-medium">You can improve your estimate</h3>
+     <h4 class="heading-small">1. Fill gaps in your National Insurance record</h4>
+
+<p>You have years on your record where you did not contribute enough National Insurance and you can make up the shortfall. This will make these years count towards your pension and may improve your forecast.</p>
+<p style="margin-top: -10px"><a href="#">View Gaps in your record</a></p>
+
+
+<h4 class="heading-small">2. Putting off claiming</h4>
+
+<p>When you’re 66, you can put off claiming your State Pension. Doing this may mean you get extra State Pension when you do come to claim it. The extra amount, along with your State Pension, forms part of your taxable income.</p>
+<p><a href="https://www.gov.uk/deferring-state-pension" rel="external" target="_blank">More on putting off claiming (opens in new tab)</a>.</p>    
+
+      
+
+    </div><!-- /.tab-pane -->
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third">
+  
+  </div><!-- /.column-third -->
+</div><!-- /.grid-row -->
+</div>
+
+{% endblock %}

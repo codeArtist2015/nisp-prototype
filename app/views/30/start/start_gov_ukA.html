@@ -1,92 +1,35 @@
 {% extends '../layouts/template.html' %}
-
 {% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
-
 {% block serviceName %}{% endblock %}
-
-
 {% block main %}
+
 <div class="grid-row">
   <div class="column-two-thirds">
-    <!-- GOV.UK content -->
 
-<main id="content" role="main" class="">
- 
-      <h1>Get a State Pension statement</h1>
+    {% include '../start/start_gov_text_intro.html' %}
 
-        
-  <h2 class="heading-medium">By phone or post</h2>
+    <a id="Start" href="start_landingA" role="button" class="button button-get-started" style="margin-top: 0">Start now</a>
 
-<p>To get a statement of how much State Pension you could get, you can contact the Future Pension Centre.</p>
+    {% include '../start/start_gov_text_outro.html' %}
 
-<div class="contact">
-<p>Telephone: 0345 3000 168 (statements and enquiries)<br>
-Telephone from outside the UK: +44 (0)191 218 3600   </p>
-
-<p>Textphone: 0345 3000 169<br>
-Textphone from outside the UK: +44 (0)191 218 2051    </p>
-
-<p>Monday to Friday, 8am to 6pm<br>
-<a href="#">Find out about call charges</a></p>
-</div>
-
-<p>You can also fill in the <a href="#">BR19 application form</a> and send it in the post - you can only do this if you’ll reach State Pension age in more than 30 days. </p>
-
-<p><a href="#">Check your State Pension age.</a></p>
-
-<div class="panel-indent">
-<p>If you’re 50 or over, your statement will be calculated according to <a href="/new-state-pension/how-its-calculated">new State Pension</a> rules.</p>
-</div>
-
-<h2 class="heading-medium">Online</h2>
-
-<p>You can <a rel="external" href="start_landing_Verifylogo">apply online to get your State Pension statement faster</a>. This new service is currently in <a href="#">‘beta’</a> - it’s being tested and improved. You can also get a forecast of how much you could get when you reach State Pension age and find out how to increase this amount.</p>
-
-      
-
-<h2 class="heading-medium">If you’ve worked and paid National Insurance in the Isle of Man</h2>
-
-<p>Contact the <a href="#">Future Pension Centre</a> to get information about your State Pension.</p>
-
-
-   
-     
-
-
-     
-    
-
-
-
-
-
-</main>
-        </div><!-- /.column-two-thirds -->
-
-					  <div class="column-third">
-
-  <div class="related-container">
-
-    <aside class="related" id="related">
-      
-        
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third">
+    <div class="related-container">
+      <aside class="related" id="related">
         <div class="inner group related-other">
-         {% include '../start/start_gov_links.html' %}
+
+          {% include '../start/start_gov_links.html' %}
+
         </div>
-      <div class="inner group">
-       
-      </div>
-    </aside>
-
-  </div>
-     
-
+        <div class="inner group">
+        </div>
+      </aside>
     </div>
-				</div>
-		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript">
-
-
 
 $(document).ready(function(){
 
@@ -147,4 +90,3 @@ $(document).ready(function(){
 </script>
 
 {% endblock %}
-

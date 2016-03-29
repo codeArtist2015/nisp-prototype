@@ -185,7 +185,7 @@ app.get("/29/start/gg_login", function (req, res) {
 
  app.post('/29/start/start_Verify2', passport.authenticate('local', { failureRedirect: '/29/start/start_Verify2' }),
   function(req, res) {
-    res.redirect('/29/dashboard/dashboardV');
+    res.redirect('/29/dashboard/dashboardA');
 });
    
 app.get('/29/dashboard/dashboardA',
@@ -198,6 +198,42 @@ app.get('/29/dashboard/dashboardV',
   require('connect-ensure-login').ensureLoggedIn('/29/start/start_Verify2'),
   function(req, res){
         res.render('29/dashboard/dashboard-v-'+req.user.id, {  "mvpversion": 29, user: req.user, "signout": true   });
+});           
+    
+//******************************************************************************************************************************// 
+
+//**************************   Prototype 29 Routes ******************************************************************************//
+//*******************************************************************************************************************************//
+   
+app.get("/30/start/gg_login", function (req, res) {
+      res.render('30/start/gg_login', {"signout":false});
+ });
+ 
+ app.get("/30/start/start_Verify2", function (req, res) {
+      res.render('30/start/start_Verify2', {"signout":false});
+ });
+ 
+ 
+ app.post('/30/start/gg_login', passport.authenticate('local', { failureRedirect: '/30/start/gg_login' }),
+  function(req, res) {
+    res.redirect('/30/dashboard/dashboardA');
+});
+
+ app.post('/30/start/start_Verify2', passport.authenticate('local', { failureRedirect: '/30/start/start_Verify2' }),
+  function(req, res) {
+    res.redirect('/30/dashboard/dashboardA');
+});
+   
+app.get('/30/dashboard/dashboardA',
+  require('connect-ensure-login').ensureLoggedIn('/30/start/gg_login'),
+  function(req, res){
+        res.render('30/dashboard/dashboard'+req.user.id, {  "mvpversion": 30, user: req.user, "signout": true   });
+});
+
+app.get('/30/dashboard/dashboardV',
+  require('connect-ensure-login').ensureLoggedIn('/30/start/start_Verify2'),
+  function(req, res){
+        res.render('30/dashboard/dashboard-v-'+req.user.id, {  "mvpversion": 30, user: req.user, "signout": true   });
 });           
     
 //******************************************************************************************************************************//   
