@@ -13,7 +13,12 @@ var records = [
 	, { id: 12, username: 'janeb', password: '123456', displayName: 'Jane B', emails: [ { value: 'jill@example.com' } ] }
 	, { id: 13, username: 'johnc', password: '123456', displayName: 'John C', emails: [ { value: 'jill@example.com' } ] }
 	, { id: 14, username: 'burtd', password: '123456', displayName: 'Burt D', emails: [ { value: 'jill@example.com' } ] }
-	, { id: 15, username: 'michelee', password: '123456', displayName: 'Michelle E', emails: [ { value: 'jill@example.com' } ] }];
+	, { id: 15, username: 'michellee', password: '123456', displayName: 'Michelle E', emails: [ { value: 'jill@example.com' } ] }
+  , { id: 16, username: 'henryf', password: '123456', displayName: 'Henry F', emails: [ { value: 'jill@example.com' } ] }
+  , { id: 17, username: 'amberg', password: '123456', displayName: 'Amber G', emails: [ { value: 'jill@example.com' } ] }
+  , { id: 18, username: 'samh', password: '123456', displayName: 'Sam H', emails: [ { value: 'jill@example.com' } ] }
+  , { id: 19, username: 'gracei', password: '123456', displayName: 'Grace I', emails: [ { value: 'jill@example.com' } ] }
+  , { id: 20, username: 'barryg', password: '123456', displayName: 'Barry G', emails: [ { value: 'jill@example.com' } ] }];
 
 exports.findById = function(id, cb) {
   process.nextTick(function() {
