@@ -2118,3 +2118,133 @@ h2.tight {
   margin-bottom: 0.4em;
   padding-right: 1em;
   margin-top: 0.4em; }
+
+accordion dd, .ni-table dd {
+  padding-top: 10px;
+  padding-bottom: 5px; }
+
+.accordion dt, .ni-table dt {
+  border-top: 1px solid #bfc1c3; }
+
+.accordion2 dd, .ni-table dd {
+  padding-top: 10px;
+  padding-bottom: 5px; }
+
+.accordion2 dt, .ni-table dt {
+  border-top: 1px solid #bfc1c3;
+  padding-top: 10px; }
+
+.ni-wrapper {
+  display: inline-block;
+  clear: both;
+  width: 100%;
+  padding: 12px 0 15px 0; }
+
+.ni-years {
+  width: 25%;
+  float: left; }
+
+.ni-years2 {
+  width: 20%;
+  float: left; }
+
+.title {
+  cursor: pointer;
+  margin: 0;
+  color: #005ea5;
+  border: none; }
+
+.ni-cost {
+  width: 25%;
+  float: left; }
+
+.ni-payby {
+  width: 30%;
+  float: left; }
+
+.ni-full {
+  width: 66%;
+  float: left;
+  color: #999; }
+
+.ni-late {
+  width: 55%;
+  float: left;
+  color: #999; }
+
+.ni-notfull {
+  width: 40%;
+  float: left; }
+
+.ni-notfull2 {
+  width: 60%;
+  float: left; }
+
+.ni-action {
+  width: 40%;
+  float: left;
+  text-align: right; }
+
+.ni-action-arrow {
+  width: 6%;
+  float: right;
+  background-image: url(/public/20/images/down-arrow.png);
+  background-size: 17px 15px;
+  background-repeat: no-repeat;
+  background-position: right; }
+
+.ni-action-arrow2 {
+  width: 6%;
+  float: right;
+  background-size: 32px 50px;
+  background-repeat: no-repeat; }
+
+.ni-action-check {
+  width: 50%;
+  float: left;
+  background-color: #000; }
+
+.tickBox {
+  background: #fff;
+  color: #6c3;
+  width: 30px;
+  height: 30px;
+  line-height: 34px;
+  display: block;
+  float: right;
+  border: 1px solid #6d6d6d; }
+
+.contributions-wrapper {
+  display: block;
+  clear: both;
+  padding: 10px 0px 0px 25%;
+  margin-bottom: 5px;
+  font-size: 16px; }
+
+.contributions-wrapper2 {
+  display: block;
+  clear: both;
+  padding: 10px 0px 0px 20%;
+  margin-bottom: 5px;
+  font-size: 16px; }
+
+.contributions-value {
+  float: left;
+  width: 40%; }
+
+.contributions-header {
+  font-weight: 700;
+  color: #6f777b;
+  margin: 0 0 5px 0; }
+
+@media (max-width: 640px) {
+  .contributions-value {
+    float: left;
+    width: 100%;
+    display: block;
+    clear: both;
+    padding-bottom: 5px; }
+  .contributions-wrapper2 {
+    padding: 10px 0px 0px 0px;
+    margin-bottom: 5px;
+    font-size: 14px; } }

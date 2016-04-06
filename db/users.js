@@ -18,7 +18,9 @@ var records = [
   , { id: 17, username: 'amberg', password: '123456', displayName: 'Amber G', emails: [ { value: 'jill@example.com' } ] }
   , { id: 18, username: 'samh', password: '123456', displayName: 'Sam H', emails: [ { value: 'jill@example.com' } ] }
   , { id: 19, username: 'gracei', password: '123456', displayName: 'Grace I', emails: [ { value: 'jill@example.com' } ] }
-  , { id: 20, username: 'barryg', password: '123456', displayName: 'Barry G', emails: [ { value: 'jill@example.com' } ] }];
+  , { id: 20, username: 'barryg', password: '123456', displayName: 'Barry G', emails: [ { value: 'jill@example.com' } ] }
+  , { id: 21, username: 'rosa', password: '123456', displayName: 'Ross A', emails: [ { value: 'jill@example.com' } ] }
+  , { id: 22, username: 'mvp', password: '123456', displayName: 'Ross A', emails: [ { value: 'jill@example.com' } ] }];
 
 exports.findById = function(id, cb) {
   process.nextTick(function() {

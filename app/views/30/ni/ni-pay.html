@@ -1,0 +1,98 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check my State Pension{% endblock %}
+{% block main %}
+{% include '../persephone_login.html' %}
+
+<a href="javascript:window.history.back();" class="example-back-link">Back</a>
+
+<div class="grid-row">
+	<div class="column-two-thirds">
+
+		<h1 class="heading-xlarge" style="margin: 1em 0 0">Voluntary contributions</h1>
+<p class="lede">Before considering paying voluntary contributions you should:</p>
+
+<h2 class="heading-medium">1. Seek guidance or financial advice</h2>
+<p>Paying voluntary contributions may not be your best option when planning for your retirement.</p>
+
+<details class="helptext">
+  <summary role="button">
+    <span class="summary">Where you can get guidance and advice</span>
+  </summary>
+
+  <div class="panel-indent">
+
+    <p>You can seek professional financial advice. For free impartial guidance (not on GOV.UK)</p>
+
+    <ul class="list-bullet">
+      <li><a href="http://www.pensionsadvisoryservice.org.uk/" rel="external">Pensions Advisory Service (opens in new tab)</a></li>
+      <li><a href="https://www.pensionwise.gov.uk/" target="blank" rel="external">Pension wise (opens in new tab)</a> - advice on private pensions for over 50s</li>
+      <li><a href="https://www.citizensadvice.org.uk/" target="blank" rel="external">Citizens Advice (opens in new tab)</a></li>
+    </ul>
+
+  </div>
+</details>
+
+<h2 class="heading-medium">2. Check if you may get extra pension income because you</h2>
+
+<details class="helptext">
+  <summary role="button">
+    <span class="summary"> inherit or increase it from a partner</span>
+  </summary>
+
+  <div class="panel-indent">
+
+    <p>Your amount may change if you:</p>
+
+    <ul class="list-bullet">
+      <li>are widowed, divorced or have dissolved your civil partnership</li>
+      <li>paid married women’s reduced rate contributions</li>
+    </ul>
+
+  </div>
+</details>
+
+<details class="helptext">
+  <summary role="button">
+    <span class="summary">lived or worked overseas</span>
+  </summary>
+
+  <div class="panel-indent">
+  
+    <ul class="list-bullet">
+      <p>You may be entitled to a State Pension from the country you lived or worked in. Contact the pension service of the country you were in to find out if you are eligible.</p>
+    </ul>
+  
+  </div>
+</details>
+
+<h2 class="heading-medium">3. Find out how paying voluntary contributions affects your State Pension</h2>
+<p><a href="https://www.gov.uk/future-pension-centre" target="blank" rel="external">Contact the Future Pension Centre</a> to find out more about how filling gaps can affect your pension.</p>
+		<a href="javascript:window.history.back();" class="example-back-link">Back</a>
+
+	</div><!-- /.column-two-thirds -->
+	<div class="column-third">
+	</div><!-- /.column-third -->
+</div><!-- /.grid-row -->
+<script>
+
+jQuery(document).ready(function($){
+	var allPanels = $('.accordion > dd').hide();
+
+	$('.accordion > dt').click(function(){
+		if(!$(this).parent().parent().hasClass("active")){          
+			allPanels.prev().removeClass("active");
+			$(this).parent().parent().addClass("active");
+            console.log($(this));
+			$(this).parent().parent().next().slideDown();
+			return false;
+		}else{
+			$(this).parent().parent().removeClass("active");             
+			return false;
+		}
+	});
+});
+
+</script>
+
+{% endblock %}
