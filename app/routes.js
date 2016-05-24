@@ -202,7 +202,7 @@ app.get('/29/dashboard/dashboardV',
     
 //******************************************************************************************************************************// 
 
-//**************************   Prototype 29 Routes ******************************************************************************//
+//**************************   Prototype 30 Routes ******************************************************************************//
 //*******************************************************************************************************************************//
    
 app.get("/30/start/gg_login", function (req, res) {
@@ -237,7 +237,46 @@ app.get('/30/dashboard/dashboardV',
 });           
     
 //******************************************************************************************************************************//   
+
+//******************************************************************************************************************************// 
+
+//**************************   Prototype 31 Routes ******************************************************************************//
+//*******************************************************************************************************************************//
+   
+app.get("/31/start/gg_login", function (req, res) {
+      res.render('31/start/gg_login', {"signout":false});
+ });
+ 
+ app.get("/31/start/start_Verify2", function (req, res) {
+      res.render('31/start/start_Verify2', {"signout":false});
+ });
+ 
+ 
+ app.post('/31/start/gg_login', passport.authenticate('local', { failureRedirect: '/31/start/gg_login' }),
+  function(req, res) {
+    res.redirect('/31/dashboard/dashboardA');
+});
+
+ app.post('/31/start/start_Verify2', passport.authenticate('local', { failureRedirect: '/31/start/start_Verify2' }),
+  function(req, res) {
+    res.redirect('/31/dashboard/dashboardA');
+});
+   
+app.get('/31/dashboard/dashboardA',
+  require('connect-ensure-login').ensureLoggedIn('/31/start/gg_login'),
+  function(req, res){
+        res.render('31/dashboard/dashboard'+req.user.id, {  "mvpversion": 31, user: req.user, "signout": true   });
+});
+
+app.get('/31/dashboard/dashboardV',
+  require('connect-ensure-login').ensureLoggedIn('/31/start/start_Verify2'),
+  function(req, res){
+        res.render('31/dashboard/dashboard-v-'+req.user.id, {  "mvpversion": 31, user: req.user, "signout": true   });
+});           
+    
+//******************************************************************************************************************************//   
       
+
 
 
 //****--------------------------------------------------------------------------------------------------------*****//
@@ -254,6 +293,11 @@ app.get('/30/dashboard/dashboardV',
 app.get("/:mvpversion/feedback", authUtil.basicAuth(userId, pwd),
         function (req, res) {
            res.render(req.params.mvpversion+'/feedback', {"mvpversion": req.params.mvpversion,"signout":false});
+        });  
+
+app.get("/:mvpversion/feedback2", authUtil.basicAuth(userId, pwd),
+        function (req, res) {
+           res.render(req.params.mvpversion+'/feedback2', {"mvpversion": req.params.mvpversion,"signout":false});
         });  
     
       
