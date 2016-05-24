@@ -1,0 +1,21 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+	<div class="column-two-thirds">
+
+		<h1 class="heading-large">We were unable to confirm your identity</h1>
+		<h2 class="heading-medium">Using Government Getway</h2>
+		<p>You can also <a href="http://twofactor-prototype.herokuapp.com/01_govuk-login?url=http://nisp2016.herokuapp.com/27/start/dashboardA&failUrl=http://nisp.herokuapp.com/20/start/fail_gov_iv" role="button">sign in using the Government Getway</a>. You may need to answer a few additional questions – they’ll be based on things HMRC already know about you.</p>
+
+		<h2 class="heading-medium">Other ways to get a statement</h2>
+		<p>If you cannot use the online service contact the <a href="https://www.gov.uk/future-pension-centre">Future Pension Centre</a>.</p>
+
+	</div><!-- /.column-two-thirds -->
+	<div class="column-third">
+	</div><!-- /.column-one-thirds -->
+</div>
+
+{% endblock %}
