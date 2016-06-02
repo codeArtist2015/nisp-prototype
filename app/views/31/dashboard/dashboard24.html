@@ -1,0 +1,132 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check your State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your State Pension{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h2 class="heading-large">Your State Pension</h2>
+    <h3 class="heading-medium" style="margin: 10px 0 -10px 0">Summary</h3>
+
+    <div class="tab-content">
+      <div class="highlighted-event">
+
+        <p>You can get your State Pension on 1&nbsp;December&nbsp;2022 when you'll be 66, your estimate is</p>
+        <p><em>£137.10 a week</em></p>
+        <p>£567 a month, £6,812 a year</p>
+
+      </div><!-- /.highlighted-event -->
+
+      <p>Your estimate</p>
+      <ul class="list-bullet">
+        <li>is not a guarantee and is based on the current law</li>
+        <li>does not include any increase due to inflation</li>
+      </ul>
+
+      <h3 class="heading-medium">You need to continue to contribute National Insurance to reach your estimate</h3>
+      <div class="chart-block">
+        <div class="graph-title">Estimate based on your latest National Insurance record (up to 5 April 2015)</div>
+        <ul class="graph">
+          <li><span class="amount" style="width:{{110/156*100}}%">£110.10 a week</span></li>
+        </ul>
+      </div>
+
+      <div class="chart-block">
+        <div class="graph-title">Estimate if you continue to contribute until 2022</div>
+        <ul class="graph">
+          <li><span class="amount" style="width:{{137/156*100}}%">£137.10 a week</span></li>
+        </ul>
+      </div>
+
+
+
+      <h3 class="heading-medium">You can improve your estimate</h3>
+      <p>You have gaps in your National Insurance record for years where you did not contribute enough. 
+
+        <ul class="list-bullet">
+         <li>filling any gap can increase your estimate</li><li>you only need to fill 4 gaps to get the most you can</li>
+       </li></ul>
+
+
+       <div id="personal-max">
+       <div class="chart-block" style="margin-bottom: 50px">
+
+        <span class="graph-title">The most you can get by filling any 4 gaps in your record is</span>
+
+        <ul class="graph">
+          <li><span class="amount" style="width:{{156/156*100}}%">£155.65 a week</span></li>
+        </ul>
+      </div>
+      <button id="show-all" class="button button-secondary" name="test">More detail</button>
+    </div>
+      <div id="modelling" style="display: none">
+        <div class="chart-block chart-modelling">
+
+        <span class="graph-title">Estimate if you continue to contribute until 2022</span>
+
+        <ul class="graph">
+          <li><span class="amount" style="width:{{137/156*100}}%">£137.10 a week</span></li>
+        </ul>
+      </div>
+      <div class="chart-block chart-modelling">
+
+        <span class="graph-title">Fill 1 gap</span>
+
+        <ul class="graph">
+          <li><span class="amount" style="width:{{141/156*100}}%">£141.55 a week</span></li>
+        </ul>
+      </div>
+      <div class="chart-block chart-modelling">
+
+        <span class="graph-title">Fill 2 gaps</span>
+
+        <ul class="graph">
+          <li><span class="amount" style="width:{{145/156*100}}%">£146.05 a week</span></li>
+        </ul>
+      </div>
+      <div class="chart-block chart-modelling">
+
+        <span class="graph-title">Fill 3 gaps</span>
+
+        <ul class="graph">
+          <li><span class="amount" style="width:{{150/156*100}}%">£150.65 a week</span></li>
+        </ul>
+      </div>
+       <div class="chart-block chart-modelling">
+
+        <span class="graph-title">Fill 4 gaps</span>
+
+        <ul class="graph">
+          <li><span class="amount" style="width:{{156/156*100}}%">£155.65 a week</span></li>
+        </ul>
+      </div>
+
+        <button id="show-less" class="button button-secondary" name="test">Less detail</button>
+      </div>
+
+      
+
+    
+      <p style="margin-top: 20px"><a href="/29/ni/ni-persephone-full5">Gaps in your record and the cost of filling them</a></p>
+
+    </div><!-- /.tab-pane -->
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third">
+
+  </div><!-- /.grid-row -->
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#show-all").click(function(){
+        $("#modelling").show();
+        $("#personal-max").hide();
+    });
+    $("#show-less").click(function(){
+        $("#modelling").hide();
+        $("#personal-max").show();
+    });
+});
+</script>  
+{% endblock %}
