@@ -2248,3 +2248,10 @@ accordion dd, .ni-table dd {
     padding: 10px 0px 0px 0px;
     margin-bottom: 5px;
     font-size: 14px; } }
+
+.style1 {
+  border-color: #2b8cc4;
+  background-color: #eaf4f9; }
+
+.panel-border-wide {
+  border-left-width: 10px; }
