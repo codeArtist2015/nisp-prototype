@@ -327,7 +327,12 @@ app.get('/:mvpversion/tsandcs', authUtil.basicAuth(userId, pwd),
 // NI routes
 //********************************
     
-    app.get('/:mvpversion/ni/ni-persephone-full5', authUtil.basicAuth(userId, pwd),
+    app.get('/:mvpversion/ni/ni-record-full', authUtil.basicAuth(userId, pwd),
+            function (req, res) {
+                res.render(req.params.mvpversion+'/ni/ni-record-full', {"mvpversion": req.params.mvpversion, "signout":true});
+            });
+
+app.get('/:mvpversion/ni/ni-persephone-full5', authUtil.basicAuth(userId, pwd),
             function (req, res) {
                 res.render(req.params.mvpversion+'/ni/ni-persephone-full5', {"mvpversion": req.params.mvpversion, "signout":true});
             });
