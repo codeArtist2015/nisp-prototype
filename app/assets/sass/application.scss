@@ -860,6 +860,161 @@ font-size: 19px;
     background-color: #000
 }
 
+// modelling gaps options
+
+.options-wrapper {
+    display: inline-block; 
+    clear: both;
+    width: 100%;
+    padding: 25px 0 0px 0;
+    border-top: 1px solid #BFC1C3;
+}
+
+.options-increase {
+    width: 30%;
+    float: left;
+}
+
+@media (max-width: 640px)
+{
+.options-increase {
+    width: 50%;
+    float: left;
+  }
+}
+
+
+.options-gaps {
+  width: 20%;
+  float: left;
+}
+
+@media (max-width: 640px)
+{
+.options-gaps {
+    width: 50%;
+    float: left;
+  }
+}
+
+.options-cost {
+  width: 30%;
+  float: left;
+}
+
+@media (max-width: 640px)
+{
+.options-cost {
+    width: 50%;
+    float: left;
+  }
+}
+
+
+
+.options-button {
+  width: 20%;
+  padding-top: 10px;
+  float: left;
+}
+
+@media (max-width: 640px)
+{
+.options-button {
+    width: 100%;
+    padding-top: 0px;
+    float: left;
+  }
+}
+
+.options-data {
+  font-size: 24px;
+}
+
+@media (max-width: 640px)
+{
+.options-data {
+    font-size: 18px;
+  }
+}
+
+.options-flag {
+    border-left: 5px solid #2b8cc4;
+    padding-left: 10px;
+    margin: 0px 0 10px 0;
+    float: left;
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+.icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -17px;
+}
+
+.icon {
+    display: inline-block;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.icon-number1 {
+    background-image: url("/public/images/number1.png");
+    background-size: 100%;
+}
+
+.icon-number2 {
+    background-image: url("/public/images/number2.png");
+    background-size: 100%;
+}
+
+.icon-number1 {
+    width: 35px;
+    height: 35px;
+}
+
+@media (max-width: 640px)
+{
+.icon-number1 {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.icon-number2 {
+    width: 35px;
+    height: 35px;
+}
+
+@media (max-width: 640px)
+{
+.icon-number2 {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.notice {
+    position: relative;
+    padding-left: 45px
+}
+
+@media (max-width: 640px)
+{
+.notice {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+  }
+}
+
+//
+
+
+
 .tickBox {
     background: #fff;
     color: #6c3;
@@ -1369,13 +1524,16 @@ accordion dd, .ni-table dd {
   float: left;
   color: #999; }
 
+.ni-full2 {
+  color: #999; }
+
 .ni-late {
-  width: 55%;
+  width: 50%;
   float: left;
   color: #999; }
 
 .ni-notfull {
-  width: 40%;
+  width: 50%;
   float: left; }
 
 .ni-notfull2 {
@@ -1383,7 +1541,7 @@ accordion dd, .ni-table dd {
   float: left; }
 
 .ni-action {
-  width: 40%;
+  width: 30%;
   float: left;
   text-align: right; }
 
