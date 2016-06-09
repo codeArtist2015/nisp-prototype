@@ -1,0 +1,50 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check your State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your State Pension{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h2 class="heading-large">Your State Pension</h2>
+
+    <div class="tab-content">
+      <div class="highlighted-event">
+
+        <p>You can get your State Pension on 6&nbsp;July&nbsp;2045 when you’ll be 67, your estimate is</p>
+        <p><em>£142.31 a week</em></p>
+        <p>£xxx a month, £xxxx a year</p>
+
+      </div><!-- /.highlighted-event -->
+
+      <p>Your estimate</p>
+      <ul class="list-bullet">
+        <li>is not a guarantee and is based on the current law</li>
+        <li>does not include any increase due to inflation</li>
+      </ul>
+
+      <h3 class="heading-medium">You have 3 years on your National Insurance record</h3>
+      <p>You only need to have 10 years to get any State Pension.</p>
+      <p>By 6&nbsp;July&nbsp;2045, you will be able to contribute another 29 years.</p>
+      <div class="panel-indent">
+        <p><a href="https://www.gov.uk/new-state-pension/living-and-working-overseas" rel="external" target="_blank">If you have lived or worked overseas (opens in new tab)</a>, you may be able to use your time abroad to make your years in the UK qualify for the purposes of getting any State Pension.</p>
+      </div>
+
+      <h3 class="heading-medium">You can improve your estimate</h3>
+      <p>You have gaps in your National Insurance record for years where you did not contribute enough.</p>
+      <ul class="list-bullet">
+        <li>filling any gap can increase your estimate</li>
+        <li>you only need to fill 3 gaps to get the most you can</li>
+      </ul>
+
+      <p><a href="/{{mvpversion}}/ni/ni-record-full">Gaps in your record and the cost of filling them</a></p>
+
+    </div><!-- /.tab-pane -->
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third">
+  </div>
+</div><!-- /.column-third -->
+</div><!-- /.grid-row -->
+</div>
+
+{% endblock %}
