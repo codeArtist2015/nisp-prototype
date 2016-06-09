@@ -1,0 +1,45 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check my State Pension{% endblock %}
+{% block main %}
+{% include '../persephone_login.html' %}
+
+<a href="javascript:window.history.back();" class="example-back-link">Back</a>
+
+<div class="grid-row">
+	<div class="column-two-thirds">
+
+		<h2 class="heading-large" style="margin: 1em 0 0">Paying voluntary contributions</h2>
+<h2 class="heading-medium">How to pay</h2>
+<h2 class="heading-medium">What happens next</h2>
+
+
+<br><br>
+	<p>	<a href="javascript:window.history.back();" class="example-back-link">Back</a></p>
+
+	</div><!-- /.column-two-thirds -->
+	<div class="column-third">
+	</div><!-- /.column-third -->
+</div><!-- /.grid-row -->
+<script>
+
+jQuery(document).ready(function($){
+	var allPanels = $('.accordion > dd').hide();
+
+	$('.accordion > dt').click(function(){
+		if(!$(this).parent().parent().hasClass("active")){          
+			allPanels.prev().removeClass("active");
+			$(this).parent().parent().addClass("active");
+            console.log($(this));
+			$(this).parent().parent().next().slideDown();
+			return false;
+		}else{
+			$(this).parent().parent().removeClass("active");             
+			return false;
+		}
+	});
+});
+
+</script>
+
+{% endblock %}
