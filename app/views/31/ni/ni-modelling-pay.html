@@ -2,7 +2,6 @@
 {% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
 {% block serviceName %}Check my State Pension{% endblock %}
 {% block main %}
-{% include '../persephone_login.html' %}
 
 <a href="javascript:window.history.back();" class="example-back-link">Back</a>
 
@@ -10,9 +9,11 @@
 	<div class="column-two-thirds">
 
 		<h2 class="heading-large">Paying voluntary contributions</h2>
-<p>As well as <a href="ni-years-check">checking your National Insurance record is correct</a>, before paying voluntary contributions you should:
-
-<h2 class="heading-medium">1. Seek guidance or financial advice</h2>
+<p>Before paying voluntary contributions, as well as <a href="ni-years-check">checking your National Insurance record is correct</a>, you should:
+<div class="notice"> 
+      <h3 class="heading-medium"><i class="icon icon-number1">
+        <span class="visuallyhidden">1.</span>
+        </i>Seek guidance or financial advice</h3></div>
 <p>Paying voluntary contributions may not be your best option when planning for your retirement.</p>
 
 <details class="helptext">
@@ -31,9 +32,10 @@
 
   </div>
 </details>
-
-<h2 class="heading-medium">2. Check if you may get extra pension income because you</h2>
-
+<div class="notice"> 
+<h3 class="heading-medium"><i class="icon icon-number2">
+        <span class="visuallyhidden">2.</span>
+        </i>Check if you may get extra pension income because you</h3></div>
 <details class="helptext">
   <summary role="button">
     <span class="summary"> inherit or increase it from a partner</span>
