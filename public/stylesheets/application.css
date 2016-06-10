@@ -1861,7 +1861,7 @@ aside .page-navigation li span.part-number {
   border-top: 1px solid #BFC1C3; }
 
 .options-increase {
-  width: 30%;
+  width: 32%;
   float: left; }
 
 @media (max-width: 640px) {
@@ -1870,7 +1870,7 @@ aside .page-navigation li span.part-number {
     float: left; } }
 
 .options-gaps {
-  width: 20%;
+  width: 22%;
   float: left; }
 
 @media (max-width: 640px) {
@@ -1879,7 +1879,7 @@ aside .page-navigation li span.part-number {
     float: left; } }
 
 .options-cost {
-  width: 30%;
+  width: 25%;
   float: left; }
 
 @media (max-width: 640px) {
@@ -1917,7 +1917,7 @@ aside .page-navigation li span.part-number {
 .icon {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 40%;
   margin-top: -17px; }
 
 .icon {
@@ -2095,7 +2095,6 @@ aside .page-navigation li span.part-number {
 .graph li {
   position: relative;
   display: block;
-  border-bottom: 1px solid #EEE;
   background: #C1DFE4;
   height: 37px; }
   @media only screen and (max-width: 640px) {
