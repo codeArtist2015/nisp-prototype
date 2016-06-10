@@ -24,8 +24,12 @@ var records = [
   , { id: 23, username: 'janerj', password: '123456', displayName: 'JaneRJ'}
   , { id: 24, username: 'steveb', password: '123456', displayName: 'steveb'}
   , { id: 25, username: 'jeff3', password: '123456', displayName: 'steveb'}
+<<<<<<< HEAD
   , { id: 26, username: 'vincent3', password: '123456', displayName: 'steveb'}
   , { id: 27, username: 'sandyy', password: '123456', displayName: 'sandyy'}
+=======
+  , { id: 26, username: 'sandyy', password: '123456', displayName: 'sandyy'}
+>>>>>>> origin/master
   ]
 
 exports.findById = function(id, cb) {
