@@ -1,18 +1,6 @@
 /*------------------------------------*\
     IE Version 7
 \*------------------------------------*/
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
-
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
-
 .grid-row, #content, .panel-indent {
   zoom: 1; }
   .grid-row:after, #content:after, .panel-indent:after {
@@ -20,50 +8,12 @@
     display: block;
     clear: both; }
 
-@font-face {
-  font-family: GDS-Logo;
-  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
-
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
-
-@font-face {
-  font-family: GDS-Logo;
-  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
-
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
-
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
-
 .grid-row, #content, .panel-indent {
   zoom: 1; }
   .grid-row:after, #content:after, .panel-indent:after {
     content: "";
     display: block;
     clear: both; }
-
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
-
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
 
 .grid-row, #content, .panel-indent {
   zoom: 1; }
@@ -82,24 +32,12 @@
 .grid-row {
   margin: 0 -15px; }
 
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
-
 .grid-row, #content, .panel-indent {
   zoom: 1; }
   .grid-row:after, #content:after, .panel-indent:after {
     content: "";
     display: block;
     clear: both; }
-
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
 
 .example-highlight-grid .grid-wrapper {
   background: #bfc1c3; }
@@ -144,6 +82,7 @@ main {
   line-height: 1.25;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   font-size: 19px;
   line-height: 1.3157894737;
   -webkit-font-smoothing: antialiased; }
@@ -154,6 +93,7 @@ main {
   line-height: 1.0377358491;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   font-size: 80px;
   line-height: 1; }
 
@@ -163,6 +103,7 @@ main {
   line-height: 1.09375;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   font-size: 48px;
   line-height: 1.0416666667; }
 
@@ -172,6 +113,7 @@ main {
   line-height: 1.0416666667;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   font-size: 36px;
   line-height: 1.1111111111; }
 
@@ -181,6 +123,7 @@ main {
   line-height: 1.2;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   font-size: 24px;
   line-height: 1.25; }
 
@@ -190,6 +133,7 @@ main {
   line-height: 1.25;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   font-size: 19px;
   line-height: 1.3157894737; }
 
@@ -199,6 +143,7 @@ main {
   line-height: 1.1428571429;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   font-size: 16px;
   line-height: 1.25; }
 
@@ -208,6 +153,7 @@ main {
   line-height: 1.0377358491;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   font-size: 80px;
   line-height: 1; }
 
@@ -217,6 +163,7 @@ main {
   line-height: 1.09375;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   font-size: 48px;
   line-height: 1.0416666667; }
 
@@ -226,6 +173,7 @@ main {
   line-height: 1.0416666667;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   font-size: 36px;
   line-height: 1.1111111111; }
 
@@ -235,6 +183,7 @@ main {
   line-height: 1.2;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   font-size: 24px;
   line-height: 1.25; }
 
@@ -244,6 +193,7 @@ main {
   line-height: 1.25;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   font-size: 19px;
   line-height: 1.3157894737; }
 
@@ -253,6 +203,7 @@ main {
   line-height: 1.1428571429;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   font-size: 16px;
   line-height: 1.25; }
 
@@ -262,6 +213,7 @@ main {
   line-height: 1.09375;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   font-size: 48px;
   line-height: 1.0416666667;
   margin-top: 0.46875em;
@@ -274,6 +226,7 @@ main {
     line-height: 1.1111111111;
     font-weight: 400;
     text-transform: none;
+    font-size-adjust: 0.5;
     font-size: 27px;
     line-height: 1.1111111111;
     padding-top: 8px;
@@ -289,6 +242,7 @@ main {
   line-height: 1.0416666667;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   font-size: 36px;
   line-height: 1.1111111111;
   margin-top: 1.04167em;
@@ -301,6 +255,7 @@ main {
     line-height: 1.2;
     font-weight: 400;
     text-transform: none;
+    font-size-adjust: 0.5;
     font-size: 24px;
     line-height: 1.25;
     padding-top: 9px;
@@ -316,6 +271,7 @@ main {
   line-height: 1.2;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   font-size: 24px;
   line-height: 1.25;
   margin-top: 1.25em;
@@ -329,6 +285,7 @@ main {
   line-height: 1.25;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   font-size: 19px;
   line-height: 1.3157894737;
   margin-top: 0.625em;
@@ -347,6 +304,7 @@ p {
   line-height: 1.2;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   font-size: 24px;
   line-height: 1.25; }
 
@@ -364,7 +322,7 @@ p {
   color: #4c2c92; }
 
 .link:hover {
-  color: #2e8aca; }
+  color: #2b8cc4; }
 
 .link:active {
   color: #005ea5; }
@@ -382,10 +340,11 @@ pre, code {
   padding-bottom: 90px; }
 
 .phase-banner {
-  padding: 10px 0 8px 0;
+  padding: 10px 0 8px;
   padding-bottom: 10px;
   border-bottom: 1px solid #bfc1c3; }
   .phase-banner p {
+    display: table;
     margin: 0;
     color: #000;
     font-family: "nta", Arial, sans-serif;
@@ -393,6 +352,7 @@ pre, code {
     line-height: 1.1428571429;
     font-weight: 400;
     text-transform: none;
+    font-size-adjust: 0.5;
     font-size: 16px;
     line-height: 1.25; }
   .phase-banner .phase-tag {
@@ -400,8 +360,6 @@ pre, code {
     display: inline-block;
     zoom: 1;
     display: inline;
-    vertical-align: top;
-    vertical-align: baseline;
     margin: 0 8px 0 0;
     padding: 2px 5px 0;
     font-family: "nta", Arial, sans-serif;
@@ -409,6 +367,7 @@ pre, code {
     line-height: 1.1428571429;
     font-weight: 700;
     text-transform: none;
+    font-size-adjust: 0.525;
     font-size: 16px;
     line-height: 1.25;
     text-transform: uppercase;
@@ -417,7 +376,7 @@ pre, code {
     color: #fff;
     background-color: #d53880; }
   .phase-banner span {
-    vertical-align: top;
+    display: table-cell;
     vertical-align: baseline; }
 
 .column-quarter {
@@ -487,6 +446,7 @@ fieldset {
   line-height: 1.25;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   font-size: 19px;
   line-height: 1.3157894737;
   display: block;
@@ -498,6 +458,7 @@ fieldset {
   line-height: 1.2;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   font-size: 24px;
   line-height: 1.25;
   display: block;
@@ -508,6 +469,7 @@ fieldset {
     line-height: 1.25;
     font-weight: 400;
     text-transform: none;
+    font-size-adjust: 0.5;
     font-size: 19px;
     line-height: 1.3157894737; }
 
@@ -532,6 +494,7 @@ fieldset {
   line-height: 1.25;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   font-size: 19px;
   line-height: 1.3157894737;
   width: 100%;
@@ -592,6 +555,7 @@ fieldset {
   line-height: 1.1428571429;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   font-size: 16px;
   line-height: 1.25; }
 
@@ -612,6 +576,7 @@ fieldset {
   line-height: 1.1428571429;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   font-size: 16px;
   line-height: 1.25;
   color: #b10e1e; }
@@ -695,6 +660,7 @@ table th, table td {
   line-height: 1.1428571429;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   font-size: 16px;
   line-height: 1.25;
   padding: 0.75em 1.25em 0.5625em 0;
@@ -714,6 +680,7 @@ table td.numeric {
   line-height: 1.1428571429;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   font-size: 16px;
   line-height: 1.25;
   text-align: right; }
@@ -725,7 +692,7 @@ table td.numeric {
   display: inline-block;
   zoom: 1;
   display: inline;
-  padding: 0.3em 0.6em 0.2em 0.6em;
+  padding: .526315em .789473em .263157em;
   border: none;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -789,7 +756,7 @@ table td.numeric {
     margin-left: 0;
     margin-right: 0; }
   .button[type="submit"], .button[type="reset"], .button[type="button"] {
-    filter: chroma(color=#000000); }
+    filter: chroma(color=#0b0c0c); }
   .button[type=submit].button {
     filter: none; }
 
@@ -812,6 +779,7 @@ table td.numeric {
   line-height: 1.2;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   font-size: 24px;
   line-height: 1.25;
   background-image: url("/icons/icon-pointer.png");
@@ -834,7 +802,7 @@ details summary {
   margin-bottom: 0.26316em; }
 
 details summary:hover {
-  color: #2e8aca; }
+  color: #2b8cc4; }
 
 details summary:focus {
   outline: 3px solid #ffbf47; }
