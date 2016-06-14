@@ -1,62 +1,12 @@
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
-
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
-
 .grid-row:after, #content:after, .panel-indent:after {
   content: "";
   display: block;
   clear: both; }
 
-@font-face {
-  font-family: GDS-Logo;
-  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
-
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
-
-@font-face {
-  font-family: GDS-Logo;
-  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
-
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
-
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
-
 .grid-row:after, #content:after, .panel-indent:after {
   content: "";
   display: block;
   clear: both; }
-
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
-
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
 
 .grid-row:after, #content:after, .panel-indent:after {
   content: "";
@@ -76,22 +26,10 @@
 .grid-row {
   margin: 0 -15px; }
 
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
-
 .grid-row:after, #content:after, .panel-indent:after {
   content: "";
   display: block;
   clear: both; }
-
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
 
 .example-highlight-grid .grid-wrapper {
   background: #bfc1c3; }
@@ -134,6 +72,7 @@ main {
   line-height: 1.25;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   -webkit-font-smoothing: antialiased; }
   @media (min-width: 641px) {
     main {
@@ -145,7 +84,8 @@ main {
   font-size: 53px;
   line-height: 1.0377358491;
   font-weight: 400;
-  text-transform: none; }
+  text-transform: none;
+  font-size-adjust: 0.5; }
   @media (min-width: 641px) {
     .font-xxlarge {
       font-size: 80px;
@@ -156,7 +96,8 @@ main {
   font-size: 32px;
   line-height: 1.09375;
   font-weight: 400;
-  text-transform: none; }
+  text-transform: none;
+  font-size-adjust: 0.5; }
   @media (min-width: 641px) {
     .font-xlarge {
       font-size: 48px;
@@ -167,7 +108,8 @@ main {
   font-size: 24px;
   line-height: 1.0416666667;
   font-weight: 400;
-  text-transform: none; }
+  text-transform: none;
+  font-size-adjust: 0.5; }
   @media (min-width: 641px) {
     .font-large {
       font-size: 36px;
@@ -178,7 +120,8 @@ main {
   font-size: 18px;
   line-height: 1.2;
   font-weight: 400;
-  text-transform: none; }
+  text-transform: none;
+  font-size-adjust: 0.5; }
   @media (min-width: 641px) {
     .font-medium {
       font-size: 24px;
@@ -189,7 +132,8 @@ main {
   font-size: 16px;
   line-height: 1.25;
   font-weight: 400;
-  text-transform: none; }
+  text-transform: none;
+  font-size-adjust: 0.5; }
   @media (min-width: 641px) {
     .font-small {
       font-size: 19px;
@@ -200,7 +144,8 @@ main {
   font-size: 14px;
   line-height: 1.1428571429;
   font-weight: 400;
-  text-transform: none; }
+  text-transform: none;
+  font-size-adjust: 0.5; }
   @media (min-width: 641px) {
     .font-xsmall {
       font-size: 16px;
@@ -211,7 +156,8 @@ main {
   font-size: 53px;
   line-height: 1.0377358491;
   font-weight: 700;
-  text-transform: none; }
+  text-transform: none;
+  font-size-adjust: 0.525; }
   @media (min-width: 641px) {
     .bold-xxlarge {
       font-size: 80px;
@@ -222,7 +168,8 @@ main {
   font-size: 32px;
   line-height: 1.09375;
   font-weight: 700;
-  text-transform: none; }
+  text-transform: none;
+  font-size-adjust: 0.525; }
   @media (min-width: 641px) {
     .bold-xlarge {
       font-size: 48px;
@@ -233,7 +180,8 @@ main {
   font-size: 24px;
   line-height: 1.0416666667;
   font-weight: 700;
-  text-transform: none; }
+  text-transform: none;
+  font-size-adjust: 0.525; }
   @media (min-width: 641px) {
     .bold-large {
       font-size: 36px;
@@ -244,7 +192,8 @@ main {
   font-size: 18px;
   line-height: 1.2;
   font-weight: 700;
-  text-transform: none; }
+  text-transform: none;
+  font-size-adjust: 0.525; }
   @media (min-width: 641px) {
     .bold-medium {
       font-size: 24px;
@@ -255,7 +204,8 @@ main {
   font-size: 16px;
   line-height: 1.25;
   font-weight: 700;
-  text-transform: none; }
+  text-transform: none;
+  font-size-adjust: 0.525; }
   @media (min-width: 641px) {
     .bold-small {
       font-size: 19px;
@@ -266,7 +216,8 @@ main {
   font-size: 14px;
   line-height: 1.1428571429;
   font-weight: 700;
-  text-transform: none; }
+  text-transform: none;
+  font-size-adjust: 0.525; }
   @media (min-width: 641px) {
     .bold-xsmall {
       font-size: 16px;
@@ -278,6 +229,7 @@ main {
   line-height: 1.09375;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   margin-top: 0.46875em;
   margin-bottom: 0.9375em; }
   @media (min-width: 641px) {
@@ -294,6 +246,7 @@ main {
     line-height: 1.1111111111;
     font-weight: 400;
     text-transform: none;
+    font-size-adjust: 0.5;
     padding-top: 8px;
     padding-bottom: 7px;
     display: block;
@@ -313,6 +266,7 @@ main {
   line-height: 1.0416666667;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   margin-top: 1.04167em;
   margin-bottom: 0.41667em; }
   @media (min-width: 641px) {
@@ -329,6 +283,7 @@ main {
     line-height: 1.2;
     font-weight: 400;
     text-transform: none;
+    font-size-adjust: 0.5;
     padding-top: 9px;
     padding-bottom: 6px;
     display: block;
@@ -348,6 +303,7 @@ main {
   line-height: 1.2;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   margin-top: 1.25em;
   margin-bottom: 0.5em; }
   @media (min-width: 641px) {
@@ -365,6 +321,7 @@ main {
   line-height: 1.25;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   margin-top: 0.625em;
   margin-bottom: 0.3125em; }
   @media (min-width: 641px) {
@@ -388,7 +345,8 @@ p {
   font-size: 18px;
   line-height: 1.2;
   font-weight: 400;
-  text-transform: none; }
+  text-transform: none;
+  font-size-adjust: 0.5; }
   @media (min-width: 641px) {
     .lede {
       font-size: 24px;
@@ -408,7 +366,7 @@ p {
   color: #4c2c92; }
 
 .link:hover {
-  color: #2e8aca; }
+  color: #2b8cc4; }
 
 .link:active {
   color: #005ea5; }
@@ -428,19 +386,21 @@ pre, code {
       padding-bottom: 90px; } }
 
 .phase-banner {
-  padding: 10px 0 8px 0;
+  padding: 10px 0 8px;
   border-bottom: 1px solid #bfc1c3; }
   @media (min-width: 641px) {
     .phase-banner {
       padding-bottom: 10px; } }
   .phase-banner p {
+    display: table;
     margin: 0;
     color: #000;
     font-family: "nta", Arial, sans-serif;
     font-size: 14px;
     line-height: 1.1428571429;
     font-weight: 400;
-    text-transform: none; }
+    text-transform: none;
+    font-size-adjust: 0.5; }
     @media (min-width: 641px) {
       .phase-banner p {
         font-size: 16px;
@@ -448,7 +408,6 @@ pre, code {
   .phase-banner .phase-tag {
     display: -moz-inline-stack;
     display: inline-block;
-    vertical-align: top;
     margin: 0 8px 0 0;
     padding: 2px 5px 0;
     font-family: "nta", Arial, sans-serif;
@@ -456,6 +415,7 @@ pre, code {
     line-height: 1.1428571429;
     font-weight: 700;
     text-transform: none;
+    font-size-adjust: 0.525;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none;
@@ -463,16 +423,11 @@ pre, code {
     background-color: #d53880; }
     @media (min-width: 641px) {
       .phase-banner .phase-tag {
-        vertical-align: baseline; } }
-    @media (min-width: 641px) {
-      .phase-banner .phase-tag {
         font-size: 16px;
         line-height: 1.25; } }
   .phase-banner span {
-    vertical-align: top; }
-    @media (min-width: 641px) {
-      .phase-banner span {
-        vertical-align: baseline; } }
+    display: table-cell;
+    vertical-align: baseline; }
 
 .column-quarter {
   padding: 0 15px;
@@ -550,6 +505,7 @@ fieldset {
   line-height: 1.25;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   display: block;
   margin-bottom: 5px; }
   @media (min-width: 641px) {
@@ -563,6 +519,7 @@ fieldset {
   line-height: 1.2;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   display: block;
   margin-bottom: 0; }
   @media (min-width: 641px) {
@@ -574,7 +531,8 @@ fieldset {
     font-size: 16px;
     line-height: 1.25;
     font-weight: 400;
-    text-transform: none; }
+    text-transform: none;
+    font-size-adjust: 0.5; }
     @media (min-width: 641px) {
       .form-label-bold .form-hint {
         font-size: 19px;
@@ -602,6 +560,7 @@ fieldset {
   line-height: 1.25;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -673,7 +632,8 @@ fieldset {
   font-size: 14px;
   line-height: 1.1428571429;
   font-weight: 400;
-  text-transform: none; }
+  text-transform: none;
+  font-size-adjust: 0.5; }
   @media (min-width: 641px) {
     .validation-summary li, .validation-summary p {
       font-size: 16px;
@@ -696,6 +656,7 @@ fieldset {
   line-height: 1.1428571429;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   color: #b10e1e; }
   @media (min-width: 641px) {
     .validation-message {
@@ -783,6 +744,7 @@ table th, table td {
   line-height: 1.1428571429;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   padding: 0.75em 1.25em 0.5625em 0;
   text-align: left;
   color: #0b0c0c;
@@ -804,6 +766,7 @@ table td.numeric {
   line-height: 1.1428571429;
   font-weight: 400;
   text-transform: none;
+  font-size-adjust: 0.5;
   text-align: right; }
   @media (min-width: 641px) {
     table td.numeric {
@@ -815,7 +778,7 @@ table td.numeric {
   position: relative;
   display: -moz-inline-stack;
   display: inline-block;
-  padding: 0.3em 0.6em 0.2em 0.6em;
+  padding: .526315em .789473em .263157em;
   border: none;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -899,6 +862,7 @@ table td.numeric {
   line-height: 1.2;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   background-image: url("/icons/icon-pointer.png");
   background-repeat: no-repeat;
   background-position: 100% 50%;
@@ -923,7 +887,7 @@ details summary {
   margin-bottom: 0.26316em; }
 
 details summary:hover {
-  color: #2e8aca; }
+  color: #2b8cc4; }
 
 details summary:focus {
   outline: 3px solid #ffbf47; }
@@ -1069,19 +1033,21 @@ ul, ol {
   color: #fff; }
 
 .alpha-banner {
-  padding: 10px 0 8px 0;
+  padding: 10px 0 8px;
   border-bottom: 1px solid #bfc1c3; }
   @media (min-width: 641px) {
     .alpha-banner {
       padding-bottom: 10px; } }
   .alpha-banner p {
+    display: table;
     margin: 0;
     color: #000;
     font-family: "nta", Arial, sans-serif;
     font-size: 14px;
     line-height: 1.1428571429;
     font-weight: 400;
-    text-transform: none; }
+    text-transform: none;
+    font-size-adjust: 0.5; }
     @media (min-width: 641px) {
       .alpha-banner p {
         font-size: 16px;
@@ -1089,7 +1055,6 @@ ul, ol {
   .alpha-banner .phase-tag {
     display: -moz-inline-stack;
     display: inline-block;
-    vertical-align: top;
     margin: 0 8px 0 0;
     padding: 2px 5px 0;
     font-family: "nta", Arial, sans-serif;
@@ -1097,6 +1062,7 @@ ul, ol {
     line-height: 1.1428571429;
     font-weight: 700;
     text-transform: none;
+    font-size-adjust: 0.525;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none;
@@ -1104,21 +1070,15 @@ ul, ol {
     background-color: #f47738; }
     @media (min-width: 641px) {
       .alpha-banner .phase-tag {
-        vertical-align: baseline; } }
-    @media (min-width: 641px) {
-      .alpha-banner .phase-tag {
         font-size: 16px;
         line-height: 1.25; } }
   .alpha-banner span {
-    vertical-align: top; }
-    @media (min-width: 641px) {
-      .alpha-banner span {
-        vertical-align: baseline; } }
+    display: table-cell;
+    vertical-align: baseline; }
 
 .alpha-tag {
   display: -moz-inline-stack;
   display: inline-block;
-  vertical-align: top;
   margin: 0 8px 0 0;
   padding: 2px 5px 0;
   font-family: "nta", Arial, sans-serif;
@@ -1126,14 +1086,12 @@ ul, ol {
   line-height: 1.1428571429;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: none;
   color: #fff;
   background-color: #f47738; }
-  @media (min-width: 641px) {
-    .alpha-tag {
-      vertical-align: baseline; } }
   @media (min-width: 641px) {
     .alpha-tag {
       font-size: 16px;
@@ -1148,19 +1106,21 @@ ul, ol {
     background: #fff; }
 
 .alpha-banner {
-  padding: 10px 0 8px 0;
+  padding: 10px 0 8px;
   border-bottom: 1px solid #bfc1c3; }
   @media (min-width: 641px) {
     .alpha-banner {
       padding-bottom: 10px; } }
   .alpha-banner p {
+    display: table;
     margin: 0;
     color: #000;
     font-family: "nta", Arial, sans-serif;
     font-size: 14px;
     line-height: 1.1428571429;
     font-weight: 400;
-    text-transform: none; }
+    text-transform: none;
+    font-size-adjust: 0.5; }
     @media (min-width: 641px) {
       .alpha-banner p {
         font-size: 16px;
@@ -1168,7 +1128,6 @@ ul, ol {
   .alpha-banner .phase-tag {
     display: -moz-inline-stack;
     display: inline-block;
-    vertical-align: top;
     margin: 0 8px 0 0;
     padding: 2px 5px 0;
     font-family: "nta", Arial, sans-serif;
@@ -1176,6 +1135,7 @@ ul, ol {
     line-height: 1.1428571429;
     font-weight: 700;
     text-transform: none;
+    font-size-adjust: 0.525;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none;
@@ -1183,23 +1143,17 @@ ul, ol {
     background-color: #d53880; }
     @media (min-width: 641px) {
       .alpha-banner .phase-tag {
-        vertical-align: baseline; } }
-    @media (min-width: 641px) {
-      .alpha-banner .phase-tag {
         font-size: 16px;
         line-height: 1.25; } }
   .alpha-banner span {
-    vertical-align: top; }
-    @media (min-width: 641px) {
-      .alpha-banner span {
-        vertical-align: baseline; } }
+    display: table-cell;
+    vertical-align: baseline; }
   .alpha-banner strong {
     text-transform: uppercase; }
 
 .alpha-tag {
   display: -moz-inline-stack;
   display: inline-block;
-  vertical-align: top;
   margin: 0 8px 0 0;
   padding: 2px 5px 0;
   font-family: "nta", Arial, sans-serif;
@@ -1207,14 +1161,12 @@ ul, ol {
   line-height: 1.1428571429;
   font-weight: 700;
   text-transform: none;
+  font-size-adjust: 0.525;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: none;
   color: #fff;
   background-color: #d53880; }
-  @media (min-width: 641px) {
-    .alpha-tag {
-      vertical-align: baseline; } }
   @media (min-width: 641px) {
     .alpha-tag {
       font-size: 16px;
