@@ -10,12 +10,11 @@
     <h3 class="heading-medium" style="margin: 10px 0 -10px 0">Summary</h3>
 
     <div class="tab-content">
+      
       <div class="highlighted-event">
-
         <p>You can get your State Pension on 1&nbsp;December&nbsp;2022 when you'll be 66, your estimate is</p>
         <p><em>£137.10 a week</em></p>
         <p>£567 a month, £6,812 a year</p>
-
       </div><!-- /.highlighted-event -->
 
       <p>Your estimate</p>
@@ -39,83 +38,71 @@
         </ul>
       </div>
 
-
-
       <h3 class="heading-medium">You can improve your estimate</h3>
-      <p>You have gaps in your National Insurance record for years where you did not contribute enough. 
+      <p>You have gaps in your National Insurance record for years where you did not contribute enough.</p>
+      <ul class="list-bullet">
+        <li>filling any gap can increase your estimate</li>
+        <li>you only need to fill 4 gaps to get the most you can</li>
+      </ul>
 
-        <ul class="list-bullet">
-         <li>filling any gap can increase your estimate</li><li>you only need to fill 4 gaps to get the most you can</li>
-       </li></ul>
-
-
-       <div id="personal-max">
-       <div class="chart-block" style="margin-bottom: 50px">
-
-        <span class="graph-title">The most you can get by filling any 4 gaps in your record is</span>
-
-        <ul class="graph">
-          <li><span class="amount" style="width:{{156/156*100}}%">£155.65 a week</span></li>
-        </ul>
+      <div id="personal-max">
+        <div class="chart-block" style="margin-bottom: 50px">
+          <span class="graph-title">The most you can get by filling any 4 gaps in your record is</span>
+          <ul class="graph">
+            <li><span class="amount" style="width:{{156/156*100}}%">£155.65 a week</span></li>
+          </ul>
+        </div>
+        <button id="show-all" class="button button-secondary" name="test">More detail</button>
       </div>
-      <button id="show-all" class="button button-secondary" name="test">More detail</button>
-    </div>
+
       <div id="modelling" style="display: none">
+
         <div class="chart-block chart-modelling">
+          <span class="graph-title">Estimate if you continue to contribute until 2022</span>
+          <ul class="graph">
+            <li><span class="amount" style="width:{{137/156*100}}%">£137.10 a week</span></li>
+          </ul>
+        </div>
 
-        <span class="graph-title">Estimate if you continue to contribute until 2022</span>
+        <div class="chart-block chart-modelling">
+          <span class="graph-title">Fill 1 gap</span>
+          <ul class="graph">
+            <li><span class="amount" style="width:{{141/156*100}}%">£141.55 a week</span></li>
+          </ul>
+        </div>
 
-        <ul class="graph">
-          <li><span class="amount" style="width:{{137/156*100}}%">£137.10 a week</span></li>
-        </ul>
-      </div>
-      <div class="chart-block chart-modelling">
+        <div class="chart-block chart-modelling">
+          <span class="graph-title">Fill 2 gaps</span>
+          <ul class="graph">
+            <li><span class="amount" style="width:{{145/156*100}}%">£146.05 a week</span></li>
+          </ul>
+        </div>
 
-        <span class="graph-title">Fill 1 gap</span>
+        <div class="chart-block chart-modelling">
+          <span class="graph-title">Fill 3 gaps</span>
+          <ul class="graph">
+            <li><span class="amount" style="width:{{150/156*100}}%">£150.65 a week</span></li>
+          </ul>
+        </div>
 
-        <ul class="graph">
-          <li><span class="amount" style="width:{{141/156*100}}%">£141.55 a week</span></li>
-        </ul>
-      </div>
-      <div class="chart-block chart-modelling">
-
-        <span class="graph-title">Fill 2 gaps</span>
-
-        <ul class="graph">
-          <li><span class="amount" style="width:{{145/156*100}}%">£146.05 a week</span></li>
-        </ul>
-      </div>
-      <div class="chart-block chart-modelling">
-
-        <span class="graph-title">Fill 3 gaps</span>
-
-        <ul class="graph">
-          <li><span class="amount" style="width:{{150/156*100}}%">£150.65 a week</span></li>
-        </ul>
-      </div>
-       <div class="chart-block chart-modelling">
-
-        <span class="graph-title">Fill 4 gaps</span>
-
-        <ul class="graph">
-          <li><span class="amount" style="width:{{156/156*100}}%">£155.65 a week</span></li>
-        </ul>
-      </div>
+        <div class="chart-block chart-modelling">
+          <span class="graph-title">Fill 4 gaps</span>
+          <ul class="graph">
+            <li><span class="amount" style="width:{{156/156*100}}%">£155.65 a week</span></li>
+          </ul>
+        </div>
 
         <button id="show-less" class="button button-secondary" name="test">Less detail</button>
+
       </div>
 
-      
-
-    
       <p style="margin-top: 20px"><a href="/29/ni/ni-persephone-full5">Gaps in your record and the cost of filling them</a></p>
 
     </div><!-- /.tab-pane -->
   </div><!-- /.column-two-thirds -->
-  <div class="column-third">
-
+  <div class="column-third"></div><!-- /.column-thrid -->
   </div><!-- /.grid-row -->
-</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
