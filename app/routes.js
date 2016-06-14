@@ -414,11 +414,21 @@ app.get('/25/start/p60_question', function (req, res) {
 
 // Write the user input to the check your answers page
 
-app.get('/check-your-answers-page', function (req, res) {
+app.get('/31/ni/ni-modelling-pay', function (req, res) {
 
-  var feat = req.query.feat;
+  var cost = req.query.cost;
+  var increase = req.query.increase;
 
-  res.render('check-your-answers-page', { 'feat' : feat });
+  res.render('31/ni/ni-modelling-pay', { 'cost' : cost , 'increase' : increase });
+  
+});
+
+app.get('/31/ni/pay-voluntary-contributions', function (req, res) {
+
+  var cost = req.query.cost;
+  var increase = req.query.increase;
+
+  res.render('31/ni/pay-voluntary-contributions', { 'cost' : cost , 'increase' : increase });
   
 });
 

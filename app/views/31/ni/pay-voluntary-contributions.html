@@ -8,23 +8,25 @@
     <a href="javascript:window.history.back();" class="example-back-link">Back</a>
 
     <h2 class="heading-large">Paying voluntary contributions</h2>
-    <p lass="lede">You can pay voluntary contributions to fill gaps in your National Insurance record to make years count towards your State Pension.</p>
+    <p><span class="heading-medium"> Pay {{ cost }}</span><br>
+    to increase your pension forecast from £130.10 to {{ increase }} a week</p>
     <h3 class="heading-medium">Paying through your bank or building society</h3>
     <p>The quickest and easiest way to make a payment is using internet or telephone banking. You can also call into your local branch.</p>
-    <ul class="list-bullet">
-      <li>Account name: HMRC</li>
-      <li>Account number: 123456789</li>
-      <li>Sort code: 12-34-56</li>
-    </ul>
-    <div class="panel-indent panel-border-wide style1">
-      <p>Your reference is <strong>ABC123DOREMI</strong></p>
-    </div>
+    <h4 class="heading-small">Account details for payment</h4>
+    <table style="width: 80%">
+      <tr><th>Account name</th><td> HMRC</td></tr>
+      <tr><th>Account number</th><td> 123456789</td></tr>
+      <tr><th>Sort code</th><td> 12-34-56</td></tr>
+      <tr><th>Payment reference</th><td>ABC123DOREMI</td></tr>
+    </table>
+    <div class="panel-indent">Pay in full and quote the payment reference</div> 
+    <hr style="border: 0; height: 1px; background: #BFC1C3;">
     <h3 class="heading-medium">Payment by cheque</h3>
-    <p>You can send your payment to HMRC directly. Make your cheque payable to &lsquo;HM Revenue and Customs only&rsquo; followed by your reference number.</p>
+    <p>You can send your payment to HMRC directly. Make your cheque payable to &lsquo;HM Revenue and Customs only&rsquo; followed by your payment reference.</p>
     <p>Include a note with:</p>
     <ul class="list-bullet">
       <li>your name, address and telephone number</li>
-      <li>your reference number or National Insurance number</li>
+      <li>your reference ABC123DOREMI or National Insurance number</li>
       <li>the periods you&rsquo;re paying for</li>
       <li>whether you want a receipt</li>
     </ul>
@@ -35,6 +37,7 @@
       Newcastle upon Tyne<br />
       NE98 1ZZ
     </p>
+      
     <p>Allow 3 working days for the payment to reach HMRC.</p>
     <div class="panel-indent">
       <p>It can take around 28 days for your National Insurance record to be updated with any voluntary contributions you make.</p>
