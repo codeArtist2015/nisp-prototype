@@ -7,14 +7,14 @@
   <div class="column-two-thirds">
 
     <h2 class="heading-large">Your State Pension</h2>
+    <h3 class="heading-medium" style="margin: 10px 0 -10px 0">Summary</h3>
 
     <div class="tab-content">
       <div class="highlighted-event">
 
-        <p>You can get your State Pension on 1&nbsp;December&nbsp;2057 when you’ll be 67, your estimate is</p>
-        <p><em>£155.65 a week</em></p>
-        <p>£655 a month, £7,865 a year</p>
-
+        <p>You can get your State Pension on 6&nbsp;July&nbsp;2045 when you’ll be 67, your estimate is</p>
+        <p><em>£142.31 a week</em></p>
+        <p>£xxx a month, £xxxx a year</p>
       </div><!-- /.highlighted-event -->
 
       <p>Your estimate</p>
@@ -22,22 +22,44 @@
         <li>is not a guarantee and is based on the current law</li>
         <li>does not include any increase due to inflation</li>
       </ul>
-      
+
       <h3 class="heading-medium">You have 3 years on your National Insurance record</h3>
       <p>You only need to have 10 years to get any State Pension.</p>
-      <p>By 1&nbsp;December&nbsp;2057, you will be able to contribute another 32 years to get the most you can.</p>
+      <p>By 6&nbsp;July&nbsp;2045, you will be able to contribute another 29 years.</p>
       <div class="panel-indent">
         <p><a href="https://www.gov.uk/new-state-pension/living-and-working-overseas" rel="external" target="_blank">If you have lived or worked overseas (opens in new tab)</a>, you may be able to use your time abroad to make your years in the UK qualify for the purposes of getting any State Pension.</p>
       </div>
 
-      <h3 class="heading-medium">£155.65 is the most you can get</h3>
-      <p>You cannot improve your estimate any further, unless you choose to put off claiming. You’ll still need to pay contributions as these fund other state benefits and the NHS.</p>
-      <p>When you reach State Pension age, 1 December 2057, you no longer have to pay National Insurance contributions.</p>
-      <p><a href="#">View your National Insurance record</a></p>
+      <h3 class="heading-medium">You can improve your estimate</h3>
+      <p>You have gaps in your National Insurance record for years where you did not contribute enough.</p>
+      <ul class="list-bullet">
+        <li>filling any gap can increase your estimate</li>
+        <li>you only need to fill 3 gaps to get the most you can</li>
+      </ul>
+
+      <p><a href="/{{mvpversion}}/ni/ni-record-full">Gaps in your record and the cost of filling them</a></p>
 
     </div><!-- /.tab-pane -->
   </div><!-- /.column-two-thirds -->
   <div class="column-third">
+
+
+  </div><!-- /.grid-row -->
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#show-all").click(function(){
+        $("#modelling").show();
+        $("#personal-max").hide();
+    });
+    $("#show-less").click(function(){
+        $("#modelling").hide();
+        $("#personal-max").show();
+    });
+});
+</script>  
+
   </div>
 </div><!-- /.column-third -->
 </div><!-- /.grid-row -->
