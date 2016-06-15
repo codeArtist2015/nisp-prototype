@@ -22,7 +22,7 @@ Install Node.js (see requirements)
 
 #### Download the prototype kit
 
-[Download the zip file](https://github.com/alphagov/govuk_prototype_kit/archive/master.zip)
+[Download the zip file](https://github.com/codeArtist2015/nisp-prototype/archive/master.zip)
 
 Unzip the file
 
