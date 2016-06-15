@@ -18,15 +18,15 @@ If you don't have Node, download it here: [http://nodejs.org/](http://nodejs.org
 
 ## Getting started
 
-Install Node.js (see requirements)
+#### 1. Install Node.js (see requirements)
 
-#### Download the prototype kit
+#### 2. Download the prototype kit
 
 [Download the zip file](https://github.com/codeArtist2015/nisp-prototype/archive/master.zip)
 
 Unzip the file
 
-#### Install dependencies
+#### 3. Install dependencies
 
 Open a command line app (Terminal on OSX) and change to the unzipped directory. Then run:
 
@@ -36,7 +36,7 @@ npm install
 
 This will install extra code that the prototype kit needs.
 
-#### Run the app
+#### 4. Run the app
 
 ```
 node start.js
