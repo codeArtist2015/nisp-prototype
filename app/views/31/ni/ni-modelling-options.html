@@ -5,7 +5,7 @@
 
 <div class="grid-row">
   <div class="column-two-thirds">
-      <a href="javascript:window.history.back();" class="example-back-link">Back</a>
+      <a href="../dashboard/dashboardA" class="example-back-link">Back</a>
 
       <h2 class="heading-large">How to increase your pension</h2>
       <p class="lede">To fill gaps in your National Insurance record and increase your pension, you should:</p>
@@ -17,7 +17,7 @@
       <p>If you have evidence that it&rsquo;s wrong you can correct it. If correcting your record fills a gap it may increase your pension.</p>
       <p><a href="ni-years-check">Check your National Insurance record</a></p>
 
-      <a name="options"><div class="notice">
+      <a name="options"></a><div class="notice">
         <h3 class="heading-medium">
           <i class="icon icon-number2"><span class="visuallyhidden">2.</span></i>Pay voluntary contributions
         </h3>
@@ -33,7 +33,7 @@
 
   <!-- 2013 -->
   <dl>
-    <dt>
+    <dt onclick="window.location = 'ni-modelling-pay?cost=£300&increase=£142.10';" style="cursor: hand; cursor: pointer;">
       <div class="options-wrapper">
         <div class="options-flag">This is the most pension you can get</div>
         <div class="options-increase"><p>increase estimate to<br><span class="options-data">£142.10 a week</span></p></div>
@@ -43,7 +43,7 @@
       </div>
     </dt>
 
-    <dt id="full-list" style="display: none">
+    <dt id="full-list" style="display: none; cursor: hand; cursor: pointer;" onclick="window.location = 'ni-modelling-pay?cost=£150&increase=£137.10';">
       <div class="options-wrapper">
         <div class="options-increase"><p>increase estimate to<br><span class="options-data">£137.10 a week</span></p></div>
         <div class="options-gaps"><p>gaps filled<br><span class="options-data">2</span></p></div>
@@ -52,7 +52,7 @@
       </div>
     </dt>
 
-    <dt>
+    <dt onclick="window.location = 'ni-modelling-pay?cost=£50&increase=£134.10';"  style="cursor: hand; cursor: pointer;">
       <div class="options-wrapper">
         <div class="options-flag">This is your cheapest option</div>
         <div class="options-increase"><p>increase estimate to<br><span class="options-data">£134.10 a week</span></p></div>
@@ -66,7 +66,7 @@
   <div id="more-options">
     <a id="show-all" href="#" name="test">Show all options</a>
   </div>
-  <a href="javascript:window.history.back();" class="example-back-link">Back</a>
+  <a href="../dashboard/dashboardA" class="example-back-link">Back</a>
 
 </div>
 
