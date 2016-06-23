@@ -21,7 +21,7 @@
     "connect": "2.30.2",
     "consolidate": "0.x",
     "minimist": "0.0.8",
-    "govuk_frontend_toolkit": "^4.3.0",
+    "govuk_frontend_toolkit": "^4.12.0",
     "govuk_template_mustache": "~0.13.0",
     "node-sass": "2.1.1",
     "grunt": "0.4.5",
