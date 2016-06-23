@@ -1,0 +1,42 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check your State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your State Pension{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h2 class="heading-large">Your State Pension</h2>
+
+    <div class="tab-content">
+
+      <div class="highlighted-event">
+        <p>You can get your State Pension on 1&nbsp;December&nbsp;2057 when you&rsquo;ll be 67, your estimate is</p>
+        <p><em>£155.65 a week</em></p>
+        <p>£676.80 a month, £8,121.59 a year</p>
+      </div><!-- /.highlighted-event -->
+
+      <p>Your estimate</p>
+      <ul class="list-bullet">
+        <li>is not a guarantee and is based on the current law</li>
+        <li>does not include any increase due to inflation</li>
+      </ul>
+
+      <h3 class="heading-medium">You need to continue to contribute National Insurance to reach your forecast</h3>
+      <p>You already have 3 years on your record and you need 10 years before you can get any State Pension.</p>      
+
+      <div class="panel-indent">
+        <p><a href="https://www.gov.uk/new-state-pension/living-and-working-overseas" rel="external" target="_blank">If you have lived or worked overseas (opens in new tab)</a>, you may be able to use your time abroad to make your years in the UK qualify for the purposes of getting any State Pension.</p>
+      </div>
+
+      <h3 class="heading-medium">£155.65 is the most you can get</h3>
+      <p>You cannot improve your estimate any further, unless you choose to put off claiming. You&rsquo;ll still need to pay contributions as these fund other state benefits and the NHS.</p>
+      <p>When you reach State Pension age, 1 December 2057, you no longer have to pay National Insurance contributions.</p>
+      <p><a href="#">View your National Insurance record</a></p>
+
+    </div><!-- /.tab-pane -->
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third"></div><!-- /.column-third -->
+</div><!-- /.grid-row -->
+
+{% endblock %}

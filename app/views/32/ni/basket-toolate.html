@@ -1,0 +1,36 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check my State Pension{% endblock %}
+{% block main %}
+{% include '../persephone_login.html' %}
+
+<a href="/{{mvpversion}}/ni/ni-persephone-full5" class="example-back-link">Back</a>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h1>{{year|int}} - {{(year|int+1)|shorten(2,4)}}</h1>
+    <h2 class="heading-medium"><strong>1. Check contributions you made from</strong></h2>
+    <p>Paid employment: <strong>£500</strong></p>
+    <p>You should check your contributions before making payments. If they&rsquo;re wrong or missing you may be able to correct them which can make years count towards your pension.</p>
+    <p><a href="/{{mvpversion}}/ni/ni-check">More on gaps and how to check them</a>.</p>
+
+    <div class="panel-indent">
+      <p>The last date you could pay for this year was 6 April 2014. You can usually pay to fill gaps up to 6 years previous.</p>
+    </div>
+
+    <a href="/{{mvpversion}}/ni/ni-persephone-full5" class="example-back-link">Back</a>
+
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third">
+    <div class="related" id="related">
+      <div class="inner group related-subsection">
+
+        {% include '../dashboard/help.html' %}
+
+      </div>
+    </div>
+  </div><!-- /.column-third -->
+</div><!-- /.grid-row -->
+
+{% endblock %}
