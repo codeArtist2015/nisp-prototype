@@ -1,0 +1,23 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check your State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your State Pension{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h2 class="heading-large">Your State Pension</h2>
+    <h3 class="heading-medium">[You&rsquo;ll reach/You reached] State Pension age on [insert SPA date] when [you&rsquo;ll be/you were] 67</h3>
+
+    <div class="panel-indent">
+      <p>[Reason why we can&rsquo;t show a forecast]. Contact <a href="">Future Pension Centre</a> [to get whatever they can offer].</p>
+    </div>
+
+    <p>[Intro about NI record if needed]</p>
+    <p><a href="#">View your National Insurance record</a></p>
+
+  </div><!-- /.column-two-thirds --> 
+  <div class="column-third"></div><!-- /.column-third -->
+</div><!-- /.grid-row -->
+
+{% endblock %}
