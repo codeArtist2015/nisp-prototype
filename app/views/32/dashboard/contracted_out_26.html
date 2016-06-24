@@ -1,0 +1,31 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your State Pension{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <a href="javascript:window.history.back();" class="example-back-link">Back</a>
+
+    <h2 class="heading-large ">You were contracted out</h2>
+    <p>In the past you&rsqquo;ve been part of one or more contracted out pension schemes, such as workplace or personal pension schemes.</p>
+    <p>When you were contracted out:</p>
+    <ul class="list-bullet">
+      <li>you and your employers paid lower rate National Insurance contributions; or</li>
+      <li>some of your National Insurance contributions were paid into your other pension schemes instead</li>
+    </ul>
+    <p>To find out which years you were contracted out <a href="">Check your National insurance record</a>.</p>
+
+    <h2 class="heading-medium">Contracted Out Pension Equivalent (COPE)</h2>
+    <p>Your workplace or personal pension scheme should include an amount of pension which will, in most cases, be equal to the additional State Pension you would have been paid. We call this amount your Contracted Out Pension Equivalent (COPE). Your COPE estimate is shown below.</p>
+    <p>The COPE amount is paid as part of your other pension schemes, not by the government. The total amount of pension paid by your workplace or personal pension scheme will depend on the scheme and on any investment choices.</p>
+    <p>Your COPE estimate is <strong>£30.50 a week</strong>.</p>
+    <p>The COPE amount is paid as part of your other pension schemes, not by the government.</p>
+    <p>More about <a href="https://www.gov.uk/government/publications/state-pension-fact-sheets/contracting-out-and-why-we-may-have-included-a-contracted-out-pension-equivalent-cope-amount-when-you-used-the-online-service" rel="external" target="_blank">contracting out and the COPE amount (opens in new tab)</a>.</p>
+    <a href="javascript:window.history.back();" class="example-back-link">Back</a>
+
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third"></div><!-- /.column-third -->
+</div><!-- /.grid-row -->
+
+{% endblock %}

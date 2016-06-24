@@ -1,0 +1,22 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your State Pension{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h1>You've signed out of your account</h1>
+    <p class="text">To use the service again you’ll need to <a href="/{{mvpversion}}">sign in</a>.</p>
+    <p><a href="">What did you think of this service? (takes 30 seconds)</a></p>
+
+   <h2 class="heading-medium">Putting off claiming</h2>
+
+              <p>You may get extra State Pension if you defer your claim. </p>
+              <p><a href="https://www.gov.uk/deferring-state-pension">More on putting off claiming</a>.</p>                 
+            </div>
+
+  </div><!-- /.column-two-thirds -->
+</div>
+
+{% endblock %}

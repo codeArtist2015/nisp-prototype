@@ -1,0 +1,36 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check your State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your State Pension{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h2 class="heading-large">Your State Pension</h2>
+    <h3 class="heading-medium">You&rsquo;ll reach State Pension age on 1&nbsp;December&nbsp;2017 when you&rsquo;ll be 66</h3>
+
+    <!-- /.highlighted-event -->
+    <div class="panel-indent">
+      <p><strong>It&rsquo;s not possible for you to get any State Pension based on your National Insurance record</strong></p>
+      <p>You need at least 10 years of contributions to get any State Pension and you do not have enough time to get these.</p>
+    </div>
+    <ul class="list-bullet">
+      <li>this is based on your National Insurance record up to 5 April 2016</li>
+      <li>after State Pension age you no longer pay National Insurance contributions</li>
+    </ul>
+
+    <h3 class="heading-medium">What you can do next</h3>
+    <ul class="list-bullet">
+      <li><a href="../ni/ni-mqp">check your National Insurance record</a>, you may be able to make gaps in your record count towards your pension</li>
+      <li><a href="https://www.gov.uk/new-state-pension/living-and-working-overseas" rel="external" target="_blank">if you have lived or worked overseas (opens in new tab)</a>, you may be able to use your time abroad to make your years in the UK qualify for the purposes of getting any State Pension</li>
+      <li>you may be eligible for <a href="https://www.gov.uk/pension-credit/overview" rel="external" target="_blank">Pension Credit (opens in new tab)</a> if your retirement income is low</li>
+    </ul>
+
+    <h3 class="heading-medium">What else you can do</h3>
+    <p>Contact the <a href="https://www.moneyadviceservice.org.uk/en" rel="external" target="_blank">Money Advice Service (opens in new tab)</a> for free impartial advice.</p>
+
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third"></div><!-- /.column-third -->
+</div><!-- /.grid-row -->
+
+{% endblock %}
