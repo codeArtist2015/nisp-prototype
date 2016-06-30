@@ -1,0 +1,47 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check your State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your State Pension{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h2 class="heading-large">Thank you</h2>
+    <p>We'll be in touch</p>
+    <p><a href="">Sign out</a></p>
+    
+
+  </div><!-- /.column-two-thirds --> 
+  <div class="column-third"></div><!-- /.column-third -->
+</div><!-- /.grid-row -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+// function show(elementId) {
+//   document.getElementById("id1").style.display = "none";
+//   document.getElementById("id2").style.display = "block";
+//   document.getElementById(elementId).style.display = "block";
+// }
+
+$(document).on('click', '#find-address', function () {
+  $('#id2').show();
+});
+
+$(document).on('click', '#cant-find', function (e) {
+  e.preventDefault();
+  $('#id2').hide();
+  $('#id3').show();
+});
+
+$(document).on('click', 'input[type="radio"]', function (e) {
+      if ($(e.target).attr('id') === 'radio-1' || $(e.target).attr('id') === 'radio-2') {
+        $('#warningmessage').show();
+        if ($(this).attr('id') === 'radio-1') {
+          $('#warningmessage').show();
+        } else {
+          $('#warningmessage').hide();
+        }
+      }
+    });
+
+</script>
+{% endblock %}
