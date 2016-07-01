@@ -2,6 +2,7 @@
 .DS_Store
 .start.pid
 govuk_modules
+node_modules
 node_modules/g*
 node_modules/b*
 node_modules/c*
