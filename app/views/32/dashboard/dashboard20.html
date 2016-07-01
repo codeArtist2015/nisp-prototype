@@ -7,17 +7,67 @@
   <div class="column-two-thirds">
 
     <h2 class="heading-large">Your State Pension</h2>
-    <h3 class="heading-medium">[You&rsquo;ll reach/You reached] State Pension age on [insert SPA date] when [you&rsquo;ll be/you were] 67</h3>
+    <h3 class="heading-medium">You&rsquo;ll reach State Pension age on 1 December 2017 when you'll be 67</h3>
 
     <div class="panel-indent">
-      <p>[Reason why we can&rsquo;t show a forecast]. Contact <a href="">Future Pension Centre</a> [to get whatever they can offer].</p>
+      <p>MWRRE message</p>
     </div>
 
-    <p>[Intro about NI record if needed]</p>
-    <p><a href="#">View your National Insurance record</a></p>
+    <h3 class="heading-medium">Help us improve this service</h3>
+    <p></p>
+     <form action="sent" class="form">
+              <fieldset class="inline" data-required data-error="Choose Yes or No">
+                <legend><span>Would you like to take part in research so we can find out what people in your situation would like to know?</span></legend>
+                 <div class="form-group">
+                <label class="block-label" for="radio-1">
+                  <input id="radio-1" type="radio" name="research" value="Yes">
+                  Yes
+                </label>
+                <label class="block-label" for="radio-2">
+                  <input id="radio-2" type="radio" name="research" value="No">
+                  No
+                </label>
+                  <div class="panel-indent panel-border-narrow" id="warningmessage" style="display: none">
+                  <label class="form-label" style="font-size: 19px" for="contact-email">Your email address</label>
+                  <input class="form-control" style="width: 75%" name="contact-email" type="text" id="contact-email">
+                 </div>
+              </div>
+              </fieldset>
+            <input type="submit" value="Continue" class="button">
+          </form>
+
 
   </div><!-- /.column-two-thirds --> 
   <div class="column-third"></div><!-- /.column-third -->
 </div><!-- /.grid-row -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+// function show(elementId) {
+//   document.getElementById("id1").style.display = "none";
+//   document.getElementById("id2").style.display = "block";
+//   document.getElementById(elementId).style.display = "block";
+// }
 
+$(document).on('click', '#find-address', function () {
+  $('#id2').show();
+});
+
+$(document).on('click', '#cant-find', function (e) {
+  e.preventDefault();
+  $('#id2').hide();
+  $('#id3').show();
+});
+
+$(document).on('click', 'input[type="radio"]', function (e) {
+      if ($(e.target).attr('id') === 'radio-1' || $(e.target).attr('id') === 'radio-2') {
+        $('#warningmessage').show();
+        if ($(this).attr('id') === 'radio-1') {
+          $('#warningmessage').show();
+        } else {
+          $('#warningmessage').hide();
+        }
+      }
+    });
+
+</script>
 {% endblock %}

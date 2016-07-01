@@ -277,7 +277,42 @@ app.get('/31/dashboard/dashboardV',
 //******************************************************************************************************************************//   
       
 
+//**************************   Prototype 32 Routes ******************************************************************************//
+//*******************************************************************************************************************************//
+   
+app.get("/32/start/gg_login", function (req, res) {
+      res.render('32/start/gg_login', {"signout":false});
+ });
+ 
+ app.get("/32/start/start_Verify2", function (req, res) {
+      res.render('32/start/start_Verify2', {"signout":false});
+ });
+ 
+ 
+ app.post('/32/start/gg_login', passport.authenticate('local', { failureRedirect: '/32/start/gg_login' }),
+  function(req, res) {
+    res.redirect('/32/dashboard/dashboardA');
+});
 
+ app.post('/32/start/start_Verify2', passport.authenticate('local', { failureRedirect: '/32/start/start_Verify2' }),
+  function(req, res) {
+    res.redirect('/32/dashboard/dashboardA');
+});
+   
+app.get('/32/dashboard/dashboardA',
+  require('connect-ensure-login').ensureLoggedIn('/32/start/gg_login'),
+  function(req, res){
+        res.render('32/dashboard/dashboard'+req.user.id, {  "mvpversion": 32, user: req.user, "signout": true   });
+});
+
+app.get('/32/dashboard/dashboardV',
+  require('connect-ensure-login').ensureLoggedIn('/32/start/start_Verify2'),
+  function(req, res){
+        res.render('32/dashboard/dashboard-v-'+req.user.id, {  "mvpversion": 32, user: req.user, "signout": true   });
+});           
+    
+//******************************************************************************************************************************//   
+      
 
 //****--------------------------------------------------------------------------------------------------------*****//
 //****                                                                                                        *****//
@@ -412,6 +447,25 @@ app.get('/25/start/p60_question', function (req, res) {
   
 });
 
+
+app.get('/32/dashboard/sent', function (req, res) {
+
+  var research = req.query.research;
+  
+
+  if (research == "Yes"){
+    res.render('32/dashboard/sent');
+  } 
+
+  else if (research == "No") {
+    res.redirect('/32/dashboard/sent_no');
+  }
+
+ 
+  
+});
+
+
 // Write the user input to the check your answers page
 
 app.get('/31/ni/ni-modelling-pay', function (req, res) {
@@ -423,17 +477,39 @@ app.get('/31/ni/ni-modelling-pay', function (req, res) {
   
 });
 
-app.get('/31/ni/pay-voluntary-contributions', function (req, res) {
+app.get('/31/ni/pay-voluntary-contributions28', function (req, res) {
 
   var cost = req.query.cost;
   var increase = req.query.increase;
 
-  res.render('31/ni/pay-voluntary-contributions', { 'cost' : cost , 'increase' : increase });
+  res.render('31/ni/pay-voluntary-contributions28', { 'cost' : cost , 'increase' : increase });
+  
+});
+
+app.get('/32/ni/pay-voluntary-contributions28', function (req, res) {
+
+  var cost = req.query.cost;
+  var increase = req.query.increase;
+  var week = req.query.week;
+  var month = req.query.month;
+  var year = req.query.year;
+
+  res.render('32/ni/pay-voluntary-contributions28', { 'cost' : cost , 'increase' : increase , 'week' : week , 'month' : month, 'year' : year });
   
 });
 
 
+app.get('/32/ni/pay-voluntary-contributions', function (req, res) {
 
+  var cost = req.query.cost;
+  var increase = req.query.increase;
+  var week = req.query.week;
+  var month = req.query.month;
+  var year = req.query.year;
+
+  res.render('32/ni/pay-voluntary-contributions', { 'cost' : cost , 'increase' : increase , 'week' : week , 'month' : month, 'year' : year });
+  
+});
  
     
   }
