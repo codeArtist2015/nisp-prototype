@@ -1,10 +1,13 @@
 {
   "name": "express-prototype",
   "description": "GOVUK prototyping app in Express",
-  "version": "0.1.0",
+  "version": "3.0.0",
   "private": true,
   "engines": {
     "node": "0.10.x"
+  },
+  "scripts": {
+    "start": "node start.js"
   },
   "dependencies": {
     "express": "4.13.3",
@@ -16,7 +19,7 @@
     "serve-favicon": "2.3.0",
     "body-parser": "^1.4.0",
     "multer": "1.0.5",
-    "basic-auth":"^1.0.3 ",
+    "basic-auth": "^1.0.3 ",
     "express-session": "1.11.3",
     "connect": "2.30.2",
     "consolidate": "0.x",
@@ -33,5 +36,9 @@
     "grunt-sass": "0.18.0",
     "grunt-text-replace": "0.3.12",
     "grunt-concurrent": "0.4.3",
-    "nunjucks":"2.1.0" }
+    "nunjucks": "2.1.0"
+  },
+  "devDependencies": {
+    "node-sass": "^2.1.1"
+  }
 }
