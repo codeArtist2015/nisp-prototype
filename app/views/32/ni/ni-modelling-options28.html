@@ -37,15 +37,17 @@
           <div class="options-gaps"><p>years filled<br><span class="options-data">1</span></p></div>
           <div class="options-cost"><p>total one-off cost<br><span class="options-data">£50</span></p></div>
           <div class="options-button"><a href="pay-voluntary-contributions28?cost=£50&increase=£147.10&week=£5.00&month=£21.66&year=£260.00" class="button button-secondary" name="test">Choose option</a></div>
-          <div style="width: 100%; display: block; clear: both;">  <details class="helptext">
-            <summary role="button" style="padding-left: 32%">
-              <span class="summary">More detail</span>
-            </summary>
+          <div style="width: 100%; display: block; clear: both;">
+              <p><a style="margin-left: 32%" href="#" id="more-detail1">More detail</a></p>
+               </div>
+                <div style="width: 100%; display: none; clear: both;" id="less-detail1">
+              <p><a style="margin-left: 32%" href="#" id="show-less1">Less detail</a></p>
+               </div>
+              <div style="display: none" id="detail1">
             <div class="options-increase">&nbsp;</div>
             <div class="options-gaps"><p><strong>year</strong><br>2012-13</div>
             <div class="options-cost"><p><strong>shortfall</strong><br>£50</div>
-          </details>
-        </div>
+       
       </div>
       <div id="full-list" style="display: none">
         <div class="options-wrapper">
@@ -53,15 +55,17 @@
           <div class="options-gaps"><p>years filled<br><span class="options-data">2</span></p></div>
           <div class="options-cost"><p>total one-off cost<br><span class="options-data">£150</span></p></div>
           <div class="options-button"><a href="pay-voluntary-contributions28?cost=£150&increase=£151.10&week=£9.00&month=£39.00&year=£468.00" class="button button-secondary" name="test">Choose option</a></div>
-          <div style="width: 100%; display: block; clear: both;">  <details class="helptext">
-            <summary role="button" style="padding-left: 32%">
-              <span class="summary">More detail</span>
-            </summary>
+        <div style="width: 100%; display: block; clear: both;">
+              <p><a style="margin-left: 32%" href="#" id="more-detail2">More detail</a></p>
+               </div>
+                <div style="width: 100%; display: none; clear: both;" id="less-detail2">
+              <p><a style="margin-left: 32%" href="#" id="show-less2">Less detail</a></p>
+               </div>
+                <div style="display: none" id="detail2">
             <div class="options-increase">&nbsp;</div>
             <div class="options-gaps"><p><strong>year</strong><br>2012-13<br>2009-10</p></div>
             <div class="options-cost"><p><strong>shortfall</strong><br>£50<br>£100</p></div>
-
-          </details>
+              </div>
         </div>
       </div>
     </div>
@@ -72,14 +76,17 @@
       <div class="options-cost"><p>total one-off cost<br><span class="options-data">£300</span></p></div>
       <div class="options-button"><a href="pay-voluntary-contributions28?cost=£300&increase=£155.65&week=£13.55&month=£58.71&year=£704.60" class="button button-secondary" name="test">Choose option</a>
       </div>
-           <div style="width: 100%; display: block; clear: both;">  <details class="helptext">
-      <summary role="button" style="padding-left: 32%">
-        <span class="summary">More detail</span>
-      </summary>
+        <div style="width: 100%; display: block; clear: both;">
+              <p><a style="margin-left: 32%" href="#" id="more-detail3">More detail</a></p>
+               </div>
+                <div style="width: 100%; display: none; clear: both;" id="less-detail3">
+              <p><a style="margin-left: 32%" href="#" id="show-less3">Less detail</a></p>
+               </div>
+          <div style="display: none" id="detail3">
         <div class="options-increase">&nbsp;</div>
         <div class="options-gaps"><p><strong>year</strong><br>2012-13<br>2011-12<br>2009-10</p></div>
         <div class="options-cost"><p><strong>shortfall</strong><br>£50<br>£150<br>£100</p></div>
-        </details>
+        </div>
       </div>
     </div>
 
@@ -106,5 +113,60 @@
       $("#more-options").hide();
     });
   });
+  $(document).ready(function(e){
+    $("#more-detail1").click(function(e){
+      e.preventDefault();
+      $("#detail1").show();
+      $("#less-detail1").show();
+      $("#more-detail1").hide();
+    });
+  });
+
+  $(document).ready(function(e){
+    $("#show-less1").click(function(e){
+      e.preventDefault();
+      $("#more-detail1").show();
+     $("#detail1").hide();
+      $("#less-detail1").hide();
+    });
+  });
+
+  $(document).ready(function(e){
+    $("#more-detail2").click(function(e){
+      e.preventDefault();
+      $("#detail2").show();
+      $("#less-detail2").show();
+      $("#more-detail2").hide();
+    });
+  });
+
+  $(document).ready(function(e){
+    $("#show-less2").click(function(e){
+      e.preventDefault();
+      $("#more-detail2").show();
+     $("#detail2").hide();
+      $("#less-detail2").hide();
+    });
+  });
+
+   $(document).ready(function(e){
+    $("#more-detail3").click(function(e){
+      e.preventDefault();
+      $("#detail3").show();
+      $("#less-detail3").show();
+      $("#more-detail3").hide();
+    });
+  });
+
+  $(document).ready(function(e){
+    $("#show-less3").click(function(e){
+      e.preventDefault();
+      $("#more-detail3").show();
+     $("#detail3").hide();
+      $("#less-detail3").hide();
+    });
+  });
+
+
   </script>
   {% endblock %}
