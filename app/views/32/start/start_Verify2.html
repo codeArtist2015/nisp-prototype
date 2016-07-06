@@ -1,57 +1,36 @@
 {% extends '../layouts/template.html' %}
-
 {% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
-
 {% block serviceName %}{% endblock %}
-
-
 {% block main %}
-   <div class="grid-row">
 
-    <div class="content-inner hub">
-          <div class="column-third">
-
-            <figure>
-              <img style="float: left; width: 200px; height: 140px;" src="/public/images/govuk-verify-457ba9535f7b09531ceeefe0223913ee.gif" alt="GOV.UK VERIFY" />
-            </figure>
-
-          </div><!-- .column-third -->
-
-          <div class="column-two-thirds">
-
-           
-        
-        
-            <!-- <p>Is this your first time using GOV.UK Verify?</p> -->
-
-            <div class="form-group" style="padding-left: 20px">
-    <h2 class="tight">Sign in</h2>
-    <form class="form" action="start_Verify2" method="POST">
-      <div class="form-group">
-        <label class="form-label" for="user-id">Username</label>
-        <input class="form-control" id="user-id" name="username" type="text">
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="password">Password</label>
-        <input class="form-control" id="password" name="password" type="text">
-      </div>
-     
-            </div><!-- .form-group -->
- <div class="actions">
- <input class="button button-action next" type="submit" value="Continue" role="button">
-           
-</form>
-            </div>
-       <!-- .actions -->
-          </div><!-- .column-two-thirds -->
-        </div><!-- .content-inner hub -->
-      </div><!-- .grid-row -->
-     
-			
+<div class="grid-row">
+  <div class="content-inner hub">
+    <div class="column-third">
+      <figure>
+        <img style="float: left; width: 200px; height: 140px;" src="/public/images/govuk-verify-457ba9535f7b09531ceeefe0223913ee.gif" alt="GOV.UK VERIFY" />
+      </figure>
+    </div><!-- .column-third -->
+    <div class="column-two-thirds">
       
+      <div class="form-group" style="padding-left: 20px">
+        <h2 class="tight">Sign in</h2>
+        <form class="form" action="start_Verify2" method="POST">
+          <div class="form-group">
+            <label class="form-label" for="user-id">Username</label>
+            <input class="form-control" id="user-id" name="username" type="text">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <input class="form-control" id="password" name="password" type="text">
+          </div>
+          <div class="actions">
+            <input class="button button-action next" type="submit" value="Continue" role="button">
+          </div>
+        </form>
+      </div>
 
-      
-
+    </div><!-- .column-two-thirds -->
+  </div><!-- .content-inner hub -->
+</div><!-- .grid-row -->
 
 {% endblock %}
-
