@@ -6,47 +6,26 @@
 <div class="grid-row">
   <div class="column-two-thirds">
 
-    <h2 class="heading-large">Your State Pension</h2>
-    <h3 class="heading-medium">You&rsquo;ll reach State Pension age on 1 December 2017 when you'll be 67</h3>
+    <h1 class="heading-large">Your State Pension</h1>
+    <h2 class="heading-medium">You&rsquo;ll reach State Pension age on 1 December 2017 when you&rsquo;ll be 67</h2>
 
     <div class="panel-indent">
-      <p>MWRRE message</p>
+      <p>We&rsquo;re unable to calculate your State Pension forecast as you have <a href="https://www.gov.uk/reduced-national-insurance-married-women" target="_blank" rel="external">paid a reduced rate of National Insurance as a married woman (opens in new tab)</a>.</p>
+      <p>In the meantime, you can <a href="https://www.gov.uk/future-pension-centre" rel="external" target="_blank">contact the Future Pension Centre (opens in new tab)</a> to get a paper statement of how much State Pension you&rsquo;ve earned so far.</p>
     </div>
 
-    <h3 class="heading-medium">Help us improve this service</h3>
-    <p></p>
-     <form action="sent" class="form">
-              <fieldset class="inline" data-required data-error="Choose Yes or No">
-                <legend><span>Would you like to take part in research so we can find out what people in your situation would like to know?</span></legend>
-                 <div class="form-group">
-                <label class="block-label" for="radio-1">
-                  <input id="radio-1" type="radio" name="research" value="Yes">
-                  Yes
-                </label>
-                <label class="block-label" for="radio-2">
-                  <input id="radio-2" type="radio" name="research" value="No">
-                  No
-                </label>
-                  <div class="panel-indent panel-border-narrow" id="warningmessage" style="display: none">
-                  <label class="form-label" style="font-size: 19px" for="contact-email">Your email address</label>
-                  <input class="form-control" style="width: 75%" name="contact-email" type="text" id="contact-email">
-                 </div>
-              </div>
-              </fieldset>
-            <input type="submit" value="Continue" class="button">
-          </form>
+    <p>To get a copy of your National Insurance record so far, <a href="https://www.gov.uk/government/organisations/hm-revenue-customs/contact/national-insurance-enquiries-for-employees-and-individuals" rel="external" target="_blank">contact the National Insurance helpline (opens in new tab)</a>.</p>
 
+    <h2 class="heading-medium">Help us improve this service</h2>
+    <p>If you would like to take part in any future research so we can find out what people in your situation would like to know, please leave your contact details when you sign out.</p>
+    <p><a href="#">Sign out and leave feedback</a></p>
 
-  </div><!-- /.column-two-thirds --> 
-  <div class="column-third"></div><!-- /.column-third -->
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third"></div>
 </div><!-- /.grid-row -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript">
-// function show(elementId) {
-//   document.getElementById("id1").style.display = "none";
-//   document.getElementById("id2").style.display = "block";
-//   document.getElementById(elementId).style.display = "block";
-// }
 
 $(document).on('click', '#find-address', function () {
   $('#id2').show();
@@ -70,4 +49,5 @@ $(document).on('click', 'input[type="radio"]', function (e) {
     });
 
 </script>
+
 {% endblock %}
