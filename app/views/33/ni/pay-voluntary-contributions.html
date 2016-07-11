@@ -1,0 +1,75 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check your State Pension {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your State Pension{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <a href="javascript:window.history.back();" class="example-back-link">Back</a>
+
+    <h2 class="heading-large">Paying voluntary contributions</h2>
+    <p><span class="heading-medium">Pay {{ cost }}</span><br />to increase your pension forecast from £130.10 to {{ increase }} a week</p>
+    <p>this will give you an extra:<br />{{ week }} a week<br />{{ month }} a month<br />{{ year }} a year<p>
+
+      <h3 class="heading-medium">Before you pay</h3>
+      <p><a href="ni-years-check">Check your National Insurance record</a></br>If you have evidence that it&rsquo;s wrong you can correct it. Correcting your record can fill a gap and improve your pension.</p>
+      <p><a href="ni-modelling-pay">Consider if paying voluntary contributions is your best option</a></p>
+
+      <h3 class="heading-medium">Paying through your bank or building society</h3>
+      <p>The quickest and easiest way to make a payment is using internet or telephone banking. You can also call into your local branch.</p>
+      
+      <h4 class="heading-small">Account details for payment</h4>
+      <table style="width: 80%">
+        <tr><th>Account name</th><td>HMRC</td></tr>
+        <tr><th>Account number</th><td>123456789</td></tr>
+        <tr><th>Sort code</th><td>12-34-56</td></tr>
+        <tr><th>Payment reference</th><td>ABC123DOREMI</td></tr>
+      </table>
+
+      <div class="panel-indent">Pay in full and quote the payment reference</div> 
+      <hr style="border: 0; height: 1px; background: #BFC1C3;">
+
+      <h3 class="heading-medium">Payment by cheque</h3>
+      <p>You can send your payment to HMRC directly. Make your cheque payable to &lsquo;HM Revenue and Customs only&rsquo; followed by your payment reference.</p>
+      <p>Include a note with:</p>
+      <ul class="list-bullet">
+        <li>your name, address and telephone number</li>
+        <li>your reference ABC123DOREMI or National Insurance number</li>
+        <li>the periods you&rsquo;re paying for</li>
+        <li>whether you want a receipt</li>
+      </ul>
+
+      <p>Post it to:</p>
+      <p>HM Revenue and Customs<br />
+        National Insurance Contributions and Employer Office<br />
+        Benton Park View<br />
+        Newcastle upon Tyne<br />
+        NE98 1ZZ
+      </p>
+
+      <p>Allow 3 working days for the payment to reach HMRC.</p>
+
+      <div class="panel-indent">
+        <p>It can take around 28 days to update your National Insurance record with any voluntary contributions you make.</p>
+      </div>
+      <a href="javascript:window.history.back();" class="example-back-link">Back</a>
+
+    </div><!-- /.column-two-thirds -->
+    <div class="column-third"></div><!-- /.column-third -->
+  </div><!-- /.grid-row -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#show-all").click(function(){
+        $("#modelling").show();
+        $("#personal-max").hide();
+    });
+    $("#show-less").click(function(){
+        $("#modelling").hide();
+        $("#personal-max").show();
+    });
+});
+</script>
+
+{% endblock %}
