@@ -1,0 +1,68 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check my State Pension{% endblock %}
+{% block main %}
+
+<a href="javascript:window.history.back();" class="example-back-link">Back</a>
+
+<div class="grid-row">
+	<div class="column-two-thirds">
+
+		<h1 class="heading-xlarge" style="margin: 1em 0 0">Gaps in your record and how to check them</h1>
+		<p class="lede">In most cases, you will have a gap in your record as you did not contribute enough National Insurance.</p>
+		<p>This could be because you were:</p>
+		<ul class="list-bullet">
+			<li>in paid employment and had low earnings</li>
+			<li>unemployed and not claiming benefit</li>
+			<li>self-employed but did not pay contributions because of small profits</li>
+			<li>living abroad</li>
+			<li>living or working in the Isle of Man</li>
+		</ul>
+
+		<h2 class="heading-medium">How to check your record</h2>
+		<p><strong>Paid employment</strong><br>Check the contributions you made against P60s from your employers.</p>
+		<details class="helptext">
+			<summary role="button">
+				<span class="summary">If you do not have P60s</span>
+			</summary>
+			<div class="panel-indent">
+				<p>You can get a replacement P60 from your employer. Alternatively you may be able to find your National Insurance contributions on payslips.</p>
+			</div>
+		</details>
+		<br>		
+		<p><strong>Self-employment and voluntary contributions</strong><br>Check the contributions you made against your personal accounts. For instance if you made payments by cheque or through your bank.</p>
+
+		<h2 class="heading-medium">If you have evidence that your record is wrong</h2>
+		<p>You may be able to correct your record,  if correcting your record fills a gap it may increase your pension.<p><a href="https://www.gov.uk/government/organisations/hm-revenue-customs/contact/national-insurance-deficiency-enquiries"  rel="external"  target="_blank">Call HMRC to find out more (opens in new tab)</a>.</p>
+
+		<h2 class="heading-medium">National Insurance credits</h2>
+		<p>If you were claiming benefits because you were unable to work, unemployed or caring for someone full time, these should have been credited automatically. If you think you were entitled to credits that are not on your record, check your eligibility and find out how to get them.</p>
+		<p>More on <a href="https://www.gov.uk/national-insurance-credits/eligibility" rel="external"  target="_blank">National Insurance credits (opens in new tab)</a>.</p>
+		<a href="javascript:window.history.back();" class="example-back-link">Back</a>
+
+	</div><!-- /.column-two-thirds -->
+	<div class="column-third">
+	</div><!-- /.column-third -->
+</div><!-- /.grid-row -->
+<script>
+
+jQuery(document).ready(function($){
+	var allPanels = $('.accordion > dd').hide();
+
+	$('.accordion > dt').click(function(){
+		if(!$(this).parent().parent().hasClass("active")){          
+			allPanels.prev().removeClass("active");
+			$(this).parent().parent().addClass("active");
+            console.log($(this));
+			$(this).parent().parent().next().slideDown();
+			return false;
+		}else{
+			$(this).parent().parent().removeClass("active");             
+			return false;
+		}
+	});
+});
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check your State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your State Pension{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h2 class="heading-large">Your State Pension</h2>
+    <h3 class="heading-medium" style="margin: 10px 0 -10px 0">Summary</h3>
+
+    <div class="tab-content">
+      <div class="highlighted-event">
+        <p>You can get your State Pension on 1&nbsp;December&nbsp;2025 when you&rsquo;ll be 67, your forecast is</p>
+        <p><em>£142.10 a week</em></p>
+        <p>£615.76 a month, £7,389.20 a year</p>
+      </div><!-- /.highlighted-event -->
+
+      <p>Your forecast</p>
+      <ul class="list-bullet">
+        <li>is not a guarantee and is based on the current law</li>
+        <li>does not include any increase due to inflation</li>
+      </ul>
+
+      <h3 class="heading-medium">You need to continue to contribute National Insurance to reach your forecast</h3>
+      <div class="chart-block">
+        <div class="graph-title">Estimate based on your National Insurance record up to 5 April 2016</div>
+        <ul class="graph">
+          <li><span class="amount" style="width:{{100/156*100}}%">£100.24 a week</span></li>
+        </ul>
+      </div>
+      <div class="chart-block">
+        <div class="graph-title">Forecast if you continue to contribute until April 2025</div>
+        <ul class="graph">
+          <li><span class="amount" style="width:{{142/156*100}}%">£142.10 a week</span></li>
+        </ul>
+      </div>
+
+      <h3 class="heading-medium">You can improve your forecast</h3>
+      <p>You have years in your National Insurance record where you did not contribute enough.</p>
+      <ul class="list-bullet">
+        <li>paying voluntary contributions can fill these years and increase your forecast</li>
+        <li>you only need to fill 3 years to get the most you can</li>
+      </ul>
+      <div id="personal-max">
+        <div class="chart-block" style="margin-bottom: 50px">
+          <span class="graph-title">Most you can improve your forecast to is</span>
+          <ul class="graph">
+            <li><span class="amount" style="width:{{155/156*100}}%">£155.65 a week</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <p style="margin-top: 50px"><a href="../ni/ni-years-check28">Gaps in your record and how to fill them</a></p>
+
+    </div><!-- /.tab-pane -->
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third"></div><!-- /.column-third -->
+</div><!-- /.grid-row -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#show-all").click(function(){
+        $("#modelling").show();
+        $("#personal-max").hide();
+    });
+    $("#show-less").click(function(){
+        $("#modelling").hide();
+        $("#personal-max").show();
+    });
+});
+</script>  
+{% endblock %}

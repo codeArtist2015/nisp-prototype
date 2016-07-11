@@ -1,0 +1,80 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check your State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your State Pension{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h2 class="heading-large">Your State Pension</h2>
+    <h3 class="heading-medium" style="margin: 10px 0 -10px 0">Summary</h3>
+
+    <div class="tab-content">
+      <div class="highlighted-event">
+        <p>You can get your State Pension on 1&nbsp;December&nbsp;2018 when you&rsquo;ll be 66, your forecast is</p>
+        <p><em>£142.10 a week</em></p>
+        <p>£615.70 a month, £7,389.20 a year</p>
+      </div><!-- /.highlighted-event -->
+
+      <p>Your forecast</p>
+      <ul class="list-bullet">
+        <li>is not a guarantee and is based on the current law</li>
+        <li>does not include any increase due to inflation</li>
+      </ul>
+
+      <h3 class="heading-medium">You need to continue to contribute National Insurance to reach your forecast</h3>
+      <div class="chart-block">
+        <div class="graph-title">Estimate based on your latest National Insurance record (up to 5&nbsp;April&nbsp;2015)</div>
+        <ul class="graph">
+          <li><span class="amount" style="width:{{133/156*100}}%">£133.24 a week</span></li>
+        </ul>
+      </div>
+
+      <div class="chart-block">
+        <div class="graph-title">Forecast if you continue to contribute until April 2022</div>
+        <ul class="graph">
+          <li><span class="amount" style="width:{{142/156*100}}%">£142.10 a week</span></li>
+        </ul>
+      </div>
+
+      <h3 class="heading-medium">You can improve your forecast</h3>
+      <p>You have years in your National Insurance record where you did not contribute enough..</p>
+      <ul class="list-bullet">
+        <li>filling any gap can increase your forecast</li>
+        <li>you only need to fill 3 gaps to get the most you can</li>
+      </ul>
+
+      <div id="personal-max">
+        <div class="chart-block" style="margin-bottom: 50px">
+          <span class="graph-title">The most you can get by filling gaps in your record is</span>
+          <ul class="graph">
+            <li><span class="amount" style="width:{{156/156*100}}%">£155.65 a week</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <p style="margin-top: 20px"><a href="../ni/ni-modelling-options26">How to fill gaps and increase your pension</a></p>
+      <h3 class="heading-medium">How contracting out affects your pension income</h3>
+      <p>Like most people, you were contracted out of part of the State Pension.</p>
+      <p>More about <a href="contracted_out_26">how contracting out has affected your pension income</a>.</p>
+
+    </div><!-- /.tab-pane -->
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third"></div><!-- /.column-third -->
+</div><!-- /.grid-row -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#show-all").click(function(){
+    $("#modelling").show();
+    $("#personal-max").hide();
+  });
+  $("#show-less").click(function(){
+    $("#modelling").hide();
+    $("#personal-max").show();
+  });
+});
+</script>  
+
+{% endblock %}

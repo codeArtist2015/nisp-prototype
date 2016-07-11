@@ -1,0 +1,192 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check your State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your State Pension{% endblock %}
+{% block main %}
+
+<a href="javascript:window.history.back();" class="example-back-link">Back</a>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-xlarge" style="margin: 1em 0 0">
+      <h2 class="heading-large">Gaps in your National Insurance record</h2>
+      <p><a href="#">View all years</a></p>
+
+      <dl class="accordion2">
+        <!-- 2014 -->
+        <dt>
+          <div class="ni-wrapper">
+            <div class="ni-years2">2014-15</div>
+            <div class="ni-full">Your record for this year is not available yet</div>
+          </div>
+        </dt>
+
+        <dt>
+          <div class="ni-wrapper">
+            <div class="ni-years2">2012-13</div>
+            <div class="ni-notfull">Year is not full</div>
+            <div class="ni-action"><a href="#">View details</a></div>
+          </div>
+        </dt>
+
+        <dd>
+          <div class="contributions-wrapper2">
+            <p class="contributions-header">You did not make any contributions for this year</strong>
+              <p>Find out more about <a href="ni-check">gaps in your record and how to check them</a>.</p>
+              <p class="contributions-header">You can make up the shortfall</p>
+              <p>Pay a voluntary contribution of <strong>£722</strong> by <strong>6 April 2018</strong>.</p>
+              <p>Find out more about <a href="ni-pay">voluntary contributions</a>.</p>
+            </p>
+          </div>
+        </dd>
+
+        <dt>
+          <div class="ni-wrapper">
+            <div class="ni-years2">2011-12</div>
+            <div class="ni-notfull">Year is not full</div>
+            <div class="ni-action"><a href="#">View details</a></div>
+          </div>
+        </dt>
+
+        <dd>
+          <div class="contributions-wrapper2">
+            <p class="contributions-header">You did not make any contributions for this year</strong>
+              <p>Find out more about <a href="ni-check">gaps in your record and how to check them</a>.</p>
+              <p class="contributions-header">You can make up the shortfall</p>
+              <p>Pay a voluntary contribution of <strong>£722</strong> by <strong>6 April 2018</strong>.</p>
+              <p>Find out more about <a href="ni-pay">voluntary contributions</a>.</p>
+            </p>
+          </div>
+        </dd>
+
+        <dt>
+          <div class="ni-wrapper">
+            <div class="ni-years2">2009-10</div>
+            <div class="ni-notfull">Year is not full</div>
+            <div class="ni-action"><a href="#">View details</a></div>
+          </div>
+        </dt>
+
+        <dd>
+          <div class="contributions-wrapper2">
+            <p class="contributions-header">You have contributions from</p>
+            <p>Paid-employment earnings: <strong>£300 </strong></p>
+            <p>When you were claiming benefits or unable to work we credited you National Insurance for <strong>3 weeks</strong>.</p>
+            <p>Find out more about <a href="ni-check">gaps in your record and how to check them</a>.</p>
+            <p class="contributions-header">You can make up the shortfall</p>
+            <p>Pay a voluntary contribution of <strong>£648</strong> by <strong>6 April 2017</strong>.</p>
+            <p>Find out more about <a href="ni-pay">voluntary contributions</a>.</p>
+          </div>
+        </dd>
+
+        <dt>
+          <div class="ni-wrapper">
+            <div class="ni-years2">2006-07</div>
+            <div class="ni-notfull">Year is not full</div>
+            <div class="ni-action"><a href="#">View details</a></div>
+          </div>
+        </dt>
+
+        <dd>
+          <div class="contributions-wrapper2">
+            <p class="contributions-header">You did not make any contributions this year</p>
+            <p>Find out more about <a href="ni-check">gaps in your record and how to check them</a>.</p>
+            <div class="panel-indent">
+              <p>The last date you could pay by was 6 April 2014. You can usually only pay for the last 6 years.</p>
+            </div>
+          </div>
+        </dd>
+
+        <dt>
+          <div class="ni-wrapper">
+            <div class="ni-years2">2005-06</div>
+            <div class="ni-notfull">Year is not full</div>
+            <div class="ni-action"><a href="#">View details</a></div>
+          </div>
+        </dt>
+
+        <dd>
+          <div class="contributions-wrapper2">
+            <p class="contributions-header">You did not make any contributions this year</p>
+            <p>Find out more about <a href="ni-record-check">gaps in your record and how to check them</a>.</p>
+            <div class="panel-indent">
+              <p>The last date you could pay by was 6 April 2013. You can usually only pay for the last 6 years.</p>
+            </div>
+          </div>
+        </dd>
+
+      </dl>
+      <a href="javascript:window.history.back();" class="example-back-link">Back</a>
+
+	</div><!-- /.column-two-thirds -->
+	 <div class="column-third">
+    <div class="related" id="related">
+      <div class="inner group related-subsection">
+
+        {% include './ni_side_bar.html' %}
+
+      </div>
+    </div>
+  </div> <!-- /.column-third -->
+</div><!-- /.grid-row -->
+</div><!-- /.grid-row -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+// $(document).ready(function(){
+//   var allPanels = $('.accordion > dd').hide();
+
+//   $('.accordion > dt').click(function(){
+//     if(!$(this).parent().parent().hasClass("active")){          
+//       // allPanels.prev().removeClass("active");
+//       $(this).parent().parent().addClass("active");
+//       // $(this).parent().parent().next().slideDown();
+//       return false;
+//     }else{
+//       $(this).parent().parent().removeClass("active");             
+//       return false;
+//     }
+//   });
+// });
+
+var allPanels = $('.accordion2 > dd').hide(),
+      allHeaders = $('.accordion2 > dt');
+
+  $('.accordion2 > dt').click(function() {
+    // $(this).parent().children("dd")
+    //   // .hide()
+    //   // .removeClass('active');
+    
+    // $(this).parent().children("dt")
+    //   .children('span')
+    //   .removeClass('down');
+
+    if(!$(this).hasClass('active')) {
+      // $(this).parent().children("dt")
+      //   .removeClass('active');
+
+      $(this)
+        .addClass('active')
+        .next()
+        .show();
+
+      $(this).find("a").text("Hide details");
+
+    $(this)
+      .children('span')
+      .addClass('down');
+    }
+    else{
+      $(this)
+        .removeClass('active')
+        .next()
+        .hide();
+
+      $(this).find("a").text("View details");
+    }
+
+    return false;
+  });
+
+</script>
+
+{% endblock %}
