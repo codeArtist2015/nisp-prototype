@@ -30,7 +30,9 @@
 
         <dd>
           <div class="contributions-wrapper2">
-            <div class="panel-indent" style="margin-top: 0"><p>We are checking this year to see if it counts towards your pension. We&rsquo;ll update your record when this is finished, you do not need to do anything.</p></div>
+            <div class="panel-indent" style="margin-top: 0">
+              <p>We are checking this year to see if it counts towards your pension. We&rsquo;ll update your record when this is finished, you do not need to do anything.</p>
+            </div>
           </div>
         </dd>
 
@@ -211,41 +213,17 @@
   </div> <!-- /.column-third -->
 </div><!-- /.grid-row -->
 </div><!-- /.grid-row -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript">
-
-// $(document).ready(function(){
-//   var allPanels = $('.accordion > dd').hide();
-
-//   $('.accordion > dt').click(function(){
-//     if(!$(this).parent().parent().hasClass("active")){          
-//       // allPanels.prev().removeClass("active");
-//       $(this).parent().parent().addClass("active");
-//       // $(this).parent().parent().next().slideDown();
-//       return false;
-//     }else{
-//       $(this).parent().parent().removeClass("active");             
-//       return false;
-//     }
-//   });
-// });
 
 var allPanels = $('.accordion2 > dd').hide(),
       allHeaders = $('.accordion2 > dt');
 
   $('.accordion2 > dt').click(function() {
-    // $(this).parent().children("dd")
-    //   // .hide()
-    //   // .removeClass('active');
-    
-    // $(this).parent().children("dt")
-    //   .children('span')
-    //   .removeClass('down');
 
     if(!$(this).hasClass('active')) {
-      // $(this).parent().children("dt")
-      //   .removeClass('active');
-
+      
       $(this)
         .addClass('active')
         .next()
