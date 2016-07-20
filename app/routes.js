@@ -313,6 +313,44 @@ app.get('/32/dashboard/dashboardV',
     
 //******************************************************************************************************************************//   
       
+//**************************   Prototype 33 Routes ******************************************************************************//
+//*******************************************************************************************************************************//
+   
+app.get("/33/start/gg_login", function (req, res) {
+      res.render('33/start/gg_login', {"signout":false});
+ });
+ 
+ app.get("/33/start/start_Verify2", function (req, res) {
+      res.render('33/start/start_Verify2', {"signout":false});
+ });
+ 
+ 
+ app.post('/33/start/gg_login', passport.authenticate('local', { failureRedirect: '/33/start/gg_login' }),
+  function(req, res) {
+    res.redirect('/33/dashboard/dashboardA');
+});
+
+ app.post('/33/start/start_Verify2', passport.authenticate('local', { failureRedirect: '/33/start/start_Verify2' }),
+  function(req, res) {
+    res.redirect('/33/dashboard/dashboardA');
+});
+   
+app.get('/33/dashboard/dashboardA',
+  require('connect-ensure-login').ensureLoggedIn('/33/start/gg_login'),
+  function(req, res){
+        res.render('33/dashboard/dashboard'+req.user.id, {  "mvpversion": 33, user: req.user, "signout": true   });
+});
+
+app.get('/33/dashboard/dashboardV',
+  require('connect-ensure-login').ensureLoggedIn('/33/start/start_Verify2'),
+  function(req, res){
+        res.render('33/dashboard/dashboard-v-'+req.user.id, {  "mvpversion": 33, user: req.user, "signout": true   });
+});           
+    
+//******************************************************************************************************************************//   
+      
+
+
 
 //****--------------------------------------------------------------------------------------------------------*****//
 //****                                                                                                        *****//
@@ -510,10 +548,36 @@ app.get('/32/ni/pay-voluntary-contributions', function (req, res) {
   res.render('32/ni/pay-voluntary-contributions', { 'cost' : cost , 'increase' : increase , 'week' : week , 'month' : month, 'year' : year });
   
 });
+
+app.get('/33/ni/pay-voluntary-contributions', function (req, res) {
+
+  var cost = req.query.cost;
+  var increase = req.query.increase;
+  var week = req.query.week;
+  var month = req.query.month;
+  var year = req.query.year;
+
+  res.render('33/ni/pay-voluntary-contributions', { 'cost' : cost , 'increase' : increase , 'week' : week , 'month' : month, 'year' : year });
+  
+});
  
+app.get('/33/ni/pay-voluntary-contributions29', function (req, res) {
+
+  var cost = req.query.cost;
+  var increase = req.query.increase;
+  var week = req.query.week;
+  var month = req.query.month;
+  var year = req.query.year;
+
+  res.render('33/ni/pay-voluntary-contributions29', { 'cost' : cost , 'increase' : increase , 'week' : week , 'month' : month, 'year' : year });
+  
+});
+
+
     
   }
 };
+
 
 
 
