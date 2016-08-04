@@ -1,0 +1,105 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <!-- GOV.UK content -->
+    <main id="content" role="main" class="">
+
+      <h1 class="heading-large">Check your State Pension forecast</h1>
+      <h2 class="heading-medium">Get a forecast online</h2>
+      <p>If you have not received your letter inviting you to claim, you can use this service to find out:</p>
+      <ul class="list-bullet">
+        <li>how much you may get, based on your current National Insurance record</li>
+        <li>the earliest date you may get it</li>
+        <li>options for improving your forecast</li>
+      </ul>
+      <a id="start" href="enter_details" role="button" class="button" style="margin-top: 0">Start</a>
+      <h2 class="heading-medium">This service may not be for you</h2>
+      <p>If you:</p>
+      <ul class="list-bullet">
+        <li><a href="https://www.gov.uk/claim-state-pension-online">already have your letter from the Pension Service inviting you to claim</a></li>
+        <li><a href="https://www.gov.uk/deferring-state-pension">are already putting off claiming your State Pension</a></li>
+        <li><a href="https://www.gov.uk/future-pension-centre">want a statement by post or phone</a></li>        
+        <li><a href="https://www.gov.uk/international-pension-centre">have lived or worked abroad and want to know about your non-UK pension</a></li>
+        <li><a href="https://www.gov.uk/future-pension-centre">have worked and paid National Insurance in the Isle of Man</a></li>
+      </ul>
+
+    </main>
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third">
+    <div class="related-container">
+      <aside class="related" id="related">
+        <div class="inner group related-other">
+          {% include '../start/start_gov_links.html' %}
+        </div>
+        <div class="inner group"></div>
+      </aside>
+    </div><!-- related container -->
+  </div><!-- column third -->
+</div><!-- grid row -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+    $("a#tab-current-sp-value").click(function() { 
+        $(".tabs-nav li").removeClass("active");
+        $(this).parent().addClass("active");
+        $("#current-sp-value").show();
+        $("#contracted-out").hide();
+        $("#improve-sp-value").hide();
+        window.location.hash = "#lie-current-sp-value";
+        return false;
+    });
+       $("a#tab-contracted-out").click(function() { 
+        $(".tabs-nav li").removeClass("active");
+        $(this).parent().addClass("active");
+        $("#contracted-out").show();
+        $("#improve-sp-value").hide();
+        $("#current-sp-value").hide();
+        window.location.hash = "#lie-contracted-out";
+        return false;
+    });
+    $("a#tab-improve-sp-value").click(function() { 
+        $(".tabs-nav li").removeClass("active");
+        $(this).parent().addClass("active");
+        $("#improve-sp-value").show();
+        $("#contracted-out").hide();
+        $("#current-sp-value").hide();
+        window.location.hash = "#lie-improve-sp-value";
+        return false;
+    });
+
+    if(window.location.hash === "#lie-current-sp-value") {
+        $("a#tab-current-sp-value").trigger('click');
+    }
+     else if (window.location.hash === "#lie-contracted-out") {
+        $("a#tab-contracted-out").trigger('click');
+    }
+    else if (window.location.hash === "#lie-improve-sp-value") {
+        $("a#tab-improve-sp-value").trigger('click');
+    }
+});
+
+$(document).ready(function(){
+  var allPanels = $('.accordion > dd').hide();
+
+  $('.accordion > dt').click(function(){
+    if(!$(this).parent().parent().hasClass("active")){          
+      allPanels.prev().removeClass("active");
+      $(this).parent().parent().addClass("active");
+      $(this).parent().parent().next().slideDown();
+      return false;
+    }else{
+      $(this).parent().parent().removeClass("active");             
+      return false;
+    }
+  });
+});
+
+</script>
+{% endblock %}
