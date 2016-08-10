@@ -325,6 +325,11 @@ pre, code {
   border: 1px solid #bfc1c3;
   padding: 3px 7px; }
 
+.section-border {
+  border-bottom: 5px solid #005ea5;
+  margin-bottom: 20px;
+  padding-bottom: 20px; }
+
 #content {
   padding-bottom: 30px;
   padding-bottom: 90px; }
