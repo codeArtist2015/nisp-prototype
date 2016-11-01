@@ -52,10 +52,10 @@
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you,
 // either add and import new partial files, or modify those in GOV.UK elements to fit your user needs.
- 
- 
+
+
  strong {font-weight: bold}
- 
+
 .highlight-answer,
 .highlighted-event {
     background-color: #28a197;
@@ -65,13 +65,13 @@
     //margin:0 -1em 1em -1em
     margin: 0 0 1em 0
 }
-    
+
 .highlight-answer p,
 .highlighted-event p {
     line-height:2.3em;
     color:#fff
 }
-    
+
 .highlight-answer p em,
 .highlighted-event p em {
     font-size: 2.45em;
@@ -81,7 +81,7 @@
     margin-bottom:0.5em;
     color:#fff
 }
-    
+
 @media (max-width: 640px){
     .highlight-answer,
     .highlighted-event {
@@ -108,30 +108,30 @@
     .highlighted-event p {
         font-size:1em;
         line-height:inherit
-    }   
+    }
     .highlight-answer p em,
     .highlighted-event p em {
         font-size:1em;
         display:inline
     }
 }
- 
+
 .highlighted-event {
     padding: 1.75em 0.75em 1.25em 0.75em
 }
- 
+
 @media (min-width: 641px) {
     .highlighted-event {
         padding: 1.75em 0.75em 1.25em 0.75em
     }
 }
-    
+
 @media (max-width: 640px) {
     .highlighted-event {
         padding: 0.5em 0.75em 0.25em 0.75em
     }
 }
- 
+
 .highlighted-event p {
     font-family:"nta",Arial,sans-serif;
     font-size:24px;
@@ -144,18 +144,18 @@
     padding: 0;
     margin:0
 }
- 
+
 @media (max-width: 640px){
     .highlighted-event p {
         font-size:20px;
         line-height:1.2
     }
 }
- 
+
 @media (min-width: 641px) {
     .highlighted-event p {padding-top:6px;padding-bottom:4px}
 }
- 
+
 @media (max-width: 640px){
     .highlighted-event p {
         padding:0;
@@ -166,7 +166,7 @@
         margin:0
     }
 }
- 
+
 @media (min-width: 641px) {
     .highlighted-event p {
         padding:0;
@@ -174,7 +174,7 @@
         font-weight:bold
     }
 }
- 
+
 .highlighted-event p span {
     display:block;
     font-family:"nta",Arial,sans-serif;font-size:24px;
@@ -185,7 +185,7 @@
     padding-bottom:6px;
     font-weight:bold
  }
-    
+
 @media (max-width: 640px){
     .highlighted-event p span {
         font-size:20px;
@@ -278,15 +278,15 @@
 
 .nav-tabs li {
     font-family:"nta",Arial,sans-serif;
-    font-size:19px;    
+    font-size:19px;
     line-height:1.3;
     font-weight:400;
     text-transform:none;
-    border-bottom: 0;  
-    float: left;  
-    margin: 0 0 -1px;        
+    border-bottom: 0;
+    float: left;
+    margin: 0 0 -1px;
    /* margin-right: 5px;
-    margin-bottom:4px;*/        
+    margin-bottom:4px;*/
 }
 
 
@@ -295,7 +295,7 @@
         font-size:14px;
         line-height:1.14286}
     }
-    
+
 @media (max-width: 640px){
     .nav-tabs li {
         float:none
@@ -303,7 +303,7 @@
 }
 
 .nav-tabs li a {
-   
+
     float:left;
     background-color: #dee0e2;
     border: 0 none;
@@ -316,14 +316,14 @@
     text-align:center;
     text-decoration: none;
      font-weight:800;
-    top:0;   
-   
+    top:0;
+
     margin: 0.26316em 0.26316em 0.26316em 0;
     padding: 0.47368em 1em;
-    
+
 
 }
-        
+
 @media (max-width: 640px){
     .nav-tabs li a {
         display:block;
@@ -341,7 +341,7 @@
 .nav-tabs li a:hover {
     color: #2e8aca;
 }
-.nav-tabs li.active a {     
+.nav-tabs li.active a {
     background-color: #fff;
     color:#0b0c0c;
     position:relative;
@@ -353,9 +353,9 @@
     margin-bottom:0;
 
     padding: 0.68421em 0.94737em 0.73684em;
-  
+
 }
-        
+
 @media (max-width: 640px) {
     .nav-tabs li.active a{
         border:none;
@@ -365,7 +365,7 @@
 
 .nav-tabs li.active a:hover{color:inherit}
 .nav-tabs li:first-child a{margin-left:0}
-    
+
 @media (max-width: 640px){
     .nav-tabs li:first-child a{border-left:none;border-top:1px solid #bfc1c3}
 }
@@ -397,7 +397,7 @@
 }
 
 @media (max-width: 640px) {
-    .tab-content .inner { 
+    .tab-content .inner {
         padding:0 1em 1em;
         border-bottom: solid 1px #C9D0D0
     }
@@ -446,8 +446,8 @@
 .year {display:inline-block; min-width: 100px}
 
 .improve-choice-box {
-    display:block; 
-    border-top: 1px solid #bfc1c3; 
+    display:block;
+    border-top: 1px solid #bfc1c3;
     padding: 10px 0
 }
 
@@ -456,7 +456,7 @@
 .improve-choice-box a {
     float: right;
     text-align: right;
-} 
+}
 
 span.inactive {color: #999}
 
@@ -506,7 +506,7 @@ details .panel-indent {
   margin-top: 0; }
 
   // Start now buttons
-.button-get-started {  
+.button-get-started {
   background-image: url("/public/images/icons/icon-pointer.png");
   background-repeat: no-repeat;
   background-position: 100% 50%;
@@ -789,72 +789,72 @@ font-size: 19px;
 
 .ni-table dt {
 
-  
+
   padding-top: 10px;
   padding-bottom: 5px;
   border-top: 1px solid #BFC1C3;
-  
+
 }
 
 
 // ni-wrapper
 
 .ni-wrapper {
-    display: inline-block; 
+    display: inline-block;
     clear: both;
    width: 100%;
    padding: 10px 0 10px 0;
-    
+
 }
 
 .ni-years {
-   
+
   width: 20%;
   float: left;
 }
 
 .ni-cost {
-   
+
     width: 25%;
     float: left;
 }
 
 .ni-shortfall {
-   
+
     width: 50%;
     float: left;
 }
 
 .ni-payby {
-   
+
     width: 25%;
     float: left;
 
 }
 
 .ni-full {
-   
+
     width: 66%;
     float: left;
     color: #999;
 }
 
 .ni-late {
-   
+
     width: 50%;
     float: left;
     color: #999;
 }
 
 .ni-action {
-   
+
     width: 30%;
     float: left;
     text-align: right;
 }
 
 .ni-action-check {
-   
+
     width: 50%;
     float: left;
     background-color: #000
@@ -863,7 +863,7 @@ font-size: 19px;
 // modelling gaps options
 
 .options-wrapper {
-    display: inline-block; 
+    display: inline-block;
     clear: both;
     width: 100%;
     padding: 25px 0 0px 0;
@@ -1029,7 +1029,7 @@ font-size: 19px;
 // contributions
 
 .contributions-wrapper {
-    display: block; 
+    display: block;
     clear: both;
     padding: 10px 0px 0px 25%;
     margin-bottom: 5px;
@@ -1045,7 +1045,7 @@ font-size: 19px;
     .contributions-value{
        float: left;
        width: 100%;
-       display:block; 
+       display:block;
     clear: both;
     padding-bottom: 5px;
     }
@@ -1146,7 +1146,7 @@ font-size: 19px;
 
 
 .gird-2-3 {
-    width:66%;   
+    width:66%;
 }
 
 
@@ -1157,7 +1157,7 @@ font-size: 19px;
 
 
 .chart-block {
-  clear: both;  
+  clear: both;
    margin-bottom: 80px;
     @media only screen and (max-width: 640px) {
       margin-bottom:50px;
@@ -1165,7 +1165,7 @@ font-size: 19px;
 }
 
 .chart-modelling {
-  clear: both;  
+  clear: both;
    margin-bottom: 50px;
     @media only screen and (max-width: 640px) {
       margin-bottom:20px;
@@ -1176,7 +1176,7 @@ font-size: 19px;
 
 
 .chart-block .footnote {
- 
+
     display:inline-block;
 }
 
@@ -1184,15 +1184,15 @@ font-size: 19px;
 
 .graph
 {
-  float: left; 
+  float: left;
   width: 100%;
   margin-top: -2px;
 }
-  
+
 .graph li
 {
   position: relative;
-  display: block;  
+  display: block;
   background:#C1DFE4;
   height:37px;
   @media only screen and (max-width: 640px) {
@@ -1200,13 +1200,13 @@ font-size: 19px;
       margin-left: 0;
   }
 }
-  
-  
+
+
 .graph  li .amount
 {
-  display: block;   
-  height: 100%; 
-  background: #28A197;   
+  display: block;
+  height: 100%;
+  background: #28A197;
   line-height: 1.6em;
   color:#fff;
   text-align: right;
@@ -1220,9 +1220,9 @@ font-size: 19px;
 
 li .amount
 {
-  display: block;   
-  height: 100%; 
-  background: #28A197;   
+  display: block;
+  height: 100%;
+  background: #28A197;
   line-height: 1.6em;
   color:#fff;
   text-align: right;
@@ -1278,13 +1278,13 @@ font-size: 19px;
 
 
 .block-label input {
- 
+
     left: 5px;
 }
 
 
 
-.button-get-started {  
+.button-get-started {
   background-image: url("/public/images/icons/icon-pointer.png");
   background-repeat: no-repeat;
   background-position: 100% 50%;
@@ -1309,7 +1309,7 @@ font-size: 19px;
   padding: 30px;
   max-width: 960px;
   float: none
- 
+
 }
 
 .grid-1-3, .grid-2-3 {
@@ -1420,15 +1420,17 @@ h2.tight {
 }
 
 .left-iv {
-border-right: 3px solid #BFC1C3; 
+border-right: 3px solid #BFC1C3;
 padding-right: 30px;
+@media only screen and (max-width: 640px) {
+     border: 0;
+  }
 }
 
 .right-verify {
 padding-left: 30px;
 @media only screen and (max-width: 640px) {
      padding: 15px;
-
   }
 
 }
@@ -1441,7 +1443,7 @@ padding-left: 30px;
     max-width: 1020px;
     margin: 0 auto;
     z-index: 50;
-   
+
 }
 
 #global-breadcrumb.pta-breadcrumb ol li a:visited, .back-to-previous a:visited {
@@ -1616,5 +1618,5 @@ accordion dd, .ni-table dd {
 }
 
 .panel-border-wide {
-    border-left-width: 10px;
+    border-left-width: 100px;
 }

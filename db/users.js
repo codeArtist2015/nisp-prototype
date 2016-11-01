@@ -20,7 +20,7 @@ var records = [
 	, { id: 19, username: 'gracei', password: '123456', displayName: 'Grace I'}
 	, { id: 20, username: 'barryg', password: '123456', displayName: 'Barry G'}
 	, { id: 21, username: 'rosa', password: '123456', displayName: 'Ross A'}
-	, { id: 22, username: 'mvp', password: '123456', displayName: 'ros'} 
+	, { id: 22, username: 'mvp', password: '123456', displayName: 'ros'}
 	, { id: 23, username: 'janerj', password: '123456', displayName: 'JaneRJ'}
 	, { id: 24, username: 'steveb', password: '123456', displayName: 'steveb'}
 	, { id: 25, username: 'jeff3', password: '123456', displayName: 'steveb'}
@@ -29,6 +29,8 @@ var records = [
 	, { id: 28, username: 'pollyh', password: '123456', displayName: 'pollyh'}
 	, { id: 29, username: 'joshh', password: '123456', displayName: 'pollyh'}
 	, { id: 30, username: 'kathr', password: '123456', displayName: 'pollyh'}
+	, { id: 31, username: 'sadiq', password: '123456', displayName: 'steveb'}
+  , { id: 32, username: 'sadiq2', password: '123456', displayName: 'steveb'}
   ]
 
 exports.findById = function(id, cb) {

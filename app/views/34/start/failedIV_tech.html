@@ -1,0 +1,18 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check your State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your State Pension{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+	<div class="column-two-thirds">
+
+		<h1 class="heading-large">There&rsqquo;s a technical problem</h1>
+		<p class="lede">This online service is experiencing technical difficulties.</p>
+		<p>Please try again in 5 minutes.</p>
+		<a href="http://twofactor-prototype.herokuapp.com/01_govuk-login_sa?url=http://nisp2016.herokuapp.com/33/start/dashboardA&failUrl=http://nisp2016.herokuapp.com/32/start/failedIV" class="button" role="button">Try again</a>
+
+	</div><!-- /.column-two-thirds -->
+	<div class="column-third"></div><!-- /.column-one-thirds -->
+</div><!-- grid-row -->
+
+{% endblock %}

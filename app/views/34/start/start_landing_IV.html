@@ -1,0 +1,40 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h1>Check your State Pension</h1>
+    <p class="lede">Check how much pension you can get based on your National Insurance record.</p>
+    <div class="panel-indent">
+      <p>Your estimate is provided for your information only and the service does not offer financial advice. When planning for your retirement, you should seek professional advice.</p>
+    </div>
+
+    <h3 class="heading-medium">You need to sign in to use this service</h3>
+    <p>You can <a href="http://twofactor-prototype.herokuapp.com/01_govuk-login_sa?url=http://nisp2016.herokuapp.com/33/start/dashboardA&failUrl=http://nisp2016.herokuapp.com/33/start/failedIV" role="button">sign in using the Government Gateway</a>. You may need to answer a few questions – they&rsquo;ll be based on things HMRC already know about you.</p>
+    <p>You can also <a href="/start/start_Verify1">sign in using GOV.UK Verify</a>. If you have not used GOV.UK Verify before, it will take you about 10 minutes to get set up. You can access other government services securely wherever you see the GOV.UK Verify logo.</p>
+    <a id="Start" href="http://twofactor-prototype.herokuapp.com/01_govuk-login_sa?url=http://nisp2016.herokuapp.com/33/start/dashboardA&failUrl=http://nisp2016.herokuapp.com/33/start/failedIV" class="button" style="margin-top: 0">Continue</a>
+
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third">
+    <div class="related-container">
+
+      <aside class="related" id="related">
+        <div class="inner group related-other">
+          <h2 id="parent-other">Elsewhere on GOV.UK</h2>
+          <nav role="navigation" aria-labelledby="parent-other">
+            <ul>
+              <li><a href="">Plan your retirement income</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="inner group"></div>
+      </aside>
+
+    </div><!-- related container -->
+  </div><!-- column third -->
+</div><!-- grid row -->
+
+{% endblock %}

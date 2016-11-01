@@ -1,0 +1,89 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check your State Pension {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your State Pension{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <a href="ni-modelling-options31#lie-show-all" class="example-back-link">Back</a>
+
+    <h2 class="heading-large">Paying voluntary contributions</h2>
+    <p><span class="heading-medium">Pay {{ cost }}</span><br />to improve your pension forecast from £108.87 to {{ increase }} a week</p>
+    <p>this will give you an extra:
+      <ul class="list-bullet">
+        <li>{{ week }} a week</li>
+        <li>{{ month }} a month</li>
+        <li>{{ year }} a year</li>
+      </ul>
+
+      <h3 class="heading-medium">Before you pay</h3>
+
+    <div class="boxes" id="1"><p>Paying {{ cost }} will fill 4 gaps in your National Insurance record.</p>
+      <table><thead><tr><th>Year</th><th>Shortfall</th><th>Increase to pension</th></tr></thead></tr>
+        <tr><td>2016-17</td><td>£150</td><td>£4.45 a week</td></tr>
+        <tr><td>2013-14</td><td>£60</td><td>£3.98 a week</td></tr>
+        <tr><td>2010-11</td><td>£200</td><td>£3.98 a week</td></tr>
+        <tr><td>2008-09</td><td>£100</td><td>£3.98 a week</td></tr>
+        <tfoot><tr><th>Total</th><th>{{ cost }}</th><th>{{ week }} a week</th></tr></tfoot>
+      </table>
+    </div>
+    <div class="boxes" id="2">Paying {{ cost }} will fill 3 gaps in your National Insurance record.
+        <table><thead><tr><th>Year</th><th>Shortfall</th><th>Increase to pension</th></tr></thead></tr>
+          <tr><td>2016-17</td><td>£150</td><td>£4.45 a week</td></tr>
+          <tr><td>2013-14</td><td>£60</td><td>£3.98 a week</td></tr>
+          <tr><td>2008-09</td><td>£100</td><td>£3.98 a week</td></tr>
+          <tfoot><tr><th>Total</th><th>{{ cost }}</th><th>{{ week }} a week</th></tr></tfoot>
+        </table>
+    </div>
+    <div class="boxes" id="3">Paying {{ cost }} will fill 1 gap in your National Insurance record.
+      <table>
+          <table><tr><th>Year</th><th>Shortfall</th><th>Increase to pension</th></tr>
+        <tr><td>2016-17</td><td>£150</td><td>£4.45 a week</td></tr>
+
+    </table>
+  </div>
+    <div class="boxes" id="4">Paying {{ cost }} will fill 1 gap your National Insurance record.
+      <table><tr><th>Year</th><th>Shortfall</th><th>Increase to pension</th></tr>
+      <tr><td>2013-14</td><td>£60</td><td>£3.98 a week</td></tr>
+    </table>
+    </div>
+<br>
+      <p><a href="ni-years-check">Check your National Insurance record</a> to find out more about the years with gaps. If you have evidence that it&rsquo;s wrong you can correct it. Correcting your record can fill a gap and improve your pension.</p>
+      <p><a href="ni-modelling-pay">Consider if paying voluntary contributions is your best option</a></p>
+
+      <p class="button">Continue to payment</p>
+      <p><a href="ni-modelling-options31#lie-show-all" class="example-back-link">Back</a></p>
+
+    </div><!-- /.column-two-thirds -->
+    <div class="column-third"></div><!-- /.column-third -->
+  </div><!-- /.grid-row -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script>
+
+
+  $(document).ready(function(){
+    $("#show-all").click(function(){
+      $("#modelling").show();
+      $("#personal-max").hide();
+    });
+    $("#show-less").click(function(){
+      $("#modelling").hide();
+      $("#personal-max").show();
+    });
+  });
+
+  $(document).ready(function() {
+    var option = '1';
+    var url = window.location.href;
+    option = url.match(/option=(.*)/)[1];
+    showDiv(option);
+  });
+  function showDiv(option) {
+    $('.boxes').hide();
+    $('#' + option).show();
+  }
+
+  </script>
+
+  {% endblock %}
