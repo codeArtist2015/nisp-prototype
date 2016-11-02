@@ -1,0 +1,44 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h1>Prototype 33 logins</h1>
+    <ul class="list-bullet">
+      <li><strong>Modelling journey - options to increase first</strong><br />jeff3 123456</li>
+      <li><strong>Modelling journey - options to increase first</strong><br />joshh 123456</li>
+    </ul>
+    <hr>
+    <ul class="list-bullet">
+      <li><strong>MQP - will reach max</strong><br />henryf 123456</li>
+      <li><strong>MQP - will reach with gaps</strong><br />sandyy 123456</li>
+    </ul>
+    <hr>
+    <ul class="list-bullet">
+      <li><strong>Manual Correspondence Indicator (MCI)</strong><br />kathr 123456</li>      
+    </ul>
+
+    <a href="gg_login" class="button">Login</a>
+    <a href="start_gov_uk" class="button">GOV.UK start page</a>
+
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third">
+    <div class="related-container">
+      <aside class="related" id="related">
+        <div class="inner group related-other">
+          <h2 id="parent-other">Elsewhere on GOV.UK</h2>
+          <nav role="navigation" aria-labelledby="parent-other">
+            <ul>
+              <li><a href="https://www.gov.uk/plan-retirement-income/overview">Plan your retirement income</a></li>
+            </ul>
+          </nav>
+        </div><!-- inner group related other -->
+        <div class="inner group"></div><!-- inner group -->
+      </aside>
+    </div><!-- related container -->
+  </div><!-- grid row -->
+
+{% endblock %}

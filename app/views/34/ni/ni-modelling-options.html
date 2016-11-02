@@ -1,0 +1,124 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check your State Pension {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your State Pension{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <a href="../dashboard/dashboardA" class="example-back-link">Back</a>
+
+    <h2 class="heading-large">How filling years can improve your pension</h2>
+    <ul class="list-bullet">
+      <li>paying voluntary National Insurance contributions can fill years with gaps</li>
+      <li>the more years you fill, the more your forecast can improve</li>
+      <li>the cost depends on how big the gap is</li>
+    </ul>
+
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third"></div> <!-- /.column-third -->
+</div><!-- /.grid-row -->
+
+<p>your pension forecast is<br /><span class="options-data">£130.10 a week</span></p>
+<h4 class="heading-medium">Options to improve it</h4>
+
+<dl>
+  <dt>
+    <div class="options-wrapper">
+      <div class="options-flag">This is the most pension you can get</div>
+      <div class="options-increase"><p>improve forecast to<br /><span class="options-data">£144.60 a week</span></p></div>
+      <div class="options-gaps"><p>years filled<br /><span class="options-data">3</span></p></div>
+      <div class="options-cost"><p>total one-off cost<br /><span class="options-data">£300</span></p></div>
+      <div class="options-button"><a href="pay-voluntary-contributions?cost=£300&increase=£144.60&week=£13.50&month=£58.50&year=£702" class="button button-secondary" name="test">More information</a></div>
+    </div>
+  </dt>
+
+  <dt id="full-list" style="display: none; cursor: hand; cursor: pointer;">
+    <div class="options-wrapper">
+      <div class="options-increase"><p>improve forecast to<br /><span class="options-data">£140.10 a week</span></p></div>
+      <div class="options-gaps"><p>years filled<br /><span class="options-data">2</span></p></div>
+      <div class="options-cost"><p>total one-off cost<br /><span class="options-data">£150</span></p></div>
+      <div class="options-button"><a href="pay-voluntary-contributions?cost=£150&increase=£140.10&week=£9&month=£39&year=£468" class="button button-secondary" name="test">More information</a></div>
+    </div>
+  </dt>
+
+  <dt style="cursor: hand; cursor: pointer;">
+    <div class="options-wrapper options-wrapper-last">
+      <div class="options-flag">This is your cheapest option</div>
+      <div class="options-increase"><p>improve forecast to<br /><span class="options-data">£135.60 a week</span></p></div>
+      <div class="options-gaps"><p>years filled<br /><span class="options-data">1</span></p></div>
+      <div class="options-cost"><p>total one-off cost<br /><span class="options-data">£50</span></p></div>
+      <div class="options-button"><a href="pay-voluntary-contributions?cost=£50&increase=£135.60&week=£4.50&month=£19.50&year=£234" class="button button-secondary" name="test">More information</a></div>
+    </div>
+  </dt>
+</dl>
+
+<div id="more-options">
+  <a id="show-all" href="#" name="test">Show all options</a>
+</div>
+<a href="../dashboard/dashboardA" class="example-back-link">Back</a>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+  $(document).ready(function(e){
+    $("#show-all").click(function(e){
+      e.preventDefault();
+      $("#full-list").show();
+      $("#more-options").hide();
+    });
+  });
+  $(document).ready(function(e){
+    $("#more-detail1").click(function(e){
+      e.preventDefault();
+      $("#detail1").show();
+      $("#less-detail1").show();
+      $("#more-detail1").hide();
+    });
+  });
+
+  $(document).ready(function(e){
+    $("#show-less1").click(function(e){
+      e.preventDefault();
+      $("#more-detail1").show();
+     $("#detail1").hide();
+      $("#less-detail1").hide();
+    });
+  });
+
+  $(document).ready(function(e){
+    $("#more-detail2").click(function(e){
+      e.preventDefault();
+      $("#detail2").show();
+      $("#less-detail2").show();
+      $("#more-detail2").hide();
+    });
+  });
+
+  $(document).ready(function(e){
+    $("#show-less2").click(function(e){
+      e.preventDefault();
+      $("#more-detail2").show();
+     $("#detail2").hide();
+      $("#less-detail2").hide();
+    });
+  });
+
+   $(document).ready(function(e){
+    $("#more-detail3").click(function(e){
+      e.preventDefault();
+      $("#detail3").show();
+      $("#less-detail3").show();
+      $("#more-detail3").hide();
+    });
+  });
+
+  $(document).ready(function(e){
+    $("#show-less3").click(function(e){
+      e.preventDefault();
+      $("#more-detail3").show();
+     $("#detail3").hide();
+      $("#less-detail3").hide();
+    });
+  });
+</script>
+
+{% endblock %}

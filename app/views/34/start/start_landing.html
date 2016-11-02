@@ -1,0 +1,44 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check my State Pension - {{mvpversion}}{% endblock %}
+{% block serviceName %}{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h1>Check your State Pension</h1>
+    <p class="lede">Check how much you may get based on your National Insurance record.</p>
+    <div class="panel-indent">
+      <p>This estimate is provided for your information only and the service does not offer financial advice. When planning for your retirement, you should seek professional advice.</p>
+    </div>
+    <p class="heading-medium">You can use this service if you&rsquo;re</p>
+    <ul class="list-bullet">
+      <li>a man born after 5 April 1951</li>
+      <li>a woman born after 5 April 1953</li>
+    </ul>
+    <a id="Start" href="enter_details" role="button" class="button" style="margin-top: 0">Continue</a>
+
+    <h2 class="heading-medium">If you were born before these dates</h2>
+    <p>Contact the <a href="https://www.gov.uk/future-pension-centre">Pension Service</a> to get a statement of your current pension by post.</p>
+
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third">
+    <div class="related-container">
+
+      <aside class="related" id="related">
+        <div class="inner group related-other">
+          <h2 id="parent-other">Elsewhere on GOV.UK</h2>
+          <nav role="navigation" aria-labelledby="parent-other">
+            <ul>
+              <li><a href="https://www.gov.uk/plan-retirement-income/overview">Plan your retirement income</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="inner group"></div>
+      </aside>
+
+    </div><!-- related container -->
+  </div><!-- /.column-one-thirds -->
+</div><!-- grid row -->
+
+{% endblock %}

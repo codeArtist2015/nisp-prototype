@@ -1,0 +1,81 @@
+{% extends '../layouts/template.html' %}
+{% block title %}Check your State Pension {{mvpversion}}{% endblock %}
+{% block serviceName %}Check your State Pension{% endblock %}
+{% block main %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <a href="../dashboard/dashboardA" class="example-back-link">Back</a>
+
+    <h2 class="heading-large">How filling years can improve your pension</h2>
+    <ul class="list-bullet">
+      <li>paying voluntary National Insurance contributions can improve your pension</li>
+      <li>the cost depends on how much National Insurance you have left to pay to make the years count towards your pension</li>
+    </ul>
+
+  </div><!-- /.column-two-thirds -->
+  <div class="column-third"></div> <!-- /.column-third -->
+</div><!-- /.grid-row -->
+
+<p>your pension forecast is<br /><span class="options-data">£108.87 a week</span></p>
+<h4 class="heading-medium">Options to improve it</h4>
+
+<dl>
+  <dt>
+    <div class="options-wrapper">
+      <div class="options-flag">This is the most pension you can get</div>
+      <div class="options-increase"><p>improve forecast to<br /><span class="options-data">£125.25 a week</span></p></div>
+      <div class="options-cost"><p>total one-off cost<br /><span class="options-data">£510</span></p></div>
+      <div class="options-button"><a href="pay-voluntary-contributions32?cost=£510&increase=£126.25&week=£16.38&month=£89.14&year=£851.76&option=1" class="button button-secondary" name="test">More information</a></div>
+    </div>
+  </dt>
+ <div id="full-list" style="display: none;">
+  <dt style="cursor: hand; cursor: pointer;">
+    <div class="options-wrapper">
+      <div class="options-increase"><p>improve forecast to<br /><span class="options-data">£121.25 a week</span></p></div>
+      <div class="options-cost"><p>total one-off cost<br /><span class="options-data">£310</span></p></div>
+      <div class="options-button"><a href="pay-voluntary-contributions32?cost=£310&increase=£121.25&week=£12.40&month=£53.73&year=£644.80&option=2" class="button button-secondary" name="test">More information</a></div>
+    </div>
+  </dt>
+    <dt style="cursor: hand; cursor: pointer;">
+    <div class="options-wrapper">
+      <div class="options-increase"><p>improve forecast to<br /><span class="options-data">£113.32 a week</span></p></div>
+      <div class="options-cost"><p>total one-off cost<br /><span class="options-data">£150</span></p></div>
+      <div class="options-button"><a href="pay-voluntary-contributions32?cost=£150&increase=£113.32&week=£4.45&month=£19.28&year=£231.40&option=3" class="button button-secondary" name="test">More information</a></div>
+    </div>
+  </dt>
+
+</div>
+  <dt style="cursor: hand; cursor: pointer;">
+    <div class="options-wrapper options-wrapper-last">
+      <div class="options-flag">This is your cheapest option</div>
+      <div class="options-increase"><p>improve forecast to<br /><span class="options-data">£112.85 a week</span></p></div>
+      <div class="options-cost"><p>total one-off cost<br /><span class="options-data">£60</span></p></div>
+      <div class="options-button"><a href="pay-voluntary-contributions32?cost=£60&increase=£112.85&week=£3.98&month=£17.24&year=£206.96&option=4" class="button button-secondary" name="test">More information</a></div>
+    </div>
+  </dt>
+</dl>
+
+<div id="more-options">
+  <p><a id="show-all" href="#" name="test" class="button">Show all options</a></p>
+</div>
+<a href="../dashboard/dashboardA" class="example-back-link">Back</a>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+  $(document).ready(function(e){
+    $("#show-all").click(function(e){
+      e.preventDefault();
+      $("#full-list").show();
+      $("#more-options").hide();
+      window.location.hash = "#lie-show-all";
+      return false;
+    });
+    if(window.location.hash === "#lie-show-all") {
+        $("#show-all").trigger('click');
+    }
+  });
+
+</script>
+
+{% endblock %}

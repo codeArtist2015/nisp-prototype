@@ -1,0 +1,54 @@
+{% macro errors(errorList) %}
+[#macro formErrors path]
+    {% if errorList %}
+         <div class="error-summary" role="group" tabindex="-1" aria-labelledby="error-summary-heading">
+                <h3 class="heading-medium error-summary-heading" id="error-summary-heading">
+                  Message to alert the user to a problem goes here
+                </h3>
+                <p>
+                  Description of the errors and how to correct them
+                </p>
+                <ul class="error-summary-list">
+                 <li class="error-message" aria-hidden="true"><a href="#">Error</a></li>
+                </ul>
+        </div>
+    {% endif %}
+{% endmacro %}
+
+{% macro inputText(name, id, hint, label, value, error) %}
+    <div class="form-group{% if error %} error{% endif %}">
+        <label class="form-label-bold" for="full-name">{{ label }}</label>
+        {% if hint %}<p class="form-hint">{{hint}}</p>{% endif %}
+        {% if error %}<span class="error-message" aria-hidden="true">{{error}}</span> {% endif %}
+        <input type="text" class="form-control" id="{{ id }}" name="{{name}}" value="{{value}}" />
+    </div>
+{% endmacro %}
+
+{% macro inputTextArea(name, id, hint, label, value, error) %}
+    <div class="form-group{% if error %} error{% endif %}">
+        <label class="form-label-bold" for="{{name}}">{{ label }}</label>
+        {% if hint %}<p class="form-hint">{{hint}}</p>{% endif %}
+        {% if error %}<span class="error-message" aria-hidden="true">{{error}}</span> {% endif %}
+        <textarea class="form-control-3-4" id="{{id}}" name="{{name}}">{{value}}</textarea>
+    </div>
+{% endmacro %}
+
+{% macro radioButtons(name, id, hint, legend, radioButtons, value, error,cssOptions) %}
+    <div class="form-group{% if error %} error{% endif %}" id="form-group-{{id}}">
+      <fieldset {% if cssOptions.inline %} class="inline"}{% endif %}>
+          {% if legend %}<legend class="form-label-bold" for="form-group-{{id}}">{% endif %}
+                {% if legend %}{{legend}}{% endif %}
+                {% if error %}<span class="error-message" aria-hidden="true">{{error}}</span> {% endif %}
+                {% if hint %}<p class="form-hint">{{hint}}</p>{% endif %}
+          {% if legend %}</legend>{% endif %}
+      					<div class="form-group">
+                        {% for radio in radioButtons %}
+                            <label class="block-label" for="{{id}}-{{radio.id}}" {% if radio.dataTarget %} data-target="{{radio.dataTarget}}"{% endif %}>
+      							<input id="{{id}}-{{radio.id}}" type="radio" name="{{name}}" value="{{radio.value}}" {% if value == radio.value %} checked{% endif %}>
+      							{{radio.value}}
+      						</label>   
+                        {% endfor %}
+            			</div>
+        </fieldset>
+    </div>
+{% endmacro %}

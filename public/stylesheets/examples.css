@@ -7,12 +7,15 @@
   color: white;
   border: dashed #fff 1px;
   padding: 1em;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* area styles specific to certain ones */
 main.area {
-  min-height: 16em; }
+  min-height: 16em;
+}
 
 .header-proposition {
   clear: none;
-  min-height: 6em; }
+  min-height: 6em;
+}
