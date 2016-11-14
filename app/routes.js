@@ -663,6 +663,18 @@ app.get('/34/ni/pay-voluntary-contributions32', function (req, res) {
 });
 
 
+app.get('/34/ni/pay-voluntary-contributions33', function (req, res) {
+
+  var cost = req.query.cost;
+  var increase = req.query.increase;
+  var week = req.query.week;
+  var month = req.query.month;
+  var year = req.query.year;
+
+  res.render('34/ni/pay-voluntary-contributions33', { 'cost' : cost , 'increase' : increase , 'week' : week , 'month' : month, 'year' : year });
+
+});
+
 
   }
 };

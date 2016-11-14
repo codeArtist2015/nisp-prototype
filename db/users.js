@@ -31,6 +31,7 @@ var records = [
 	, { id: 30, username: 'kathr', password: '123456', displayName: 'pollyh'}
 	, { id: 31, username: 'sadiq', password: '123456', displayName: 'steveb'}
   , { id: 32, username: 'sadiq2', password: '123456', displayName: 'steveb'}
+  , { id: 33, username: 'donald3', password: '123456', displayName: 'steveb'}
   ]
 
 exports.findById = function(id, cb) {
